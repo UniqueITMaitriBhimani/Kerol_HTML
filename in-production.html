@@ -4,7 +4,7 @@
 
 <head>
     <base href="">
-    <title>Start-Production</title>
+    <title>In-Production</title>
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
@@ -18,7 +18,7 @@
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -239,162 +239,90 @@
                         <!--end : Header-->
 
                     </div>
-
+                    
                     <!--end::Container-->
                 </div>
                 <!--end::Header-->
                 <!--three section-->
-                <style>
-                    .status-card {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        padding: 20px;
-                        border-radius: 8px;
-                        color: #000;
-                        font-weight: bold;
-                        cursor: pointer;
+                <div style="padding:30px; background:#f5f8fa; text-align:center;">
 
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    }
-
-                    .status-card .count {
-                        font-size: 2em;
-                    }
-
-                    .status-card.pending {
-                        background-color: #F6A1A1;
-                    }
-
-                    .status-card.working {
-                        background-color: #b3d1ff;
-                    }
-
-                    .status-card.completed {
-                        background-color: #d3f1e4;
-                    }
-
-                    .status-card.pending-active {
-                        background-color: #E44141;
-                        /* Color when pending card is clicked */
-                        color: white;
-                    }
-
-                    .status-card.working-active {
-                        background-color: #007bff;
-                        /* Color when working card is clicked */
-                        color: white;
-                    }
-
-                    .status-card.completed-active {
-                        background-color: #0DA759;
-                        /* Color when completed card is clicked */
-                        color: #ffff;
-                    }
-
-                    .status-card.pending-active h4 {
-                        color: #fff !important;
-                    }
-
-                    .status-card.pending-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .pending-active.a-pending::after {
-                        position: absolute;
-                        content: '';
-                        left: 33%;
-                        bottom: 148px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #E44141 transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-
-
-                    .status-card.working-active h4 {
-                        color: #fff !important;
-                    }
-
-                    .status-card.working-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .working-active.a-working::after {
-                        position: absolute;
-                        content: '';
-                        left: 58%;
-                        bottom: 148px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #007bff transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-
-                    .status-card.completed-active h4 {
-                        color: #fff !important;
-                    }
-
-                    .status-card.completed-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .completed-active.a-completed::after {
-                        position: absolute;
-                        content: '';
-                        left: 85%;
-                        bottom: 148px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #0DA759 transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-                </style>
-                <div class="container-fluid m-5">
-                    <div class="row g-3">
-                        <!-- Pending Ticket -->
-                        <div class="col">
-                            <div class="status-card pending a-pending"
-                                onclick="changeColor(this, 'pending-active', 'pending-table')">
-                                <h4>
-                                    <!--  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                          class="bi bi-hourglass-split" viewBox="0 0 16 16">
-                          <path
-                            d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z" />
-                        </svg> -->
-                                    Start Production
-                                </h4>
-                                <h2 class="count">53</h2>
-                            </div>
-                        </div>
-                        <!-- Working on Tickets -->
-                        <div class="col">
-                            <div class="status-card working a-working"
-                                onclick="changeColor(this, 'working-active', 'working-table')">
-                                <h4>In Production</h4>
-                                <h2 class="count">43</h2>
-                            </div>
-                        </div>
-                        <!-- Completed Tickets -->
-                        <div class="col">
-                            <div class="status-card completed a-completed"
-                                onclick="changeColor(this, 'completed-active', 'completed-table')">
-                                <h4>
-                                    <!-- <i class="fa fa-check-square-o" aria-hidden="true"></i> -->
-                                    Finish Production
-                                </h4>
-                                <h2 class="count">46</h2>
-                            </div>
-                        </div>
-
+                    <!-- CARD 1 -->
+                    <div style="
+                        display:inline-block;
+                        width:350px;
+                        height:120px;
+                        border-radius:10px;
+                        margin:0 10px;
+                        color:#fff;
+                        font-family:Arial;
+                        position:relative;
+                        padding:20px;
+                        background:#e64444;
+                        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+                    ">
+                        <span style="font-size:20px; font-weight:bold; float:left;">
+                            Start Production 
+                        </span>
+                        
                     </div>
+
+                    <!-- CARD 2 -->
+                    <div style="
+                        display:inline-block;
+                        width:350px;
+                        height:120px;
+                        border-radius:10px;
+                        margin:0 10px;
+                        color:#1a1a1a;
+                        font-family:Arial;
+                        position:relative;
+                        padding:20px;
+                        background:#b7d4ff;
+                        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+                    ">
+                        <span style="font-size:20px; font-weight:bold; float:left;">
+                            In Production
+                        </span>
+                        <!-- Arrow -->
+                        <div style="
+                            width:0;
+                            height:0;
+                            border-left:18px solid transparent;
+                            border-right:18px solid transparent;
+                            border-top:18px solid #b7d4ff;
+                            position:absolute;
+                            left:50%;
+                            bottom:-18px;
+                            transform:translateX(-50%);
+                        "></div>
+                        
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div style="
+                        display:inline-block;
+                        width:350px;
+                        height:120px;
+                        border-radius:10px;
+                        margin:0 10px;
+                        color:#1a1a1a;
+                        font-family:Arial;
+                        position:relative;
+                        padding:20px;
+                        background:#d6f5eb;
+                        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+                    ">
+                        <span style="font-size:20px; font-weight:bold; float:left;">
+                            Finish Production
+                        </span>
+                    
+                    </div>
+                    
                 </div>
+
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-column-fluid" id="kt_content">
-
+                    
                     <div class="docs-content d-flex flex-column flex-column-fluid" id="kt_docs_content">
                         <!--begin::Container-->
                         <div class="container" id="kt_docs_content_container">
@@ -404,51 +332,17 @@
                                 <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
                                     <!--begin::Section-->
                                     <div>
-                                        <div
-                                            style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-
-                                            <!-- Filter Dropdown -->
-                                            <select style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                ">
-                                                <option value="">Filter</option>
-                                                <option value="red">Red</option>
-                                                <option value="blue">Blue</option>
-                                                <option value="green">Green</option>
-                                            </select>
-
-                                            <!-- Status Filter -->
-                                            <select style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                ">
-                                                <option value="">Status</option>
-                                                <option value="active">Active</option>
-                                                <option value="pending">Pending</option>
-                                                <option value="completed">Completed</option>
-                                            </select>
-
-                                            <!-- Search Bar -->
-                                            <input type="text" placeholder="Search..." style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                    width: 200px;
-                                                ">
-                                        </div>
-
+                                        
                                         <!--begin::Heading-->
                                         <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Start-Production</h1>
-                                            <a href="color-add.html" class="btn btn-primary">
-                                                Start Production
-                                            </a>
+                                            <h1 class="anchor fw-bolder m-0" id="active-rows">In-Production</h1>
+                                            <input type="text" placeholder="Search..." style="
+                                                width: 250px;
+                                                padding: 8px 12px;
+                                                border: 1px solid #ccc;
+                                                border-radius: 6px;
+                                                font-size: 14px;
+                                            ">
                                         </div>
 
                                         <!--end::Heading-->
@@ -456,13 +350,11 @@
                                         <div class="my-5">
                                             <table class="table table-rounded table-row-bordered border gy-7 gs-7">
                                                 <thead>
-                                                    <tr
-                                                        class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                        <th>select</th>
-                                                        <th>Client ID</th>
-                                                        <th>Order No</th>
+                                                    <tr class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
+                                                        <th>No.</th>
+                                                        <th>Coil Color</th>
                                                         <th>Product Name</th>
-                                                        <th>Coil Colour</th>
+                                                        <th>Client No</th>
                                                         <th>Total Rolls Per 4ft</th>
                                                         <th>Total SQF</th>
                                                         <th class="text-center">Action</th>
@@ -470,115 +362,94 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>
-                                                            <label>
-                                                                <input type="checkbox" id="check1">
-                                                            </label>
-                                                        </td>
+                                                        <td rowspan="2" style="text-align:center; vertical-align:middle;">1</td>
+                                                        <td rowspan="2" style="text-align:center; vertical-align:middle;">
+                                                                <div style="
+                                                                    width:60px;
+                                                                    height:90px;
+                                                                    background:red;
+                                                                    color:white;
+                                                                    display:flex;
+                                                                    align-items:center;
+                                                                    justify-content:center;
+                                                                    border-radius:5px;
+                                                                    margin:auto;
+                                                                    font-weight:bold;
+                                                                ">
+                                                                    red
+                                                                </div>
+                                                            
+                                                            </td>
                                                         <td>SPIKE-N</td>
                                                         <td></td>
                                                         <td>1.0</td>
                                                         <td>-</td>
-                                                        <td></td>
-                                                        <td></td>
                                                         <td class="text-center">
-                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
-                                                                style="background-color: transparent; border:0px">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                    height="24" viewBox="0 0 24 24" fill="none">
-                                                                    <path opacity="0.3"
-                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
-                                                                        fill="black" />
-                                                                    <path
-                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
-                                                                        fill="black" />
-                                                                </svg>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
+                                                                <button class="svg-icon svg-icon-info svg-icon-2hx" 
+                                                                        style="background-color: transparent; border:0px">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                                                        width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <path opacity="0.3" 
+                                                                            d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z" 
+                                                                            fill="black"/>
+                                                                        <path 
+                                                                            d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" 
+                                                                            fill="black"/>
                                                                     </svg>
-                                                                </span>
-                                                            </button>
+                                                                </button>
+                                                                <button style="background-color: transparent; border: 0px">
+                                                                    <span class="svg-icon svg-icon-danger svg-icon-2hx">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                                        <rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="black"></rect><rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="black"></rect></svg></span>
+                                                                </button>
+                                                                <button style="background-color: transparent; border: 0px">
+                                                                    <span class="svg-icon svg-icon-primary svg-icon-2hx">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                                            <path d="M10 8L16 12L10 16V8Z" fill="black"></path>
+                                                                        </svg>
+                                                                     </span>
+                                                                </button>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>
-                                                            <label>
-                                                                <input type="checkbox" id="check1">
-                                                            </label>
-                                                        </td>
                                                         <td>SPIKE-N</td>
                                                         <td></td>
                                                         <td>1.0</td>
                                                         <td>-</td>
-                                                        <td></td>
-                                                        <td></td>
                                                         <td class="text-center">
-                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
-                                                                style="background-color: transparent; border:0px">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                    height="24" viewBox="0 0 24 24" fill="none">
-                                                                    <path opacity="0.3"
-                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
-                                                                        fill="black" />
-                                                                    <path
-                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
-                                                                        fill="black" />
-                                                                </svg>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
+                                                                <button class="svg-icon svg-icon-info svg-icon-2hx" 
+                                                                        style="background-color: transparent; border:0px">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                                                        width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <path opacity="0.3" 
+                                                                            d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z" 
+                                                                            fill="black"/>
+                                                                        <path 
+                                                                            d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" 
+                                                                            fill="black"/>
                                                                     </svg>
-                                                                </span>
-                                                            </button>
+                                                                </button>
+                                                                <button style="background-color: transparent; border: 0px">
+                                                                    <span class="svg-icon svg-icon-danger svg-icon-2hx">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                                        <rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="black"></rect><rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="black"></rect></svg></span>
+                                                                </button>
+                                                                <button style="background-color: transparent; border: 0px">
+                                                                    <span class="svg-icon svg-icon-primary svg-icon-2hx">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                        <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                                            <path d="M10 8L16 12L10 16V8Z" fill="black"></path>
+                                                                        </svg>
+                                                                     </span>
+                                                                </button>
                                                         </td>
                                                     </tr>
                                                     <tr class="table-active">
                                                         <td></td>
                                                         <td></td>
                                                         <td></td>
-                                                        <td></td>
-                                                        <td><b>Total Rolls In Quantity Colour </b></td>
+                                                        <td ><b>Total Rolls In Quantity Colour </b></td>
                                                         <td><b>5</b></td>
                                                         <td><b>1515.2</b></td>
                                                         <td class="text-center"></td>
@@ -638,26 +509,8 @@
     <script src="assets/js/custom/apps/chat/chat.js"></script>
     <script src="assets/js/custom/modals/create-app.js"></script>
     <script src="assets/js/custom/modals/upgrade-plan.js"></script>
-    <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
     <script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
-    <script>
-        function changeColor(card, activeClass, tableId) {
-
-            document.querySelectorAll('.status-card').forEach(function (el) {
-                el.classList.remove('pending-active', 'working-active', 'completed-active');
-            });
-
-
-            document.querySelectorAll('.status-table').forEach(function (table) {
-                table.parentElement.classList.add('d-none');
-            });
-
-            card.classList.add(activeClass);
-
-
-            document.getElementById(tableId).classList.remove('d-none');
-        }
-    </script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 </body>
