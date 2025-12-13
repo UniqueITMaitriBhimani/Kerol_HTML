@@ -19,6 +19,8 @@
     <!--end::Global Stylesheets Bundle-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/dev-style.css" rel="stylesheet" type="text/css" />
+
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -612,13 +614,15 @@
                     <div class="row g-3">
                         <!-- Pending Ticket -->
                         <div class="col">
-                            <div class="status-card pending a-pending"
+                             <a href="production-start.html">
+                            <div class="status-card pending a-pending pending-active"
                                 onclick="changeColor(this, 'pending-active', 'pending-table')">
                                 <h4>
                                     Start Production
                                 </h4>
                                 <h2 class="count">53</h2>
                             </div>
+                            </a>
                         </div>
                         <!-- Working on Tickets -->
                         <div class="col">
@@ -673,18 +677,6 @@
                                                 <option value="green">Green</option>
                                             </select>
 
-                                            <!-- Status Filter -->
-                                            <select style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                ">
-                                                <option value="">Status</option>
-                                                <option value="active">Active</option>
-                                                <option value="pending">Pending</option>
-                                                <option value="completed">Completed</option>
-                                            </select>
 
                                             <!-- Search Bar -->
                                             <input type="text" placeholder="Search..." style="
@@ -710,11 +702,16 @@
                                             <table class="table table-rounded table-row-bordered border gy-7 gs-7">
                                                 <thead>
                                                     <tr class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                        <th>select</th>
+                                                        <th><input type="checkbox"></th>
+                                                        <th>Coil Colour</th>
                                                         <th>Customer ID</th>
                                                         <th>Order No</th>
                                                         <th>Product Name</th>
-                                                        <th>Coil Colour</th>
+                                                        <th>Backing/Brand</th>
+                                                        <th>Length </th>
+                                                        <th>Looping Design</th>
+                                                        <th>Width</th>
+                                                        <th>Qty</th>
                                                         <th>Total Rolls Per 4ft</th>
                                                         <th>Total SQF</th>
                                                         <th class="text-center">Action</th>
@@ -722,46 +719,23 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>
-                                                            <label>
-                                                                <input type="checkbox" id="check1">
-                                                            </label>
-                                                        </td>
-                                                        <td>KT0001</td>
-                                                        <td>ORD-01</td>
-                                                        <td>12 MM SHIELDPRO 1.22X12 MTR</td>
-                                                        <td>RED</td>
-                                                        <td>50</td>
-                                                        <td>15.52</td>
-
-                                                        <td class="text-center">
-                                                            <!-- <button class="svg-icon svg-icon-info svg-icon-2hx"
-                                                                style="background-color: transparent; border:0px">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                    height="24" viewBox="0 0 24 24" fill="none">
-                                                                    <path opacity="0.3"
-                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
-                                                                        fill="black" />
-                                                                    <path
-                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
-                                                                        fill="black" />
-                                                                </svg>
-                                                            </button> -->
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
+                                                            <td><input type="checkbox"></td>
+                                                             <td>
+                                                                <div class="color-box" style="background-color: rgb(94, 157, 194);">
+                                                                </div>
+                                                                <small class="color-name">Blue</small>
+                                                            </td>
+                                                            <td>KT0005</td>
+                                                            <td>ORD-005</td>
+                                                            <td>12 MM SHIELDPRO</td>
+                                                            <td>Kodel- Daimond</td>
+                                                            <td>15 MTR</td>
+                                                            <td>Flat Looping</td>
+                                                            <td>36 inch</td>
+                                                            <td>5</td>
+                                                            <td>2</td>
+                                                            <td>738.185</td>
+                                                            <td><button style="background-color: transparent; border: 0px">
                                                                 <span class="svg-icon svg-icon-primary svg-icon-2hx">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                                         height="24" viewBox="0 0 24 24" fill="none">
@@ -771,49 +745,28 @@
                                                                         </path>
                                                                     </svg>
                                                                 </span>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <label>
-                                                                <input type="checkbox" id="check1">
-                                                            </label>
-                                                        </td>
-                                                        <td>SPIKE-N</td>
-                                                        <td></td>
-                                                        <td>1.0</td>
-                                                        <td>-</td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td class="text-center">
-                                                            <!-- <button class="svg-icon svg-icon-info svg-icon-2hx"
-                                                                style="background-color: transparent; border:0px">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                    height="24" viewBox="0 0 24 24" fill="none">
-                                                                    <path opacity="0.3"
-                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
-                                                                        fill="black" />
-                                                                    <path
-                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
-                                                                        fill="black" />
-                                                                </svg>
-                                                            </button> -->
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
+                                                            </button></td>
+                                                        </tr>
+                                                     <tr>
+                                                            <td><input type="checkbox"></td>
+                                                             <td>
+                                                                <div class="color-box" style="background-color: rgb(94, 157, 194);">
+                                                                </div>
+                                                                <div class="color-box" style="background-color: rgb(212, 128, 17);">
+                                                                </div>
+                                                                <small class="color-name">Blue</small>
+                                                            </td>
+                                                            <td>KT0005</td>
+                                                            <td>ORD-005</td>
+                                                            <td>12 MM SHIELDPRO</td>
+                                                            <td>Kodel- Daimond</td>
+                                                            <td>15 MTR</td>
+                                                            <td>Flat Looping</td>
+                                                            <td>36 inch</td>
+                                                            <td>5</td>
+                                                            <td>2</td>
+                                                            <td>738.185</td>
+                                                            <td><button style="background-color: transparent; border: 0px">
                                                                 <span class="svg-icon svg-icon-primary svg-icon-2hx">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                                         height="24" viewBox="0 0 24 24" fill="none">
@@ -823,17 +776,39 @@
                                                                         </path>
                                                                     </svg>
                                                                 </span>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
+                                                            </button></td>
+                                                        </tr>
+                                                   
                                                     <tr class="table-active">
                                                         <td></td>
                                                         <td></td>
                                                         <td></td>
                                                         <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
                                                         <td><b>Total Rolls In Quantity Colour </b></td>
+                                                        <td>2 Feet</td>
                                                         <td><b>5</b></td>
-                                                        <td><b>1515.2</b></td>
+                                                        <td>4 Feet</td>
+                                                        <td><b>5</b></td>
+                                                        <td class="text-center"></td>
+                                                    </tr>
+                                                     <tr class="table-active">
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>14 inch</td>
+                                                        <td><b>5</b></td>
+                                                        <td>36 inch</td>
+                                                        <td><b>5</b></td>
                                                         <td class="text-center"></td>
                                                     </tr>
                                                 </tbody>
