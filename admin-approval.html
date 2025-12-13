@@ -502,8 +502,27 @@
                     <div class="docs-content d-flex flex-column flex-column-fluid" id="kt_docs_content">
                         <!--begin::Container-->
                         <div class="container" id="kt_docs_content_container">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-3 mb-5">
+                                            <label class="form-label">Select Customer</label>
+                                            <select class="form-select" data-control="select2"
+                                                data-placeholder="Select a Customer">
+                                                <option></option>
+                                                <option value="1">Ramesh bhai</option>
+                                                <option value="2">Mahesh bhai</option>
+                                            </select>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
                             <!--begin::Card-->
-                            <div class="card card-docs mb-2">
+                            <div class="card card-docs mb-2 mt-4">
                                 <!--begin::Card Body-->
                                 <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
                                     <!--begin::Section-->
@@ -527,8 +546,10 @@
                                                         <th>No.</th>
                                                         <th>Order Number</th>
                                                         <th>Customer ID</th>
-                                                        <th>Company Name</th>
+                                                        <!-- <th>Company Name</th> -->
                                                         <th>Stage</th>
+                                                        <th>Last Production Date</th>
+                                                        <th>Total Pending Rolls</th>
                                                         <th>Order Date</th>
                                                         <th>Production Finish Date</th>
                                                         <th>Total Rolls</th>
@@ -539,13 +560,14 @@
                                                     <tr>
                                                         <td>1.</td>
                                                         <td>Mahesh bhai</td>
-                                                        <td>Patel Home Decor</td>
+                                                        <!-- <td>Patel Home Decor</td> -->
                                                         <td>KT002</td>
                                                         <td>ORD-005</td>
                                                         <td>12-02-2025</td>
                                                         <td>12</td>
                                                         <td>
-                                                            <a class="btn" href="orderwise-colorlist.html" style="background-color: transparent; border: 0px">
+                                                            <a class="btn" href="orderwise-colorlist.html"
+                                                                style="background-color: transparent; border: 0px">
                                                                 <span class="svg-icon svg-icon-primary svg-icon-2hx">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                                         height="24" viewBox="0 0 24 24" fill="none">
@@ -555,7 +577,7 @@
                                                                         <circle cx="12" cy="12" r="2" fill="black" />
                                                                     </svg>
                                                                 </span>
-                                                            </button>
+                                                                </button>
                                                         </td>
                                                     </tr>
                                                 </tbody>
