@@ -18,7 +18,7 @@
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -239,88 +239,160 @@
                         <!--end : Header-->
 
                     </div>
-                    
+
                     <!--end::Container-->
                 </div>
                 <!--end::Header-->
                 <!--three section-->
-                <div style="padding:30px; background:#f5f8fa; text-align:center;">
+                <style>
+                    .status-card {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 20px;
+                        border-radius: 8px;
+                        color: #000;
+                        font-weight: bold;
+                        cursor: pointer;
 
-                    <!-- CARD 1 -->
-                    <div style="
-                        display:inline-block;
-                        width:350px;
-                        height:120px;
-                        border-radius:10px;
-                        margin:0 10px;
-                        color:#fff;
-                        font-family:Arial;
-                        position:relative;
-                        padding:20px;
-                        background:#e64444;
-                        box-shadow:0 4px 12px rgba(0,0,0,0.1);
-                    ">
-                        <span style="font-size:20px; font-weight:bold; float:left;">
-                            Start Production 
-                        </span>
-                        
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .status-card .count {
+                        font-size: 2em;
+                    }
+
+                    .status-card.pending {
+                        background-color: #F6A1A1;
+                    }
+
+                    .status-card.working {
+                        background-color: #b3d1ff;
+                    }
+
+                    .status-card.completed {
+                        background-color: #d3f1e4;
+                    }
+
+                    .status-card.pending-active {
+                        background-color: #E44141;
+                        /* Color when pending card is clicked */
+                        color: white;
+                    }
+
+                    .status-card.working-active {
+                        background-color: #007bff;
+                        /* Color when working card is clicked */
+                        color: white;
+                    }
+
+                    .status-card.completed-active {
+                        background-color: #0DA759;
+                        /* Color when completed card is clicked */
+                        color: #ffff;
+                    }
+
+                    .status-card.pending-active h4 {
+                        color: #fff !important;
+                    }
+
+                    .status-card.pending-active h2 {
+                        color: #fff !important;
+                    }
+
+                    .pending-active.a-pending::after {
+                        position: absolute;
+                        content: '';
+                        left: 33%;
+                        bottom: 484px;
+                        border-style: solid;
+                        border-width: 0 20px 20px 20px;
+                        border-color: transparent transparent #E44141 transparent;
+                        transform: rotate(179deg);
+                        transition: 1s;
+                    }
+
+
+                    .status-card.working-active h4 {
+                        color: #fff !important;
+                    }
+
+                    .status-card.working-active h2 {
+                        color: #fff !important;
+                    }
+
+                    .working-active.a-working::after {
+                        position: absolute;
+                        content: '';
+                        left: 58%;
+                        bottom: 484px;
+                        border-style: solid;
+                        border-width: 0 20px 20px 20px;
+                        border-color: transparent transparent #007bff transparent;
+                        transform: rotate(179deg);
+                        transition: 1s;
+                    }
+
+                    .status-card.completed-active h4 {
+                        color: #fff !important;
+                    }
+
+                    .status-card.completed-active h2 {
+                        color: #fff !important;
+                    }
+
+                    .completed-active.a-completed::after {
+                        position: absolute;
+                        content: '';
+                        left: 85%;
+                        bottom: 484px;
+                        border-style: solid;
+                        border-width: 0 20px 20px 20px;
+                        border-color: transparent transparent #0DA759 transparent;
+                        transform: rotate(179deg);
+                        transition: 1s;
+                    }
+                </style>
+                <div class="container-fluid m-5">
+                    <div class="row g-3">
+                        <!-- Pending Ticket -->
+                        <div class="col">
+                            <div class="status-card pending a-pending"
+                                onclick="changeColor(this, 'pending-active', 'pending-table')">
+                                <h4>
+                                    Start Production
+                                </h4>
+                                <h2 class="count">53</h2>
+                            </div>
+                        </div>
+                        <!-- Working on Tickets -->
+                        <div class="col">
+                            <a href="production-in.html">
+                            <div class="status-card working a-working"
+                                onclick="changeColor(this, 'working-active', 'working-table')">
+                                <h4>In Production</h4>
+                                <h2 class="count">43</h2>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- Completed Tickets -->
+                        <div class="col">
+                            <a href="production-finish.html">
+                            <div class="status-card completed a-completed"
+                                onclick="changeColor(this, 'completed-active', 'completed-table')">
+                                <h4>
+                                    Finish Production
+                                </h4>
+                                <h2 class="count">46</h2>
+                            </div>
+                            </a>
+                        </div>
+
                     </div>
-
-                    <!-- CARD 2 -->
-                    <div style="
-                        display:inline-block;
-                        width:350px;
-                        height:120px;
-                        border-radius:10px;
-                        margin:0 10px;
-                        color:#1a1a1a;
-                        font-family:Arial;
-                        position:relative;
-                        padding:20px;
-                        background:#b7d4ff;
-                        box-shadow:0 4px 12px rgba(0,0,0,0.1);
-                    ">
-                        <span style="font-size:20px; font-weight:bold; float:left;">
-                            In Production
-                        </span>
-                    </div>
-
-                    <!-- CARD 3 -->
-                    <div style="
-                        display:inline-block;
-                        width:350px;
-                        height:120px;
-                        border-radius:10px;
-                        margin:0 10px;
-                        color:#1a1a1a;
-                        font-family:Arial;
-                        position:relative;
-                        padding:20px;
-                        background:#d6f5eb;
-                        box-shadow:0 4px 12px rgba(0,0,0,0.1);
-                    ">
-                        <span style="font-size:20px; font-weight:bold; float:left;">
-                            Finish Production
-                        </span>
-                        <!-- Arrow -->
-                        <div style="
-                            width:0;
-                            height:0;
-                            border-left:18px solid transparent;
-                            border-right:18px solid transparent;
-                            border-top:18px solid #d6f5eb;
-                            position:absolute;
-                            left:50%;
-                            bottom:-18px;
-                            transform:translateX(-50%);
-                        "></div>
-                    </div>
-
                 </div>
-
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-column-fluid" id="kt_content">
-                    
+
                     <div class="docs-content d-flex flex-column flex-column-fluid" id="kt_docs_content">
                         <!--begin::Container-->
                         <div class="container" id="kt_docs_content_container">
@@ -330,24 +402,57 @@
                                 <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
                                     <!--begin::Section-->
                                     <div>
-                                        
+                                        <div
+                                            style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+
+                                            <!-- Filter Dropdown -->
+                                            <select style="
+                                                    padding: 8px 12px;
+                                                    border: 1px solid #ccc;
+                                                    border-radius: 6px;
+                                                    font-size: 14px;
+                                                ">
+                                                <option value="">Filter</option>
+                                                <option value="red">Red</option>
+                                                <option value="blue">Blue</option>
+                                                <option value="green">Green</option>
+                                            </select>
+
+                                            <!-- Status Filter -->
+                                            <select style="
+                                                    padding: 8px 12px;
+                                                    border: 1px solid #ccc;
+                                                    border-radius: 6px;
+                                                    font-size: 14px;
+                                                ">
+                                                <option value="">Status</option>
+                                                <option value="active">Active</option>
+                                                <option value="pending">Pending</option>
+                                                <option value="completed">Completed</option>
+                                            </select>
+
+                                            <!-- Search Bar -->
+                                            <input type="text" placeholder="Search..." style="
+                                                    padding: 8px 12px;
+                                                    border: 1px solid #ccc;
+                                                    border-radius: 6px;
+                                                    font-size: 14px;
+                                                    width: 200px;
+                                                ">
+                                        </div>
+
                                         <!--begin::Heading-->
                                         <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Start-Production</h1>
-                                            <input type="text" placeholder="Search..." style="
-                                                width: 250px;
-                                                padding: 8px 12px;
-                                                border: 1px solid #ccc;
-                                                border-radius: 6px;
-                                                font-size: 14px;
-                                            ">
-
+                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Finish Production</h1>
+                                            <!-- <a href="color-add.html" class="btn btn-primary">
+                                                Start Production
+                                            </a> -->
                                         </div>
 
                                         <!--end::Heading-->
                                         <!--begin::Block-->
                                         <div class="my-5">
-                                            <table class="table table-rounded table-row-bordered border gy-7 gs-7">
+                                           <table class="table table-rounded table-row-bordered border gy-7 gs-7">
                                                 <thead>
                                                     <tr class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
                                                         <th>No.</th>
@@ -420,6 +525,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
+                                         
                                         <!--end::Block-->
                                     </div>
                                     <!--end::Section-->
@@ -472,8 +578,26 @@
     <script src="assets/js/custom/apps/chat/chat.js"></script>
     <script src="assets/js/custom/modals/create-app.js"></script>
     <script src="assets/js/custom/modals/upgrade-plan.js"></script>
-		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
     <script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
+    <script>
+        function changeColor(card, activeClass, tableId) {
+
+            document.querySelectorAll('.status-card').forEach(function (el) {
+                el.classList.remove('pending-active', 'working-active', 'completed-active');
+            });
+
+
+            document.querySelectorAll('.status-table').forEach(function (table) {
+                table.parentElement.classList.add('d-none');
+            });
+
+            card.classList.add(activeClass);
+
+
+            document.getElementById(tableId).classList.remove('d-none');
+        }
+    </script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 </body>

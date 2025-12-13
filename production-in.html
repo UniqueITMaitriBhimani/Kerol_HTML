@@ -4,7 +4,7 @@
 
 <head>
     <base href="">
-    <title>In-Production</title>
+    <title>Start-Production</title>
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
@@ -244,82 +244,152 @@
                 </div>
                 <!--end::Header-->
                 <!--three section-->
-                <div style="padding:30px; background:#f5f8fa; text-align:center;">
+                <style>
+                    .status-card {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 20px;
+                        border-radius: 8px;
+                        color: #000;
+                        font-weight: bold;
+                        cursor: pointer;
 
-                    <!-- CARD 1 -->
-                    <div style="
-                        display:inline-block;
-                        width:350px;
-                        height:120px;
-                        border-radius:10px;
-                        margin:0 10px;
-                        color:#fff;
-                        font-family:Arial;
-                        position:relative;
-                        padding:20px;
-                        background:#e64444;
-                        box-shadow:0 4px 12px rgba(0,0,0,0.1);
-                    ">
-                        <span style="font-size:20px; font-weight:bold; float:left;">
-                            Start Production
-                        </span>
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .status-card .count {
+                        font-size: 2em;
+                    }
+
+                    .status-card.pending {
+                        background-color: #F6A1A1;
+                    }
+
+                    .status-card.working {
+                        background-color: #b3d1ff;
+                    }
+
+                    .status-card.completed {
+                        background-color: #d3f1e4;
+                    }
+
+                    .status-card.pending-active {
+                        background-color: #E44141;
+                        /* Color when pending card is clicked */
+                        color: white;
+                    }
+
+                    .status-card.working-active {
+                        background-color: #007bff;
+                        /* Color when working card is clicked */
+                        color: white;
+                    }
+
+                    .status-card.completed-active {
+                        background-color: #0DA759;
+                        /* Color when completed card is clicked */
+                        color: #ffff;
+                    }
+
+                    .status-card.pending-active h4 {
+                        color: #fff !important;
+                    }
+
+                    .status-card.pending-active h2 {
+                        color: #fff !important;
+                    }
+
+                    .pending-active.a-pending::after {
+                        position: absolute;
+                        content: '';
+                        left: 33%;
+                        bottom: 484px;
+                        border-style: solid;
+                        border-width: 0 20px 20px 20px;
+                        border-color: transparent transparent #E44141 transparent;
+                        transform: rotate(179deg);
+                        transition: 1s;
+                    }
+
+
+                    .status-card.working-active h4 {
+                        color: #fff !important;
+                    }
+
+                    .status-card.working-active h2 {
+                        color: #fff !important;
+                    }
+
+                    .working-active.a-working::after {
+                        position: absolute;
+                        content: '';
+                        left: 58%;
+                        bottom: 484px;
+                        border-style: solid;
+                        border-width: 0 20px 20px 20px;
+                        border-color: transparent transparent #007bff transparent;
+                        transform: rotate(179deg);
+                        transition: 1s;
+                    }
+
+                    .status-card.completed-active h4 {
+                        color: #fff !important;
+                    }
+
+                    .status-card.completed-active h2 {
+                        color: #fff !important;
+                    }
+
+                    .completed-active.a-completed::after {
+                        position: absolute;
+                        content: '';
+                        left: 85%;
+                        bottom: 484px;
+                        border-style: solid;
+                        border-width: 0 20px 20px 20px;
+                        border-color: transparent transparent #0DA759 transparent;
+                        transform: rotate(179deg);
+                        transition: 1s;
+                    }
+                </style>
+                <div class="container-fluid m-5">
+                    <div class="row g-3">
+                        <!-- Pending Ticket -->
+                        <div class="col">
+                            <div class="status-card pending a-pending"
+                                onclick="changeColor(this, 'pending-active', 'pending-table')">
+                                <h4>
+                                    Start Production
+                                </h4>
+                                <h2 class="count">53</h2>
+                            </div>
+                        </div>
+                        <!-- Working on Tickets -->
+                        <div class="col">
+                            <a href="production-in.html">
+                                <div class="status-card working a-working"
+                                    onclick="changeColor(this, 'working-active', 'working-table')">
+                                    <h4>In Production</h4>
+                                    <h2 class="count">43</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Completed Tickets -->
+                        <div class="col">
+                            <a href="production-finish.html">
+                                <div class="status-card completed a-completed"
+                                    onclick="changeColor(this, 'completed-active', 'completed-table')">
+                                    <h4>
+                                        Finish Production
+                                    </h4>
+                                    <h2 class="count">46</h2>
+                                </div>
+                            </a>
+                        </div>
 
                     </div>
-
-                    <!-- CARD 2 -->
-                    <div style="
-                        display:inline-block;
-                        width:350px;
-                        height:120px;
-                        border-radius:10px;
-                        margin:0 10px;
-                        color:#1a1a1a;
-                        font-family:Arial;
-                        position:relative;
-                        padding:20px;
-                        background:#b7d4ff;
-                        box-shadow:0 4px 12px rgba(0,0,0,0.1);
-                    ">
-                        <span style="font-size:20px; font-weight:bold; float:left;">
-                            In Production
-                        </span>
-                        <!-- Arrow -->
-                        <div style="
-                            width:0;
-                            height:0;
-                            border-left:18px solid transparent;
-                            border-right:18px solid transparent;
-                            border-top:18px solid #b7d4ff;
-                            position:absolute;
-                            left:50%;
-                            bottom:-18px;
-                            transform:translateX(-50%);
-                        "></div>
-
-                    </div>
-
-                    <!-- CARD 3 -->
-                    <div style="
-                        display:inline-block;
-                        width:350px;
-                        height:120px;
-                        border-radius:10px;
-                        margin:0 10px;
-                        color:#1a1a1a;
-                        font-family:Arial;
-                        position:relative;
-                        padding:20px;
-                        background:#d6f5eb;
-                        box-shadow:0 4px 12px rgba(0,0,0,0.1);
-                    ">
-                        <span style="font-size:20px; font-weight:bold; float:left;">
-                            Finish Production
-                        </span>
-
-                    </div>
-
                 </div>
-
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-column-fluid" id="kt_content">
 
@@ -332,17 +402,51 @@
                                 <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
                                     <!--begin::Section-->
                                     <div>
+                                        <div
+                                            style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+
+                                            <!-- Filter Dropdown -->
+                                            <select style="
+                                                    padding: 8px 12px;
+                                                    border: 1px solid #ccc;
+                                                    border-radius: 6px;
+                                                    font-size: 14px;
+                                                ">
+                                                <option value="">Filter</option>
+                                                <option value="red">Red</option>
+                                                <option value="blue">Blue</option>
+                                                <option value="green">Green</option>
+                                            </select>
+
+                                            <!-- Status Filter -->
+                                            <select style="
+                                                    padding: 8px 12px;
+                                                    border: 1px solid #ccc;
+                                                    border-radius: 6px;
+                                                    font-size: 14px;
+                                                ">
+                                                <option value="">Status</option>
+                                                <option value="active">Active</option>
+                                                <option value="pending">Pending</option>
+                                                <option value="completed">Completed</option>
+                                            </select>
+
+                                            <!-- Search Bar -->
+                                            <input type="text" placeholder="Search..." style="
+                                                    padding: 8px 12px;
+                                                    border: 1px solid #ccc;
+                                                    border-radius: 6px;
+                                                    font-size: 14px;
+                                                    width: 200px;
+                                                ">
+                                        </div>
 
                                         <!--begin::Heading-->
                                         <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">In-Production</h1>
-                                            <input type="text" placeholder="Search..." style="
-                                                width: 250px;
-                                                padding: 8px 12px;
-                                                border: 1px solid #ccc;
-                                                border-radius: 6px;
-                                                font-size: 14px;
-                                            ">
+                                            <h1 class="anchor fw-bolder m-0" id="active-rows">IN Production</h1>
+                                            <!-- <a href="color-add.html" class="btn btn-primary">
+                                                Start Production
+                                            </a> -->
                                         </div>
 
                                         <!--end::Heading-->
@@ -355,7 +459,8 @@
                                                         <th>No.</th>
                                                         <th>Coil Color</th>
                                                         <th>Product Name</th>
-                                                        <th>Client No</th>
+                                                        <th>Customer ID</th>
+                                                        <th>Order No</th>
                                                         <th>Total Rolls Per 4ft</th>
                                                         <th>Total SQF</th>
                                                         <th class="text-center">Action</th>
@@ -363,14 +468,12 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
+                                                        <td style="text-align:center; vertical-align:middle;">1</td>
                                                         <td rowspan="2"
-                                                            style="text-align:center; vertical-align:middle;">1</td>
-                                                        <td rowspan="2"
-                                                            style="text-align:center; vertical-align:middle;">
+                                                            style="text-align:center; vertical-align:middle; background-color: red;">
                                                             <div style="
                                                                     width:60px;
                                                                     height:90px;
-                                                                    background:red;
                                                                     color:white;
                                                                     display:flex;
                                                                     align-items:center;
@@ -381,14 +484,14 @@
                                                                 ">
                                                                 red
                                                             </div>
-
                                                         </td>
-                                                        <td>SPIKE-N</td>
+                                                        <td>12 MM SHIELDPRO 1.22X12 MTR</td>
+                                                        <td></td>
                                                         <td></td>
                                                         <td>1.0</td>
                                                         <td>-</td>
                                                         <td class="text-center">
-                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                            <!-- <button class="svg-icon svg-icon-info svg-icon-2hx"
                                                                 style="background-color: transparent; border:0px">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                                     height="24" viewBox="0 0 24 24" fill="none">
@@ -399,7 +502,7 @@
                                                                         d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
                                                                         fill="black" />
                                                                 </svg>
-                                                            </button>
+                                                            </button> -->
                                                             <button style="background-color: transparent; border: 0px">
                                                                 <span class="svg-icon svg-icon-danger svg-icon-2hx">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -431,12 +534,14 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>SPIKE-N</td>
+                                                        <td>2</td>
+                                                        <td>12 MM SHIELDPRO 1.22X12 MTR</td>
                                                         <td></td>
                                                         <td>1.0</td>
                                                         <td>-</td>
+                                                        <td>-</td>
                                                         <td class="text-center">
-                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                            <!-- <button class="svg-icon svg-icon-info svg-icon-2hx"
                                                                 style="background-color: transparent; border:0px">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                                     height="24" viewBox="0 0 24 24" fill="none">
@@ -447,7 +552,7 @@
                                                                         d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
                                                                         fill="black" />
                                                                 </svg>
-                                                            </button>
+                                                            </button> -->
                                                             <button style="background-color: transparent; border: 0px">
                                                                 <span class="svg-icon svg-icon-danger svg-icon-2hx">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -462,7 +567,9 @@
                                                                             fill="black"></rect>
                                                                     </svg></span>
                                                             </button>
-                                                            <button style="background-color: transparent; border: 0px">
+                                                            <button type="button"
+                                                                style="background-color: transparent; border: 0px"
+                                                                data-bs-toggle="modal" data-bs-target="#lengthModal">
                                                                 <span class="svg-icon svg-icon-primary svg-icon-2hx">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                                         height="24" viewBox="0 0 24 24" fill="none">
@@ -473,9 +580,11 @@
                                                                     </svg>
                                                                 </span>
                                                             </button>
+
                                                         </td>
                                                     </tr>
                                                     <tr class="table-active">
+                                                        <td></td>
                                                         <td></td>
                                                         <td></td>
                                                         <td></td>
@@ -487,6 +596,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
+
                                         <!--end::Block-->
                                     </div>
                                     <!--end::Section-->
@@ -499,42 +609,37 @@
                     </div>
                 </div>
                 <div class="modal fade" id="lengthModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
 
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h5 class="modal-title">Add Length</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h5 class="modal-title">Add Length</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
 
-            <!-- Modal Body -->
-            <div class="modal-body">
-                <div class="mb-3">
-                    <label>Order Length : 15 MTR</label>
-                    <label class="form-label">Length</label>
-                    <input type="number"
-                           class="form-control"
-                           placeholder="Enter length"
-                           id="lengthInput">
+                            <!-- Modal Body -->
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Length</label>
+                                    <input type="number" class="form-control" placeholder="Enter length"
+                                        id="lengthInput">
+                                </div>
+                            </div>
+
+                            <!-- Modal Footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button type="button" class="btn btn-primary" onclick="saveLength()">
+                                    Save
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">
-                    Cancel
-                </button>
-                <button type="button" class="btn btn-primary"
-                        onclick="saveLength()">
-                    Save
-                </button>
-            </div>
-
-        </div>
-    </div>
-</div>
 
                 <!--end::Content-->
                 <!--begin::Footer-->
@@ -579,6 +684,24 @@
     <script src="assets/js/custom/modals/upgrade-plan.js"></script>
     <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
     <script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
+    <script>
+        function changeColor(card, activeClass, tableId) {
+
+            document.querySelectorAll('.status-card').forEach(function (el) {
+                el.classList.remove('pending-active', 'working-active', 'completed-active');
+            });
+
+
+            document.querySelectorAll('.status-table').forEach(function (table) {
+                table.parentElement.classList.add('d-none');
+            });
+
+            card.classList.add(activeClass);
+
+
+            document.getElementById(tableId).classList.remove('d-none');
+        }
+    </script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 </body>
