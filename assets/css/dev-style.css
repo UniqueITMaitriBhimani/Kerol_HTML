@@ -1,0 +1,13 @@
+.color-box {
+    width: 70px;
+    height: 30px;
+    border-radius: 3px;
+    margin: 0 auto 4px;
+    border: 1px solid #ccc;
+}
+
+.color-name {
+    text-align: center;
+    display: block;
+    font-size: 12px;
+}
