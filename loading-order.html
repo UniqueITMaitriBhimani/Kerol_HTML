@@ -4,7 +4,7 @@
 
 <head>
     <base href="">
-    <title>Add-Length</title>
+    <title>Looping Design List</title>
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
@@ -17,13 +17,15 @@
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
 
 <body id="kt_body"
     class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed"
-    style="--kt-toolbar-height:30px;--kt-toolbar-height-tablet-and-mobile:55px">
+    style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
     <!--begin::Main-->
     <!--begin::Root-->
     <div class="d-flex flex-column flex-root">
@@ -241,54 +243,127 @@
                 <!--end::Header-->
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-column-fluid" id="kt_content">
-                    <div class="container" id="kt_docs_content_container">
-                        <div class="card card-docs mb-2">
-                            <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
 
-                                <!-- Title + Button Row -->
-                                <div class="d-flex justify-content-between align-items-center mb-10">
-                                    <h1 class="anchor fw-bolder m-0" id="active-rows">Add Length</h1>
+                    <div class="docs-content d-flex flex-column flex-column-fluid" id="kt_docs_content">
+                        <!--begin::Container-->
+                        <div class="container" id="kt_docs_content_container">
+                            <!--begin::Card-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card card-docs mb-2">
+                                <!--begin::Card Body-->
+                                <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
+                                    <!--begin::Section-->
+                                    <div>
+                                        <!--begin::Heading-->
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h1 class="anchor fw-bolder m-0" id="active-rows"> Loading Rolls</h1>
+                                            <a href="" class="btn btn-primary">
+                                                Save
+                                            </a>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Block-->
+                                        <div class="my-5">
+                                            <table class="table table-rounded table-row-bordered border gy-7 gs-7">
+                                                <thead>
+                                                    <tr
+                                                        class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
+                                                        <th>No.</th>
+                                                        <th>Order Number</th>
+                                                        <th>Coil Color</th>
+                                                        <th>Rolls</th>
+                                                        <th>Width</th>
+                                                        <th>Length</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1.</td>
+                                                        <td>Mahesh bhai</td>
+                                                        <td>Patel Home Decor</td>
+                                                        <td>KT002</td>
+                                                        <td>ORD-005</td>
+                                                        <td>12</td>
+                                                        
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!--end::Block-->
+                                    </div>
+                                    <!--end::Section-->
                                 </div>
+                                <!--end::Card Body-->
+                            </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card card-docs mb-2">
+                                <!--begin::Card Body-->
+                                <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
+                                    <!--begin::Section-->
+                                    <div>
+                                        <!--begin::Heading-->
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Select Colors - D005</h1>
 
-                                <div class="row">
-
-                                    <!-- Thickness Name -->
-                                     <div class="col-6 mb-5">
-                                        <label class="form-label">Length (MTR)</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Enter Length" />
-                                            <span class="input-group-text">MTR</span>
+                                            <!-- <div>
+                                                 <label class="form-label">Select Customer</label>
+                                                    <select class="form-select" data-control="select2"
+                                                        data-placeholder="Select an option">
+                                                        <option></option>
+                                                        <option value="1">Ramesh bhai</option>
+                                                        <option value="2">Mahesh bhai</option>
+                                                    </select>
+                                            </div> -->
                                         </div>
-                                    </div>
-                                     <div class="col-6 mb-5">
-                                        <label class="form-label">Length (FEET)</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Length in Feet" disabled />
-                                            <span class="input-group-text">FEET</span>
+
+                                        <!--end::Heading-->
+                                        <!--begin::Block-->
+                                        <div class="my-5">
+                                            <table class="table table-rounded table-row-bordered border gy-7 gs-7">
+                                                <thead>
+                                                    <tr
+                                                        class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
+                                                        <th> </th>
+                                                        <th>No.</th>
+                                                        <th>Order Number</th>
+                                                        <th>Coil Color</th>
+                                                        <th>Rolls</th>
+                                                        <th>Width</th>
+                                                        <th>Length</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><label>
+                                                                <input type="checkbox" id="check1">
+                                                            </label></td>
+                                                        <td>1.</td>
+                                                        <td></td>
+                                                        <td>Patel Home Decor</td>
+                                                        <td>KT002</td>
+                                                        <td>ORD-005</td>
+                                                        <td>12</td>
+                                                        <td>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
+                                        <!--end::Block-->
                                     </div>
-
-                                    <div class="col-12 mb-5">
-                                        <label class="form-label">Sequence</label>
-                                        <input type="text" class="form-control" placeholder="Enter Sequence" />
-                                    </div>
-
-                                    <!-- Description -->
-                                    <div class="col-12 mb-5">
-                                        <label class="form-label">Description</label>
-                                        <input type="text" class="form-control" placeholder="Enter Description" />
-                                    </div>
-
-                                    <!-- Buttons (Centered) -->
-                                    <div class="col-12 d-flex justify-content-center align-items-center mt-10">
-                                        <a href="#" class="btn btn-bg-success text-inverse-success me-3">Save</a>
-                                        <a href="#" class="btn btn-bg-danger text-inverse-danger">Cancel</a>
-                                    </div>
-
+                                    <!--end::Section-->
+                                </div>
+                                <!--end::Card Body-->
+                            </div>
                                 </div>
                             </div>
+                            
+                            <!--end::Card-->
                         </div>
-
+                        <!--end::Container-->
                     </div>
                 </div>
                 <!--end::Content-->
@@ -332,6 +407,8 @@
     <script src="assets/js/custom/apps/chat/chat.js"></script>
     <script src="assets/js/custom/modals/create-app.js"></script>
     <script src="assets/js/custom/modals/upgrade-plan.js"></script>
+    <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 </body>

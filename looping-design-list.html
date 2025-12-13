@@ -255,11 +255,25 @@
                                     <div>
                                         <!--begin::Heading-->
                                         <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Looping Design List</h1>
+                                            <!-- Left side: Title -->
+                                            <h1 class="anchor fw-bolder m-0" id="active-rows">
+                                                Looping Design List
+                                            </h1>
+                                            <!-- Right side: Search + Button -->
+                                            <div class="d-flex align-items-center gap-3">
+                                                <input type="text" data-kt-docs-table-filter="search"
+                                                    class="form-control form-control-solid w-250px"
+                                                    placeholder="Search" />
 
-                                            <a href="looping-design-add.html" class="btn btn-primary">
-                                                + Add Looping Design
-                                            </a>
+                                                <a href="looping-design-add.html" class="btn btn-primary">
+                                                    <span class="svg-icon svg-icon-2">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.5" x="11.364" y="20.364" width="16" height="2" rx="1" transform="rotate(-90 11.364 20.364)" fill="black" />
+															<rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="black" />
+														</svg>
+													</span> Add Looping Design
+                                                </a>
+                                            </div>
                                         </div>
 
                                         <!--end::Heading-->
@@ -269,7 +283,7 @@
                                                 <thead>
                                                     <tr class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
                                                         <th>No.</th>
-                                                        <th>width</th>
+                                                        <th>Name</th>
                                                         <th>Sequence</th>
                                                         <th>Description</th>
                                                         <th>Action</th>
