@@ -4,7 +4,7 @@
 
 <head>
     <base href="">
-    <title>Start-Production</title>
+    <title>Admin Approval</title>
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
@@ -225,7 +225,6 @@
                                             <!--end::Menu item-->
 
                                         </div>
-
                                         <!--end::Menu-->
                                         <!--end::Menu wrapper-->
                                     </div>
@@ -239,153 +238,9 @@
                         <!--end : Header-->
 
                     </div>
-
                     <!--end::Container-->
                 </div>
                 <!--end::Header-->
-                <!--three section-->
-                <style>
-                    .status-card {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        padding: 20px;
-                        border-radius: 8px;
-                        color: #000;
-                        font-weight: bold;
-                        cursor: pointer;
-
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    }
-
-                    .status-card .count {
-                        font-size: 2em;
-                    }
-
-                    .status-card.pending {
-                        background-color: #F6A1A1;
-                    }
-
-                    .status-card.working {
-                        background-color: #b3d1ff;
-                    }
-
-                    .status-card.completed {
-                        background-color: #d3f1e4;
-                    }
-
-                    .status-card.pending-active {
-                        background-color: #E44141;
-                        /* Color when pending card is clicked */
-                        color: white;
-                    }
-
-                    .status-card.working-active {
-                        background-color: #007bff;
-                        /* Color when working card is clicked */
-                        color: white;
-                    }
-
-                    .status-card.completed-active {
-                        background-color: #0DA759;
-                        /* Color when completed card is clicked */
-                        color: #ffff;
-                    }
-
-                    .status-card.pending-active h4 {
-                        color: #fff !important;
-                    }
-
-                    .status-card.pending-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .pending-active.a-pending::after {
-                        position: absolute;
-                        content: '';
-                        left: 33%;
-                        bottom: 484px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #E44141 transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-
-
-                    .status-card.working-active h4 {
-                        color: #fff !important;
-                    }
-
-                    .status-card.working-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .working-active.a-working::after {
-                        position: absolute;
-                        content: '';
-                        left: 58%;
-                        bottom: 484px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #007bff transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-
-                    .status-card.completed-active h4 {
-                        color: #fff !important;
-                    }
-
-                    .status-card.completed-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .completed-active.a-completed::after {
-                        position: absolute;
-                        content: '';
-                        left: 85%;
-                        bottom: 484px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #0DA759 transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-                </style>
-                <div class="container-fluid m-5">
-                    <div class="row g-3">
-                        <!-- Pending Ticket -->
-                        <div class="col">
-                            <div class="status-card pending a-pending"
-                                onclick="changeColor(this, 'pending-active', 'pending-table')">
-                                <h4>
-                                    Start Production
-                                </h4>
-                                <h2 class="count">53</h2>
-                            </div>
-                        </div>
-                        <!-- Working on Tickets -->
-                        <div class="col">
-                            <div class="status-card working a-working"
-                                onclick="changeColor(this, 'working-active', 'working-table')">
-                                <h4>In Production</h4>
-                                <h2 class="count">43</h2>
-                            </div>
-                        </div>
-                        <!-- Completed Tickets -->
-                        <div class="col">
-                            <div class="status-card completed a-completed"
-                                onclick="changeColor(this, 'completed-active', 'completed-table')">
-                                <h4>
-                                    Finish Production
-                                </h4>
-                                <h2 class="count">46</h2>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-column-fluid" id="kt_content">
 
@@ -398,50 +253,12 @@
                                 <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
                                     <!--begin::Section-->
                                     <div>
-                                        <div
-                                            style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-
-                                            <!-- Filter Dropdown -->
-                                            <select style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                ">
-                                                <option value="">Filter</option>
-                                                <option value="red">Red</option>
-                                                <option value="blue">Blue</option>
-                                                <option value="green">Green</option>
-                                            </select>
-
-                                            <!-- Status Filter -->
-                                            <select style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                ">
-                                                <option value="">Status</option>
-                                                <option value="active">Active</option>
-                                                <option value="pending">Pending</option>
-                                                <option value="completed">Completed</option>
-                                            </select>
-
-                                            <!-- Search Bar -->
-                                            <input type="text" placeholder="Search..." style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                    width: 200px;
-                                                ">
-                                        </div>
-
                                         <!--begin::Heading-->
                                         <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Start-Production</h1>
-                                            <a href="color-add.html" class="btn btn-primary">
-                                                Start Production
+                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Approval Pending List</h1>
+
+                                            <a href="" class="btn btn-primary">
+                                                Approve
                                             </a>
                                         </div>
 
@@ -452,135 +269,40 @@
                                                 <thead>
                                                     <tr
                                                         class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                        <th>select</th>
-                                                        <th>Client ID</th>
-                                                        <th>Order No</th>
+                                                        <th class="w-10px pe-2">
+															<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+																<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_datatable_example_1 .form-check-input" value="1" />
+															</div>
+														</th>
+                                                        <th>No.</th>
+                                                        <th>Order Number</th>
                                                         <th>Product Name</th>
-                                                        <th>Coil Colour</th>
-                                                        <th>Total Rolls Per 4ft</th>
-                                                        <th>Total SQF</th>
-                                                        <th class="text-center">Action</th>
+                                                        <th>Coil Color</th>
+                                                        <th>Derived Length</th>
+                                                        <th>Production Length</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
+                                                        <td><div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+																<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_datatable_example_1 .form-check-input" value="1" />
+															</div></td>
+                                                        <td>1.</td>
+                                                        <td>Mahesh bhai</td>
+                                                        <td>Patel Home Decor</td>
+                                                        <td>KT002</td>
+                                                        <td>ORD-005</td>
+                                                        <td>12-02-2025</td>
                                                         <td>
-                                                            <label>
-                                                                <input type="checkbox" id="check1">
-                                                            </label>
-                                                        </td>
-                                                        <td>SPIKE-N</td>
-                                                        <td></td>
-                                                        <td>1.0</td>
-                                                        <td>-</td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td class="text-center">
-                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
-                                                                style="background-color: transparent; border:0px">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                    height="24" viewBox="0 0 24 24" fill="none">
-                                                                    <path opacity="0.3"
-                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
-                                                                        fill="black" />
-                                                                    <path
-                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
-                                                                        fill="black" />
-                                                                </svg>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
-                                                                    </svg>
-                                                                </span>
+                                                            <a class="btn" href="" style="background-color: transparent; border: 0px">
+                                                               Approve
                                                             </button>
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <label>
-                                                                <input type="checkbox" id="check1">
-                                                            </label>
-                                                        </td>
-                                                        <td>SPIKE-N</td>
-                                                        <td></td>
-                                                        <td>1.0</td>
-                                                        <td>-</td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td class="text-center">
-                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
-                                                                style="background-color: transparent; border:0px">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                    height="24" viewBox="0 0 24 24" fill="none">
-                                                                    <path opacity="0.3"
-                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
-                                                                        fill="black" />
-                                                                    <path
-                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
-                                                                        fill="black" />
-                                                                </svg>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="table-active">
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td><b>Total Rolls In Quantity Colour </b></td>
-                                                        <td><b>5</b></td>
-                                                        <td><b>1515.2</b></td>
-                                                        <td class="text-center"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
-                                         
                                         <!--end::Block-->
                                     </div>
                                     <!--end::Section-->
@@ -635,24 +357,6 @@
     <script src="assets/js/custom/modals/upgrade-plan.js"></script>
     <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
     <script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
-    <script>
-        function changeColor(card, activeClass, tableId) {
-
-            document.querySelectorAll('.status-card').forEach(function (el) {
-                el.classList.remove('pending-active', 'working-active', 'completed-active');
-            });
-
-
-            document.querySelectorAll('.status-table').forEach(function (table) {
-                table.parentElement.classList.add('d-none');
-            });
-
-            card.classList.add(activeClass);
-
-
-            document.getElementById(tableId).classList.remove('d-none');
-        }
-    </script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 </body>
