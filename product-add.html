@@ -4,7 +4,7 @@
 
 <head>
     <base href="">
-    <title>Stock Summary List</title>
+    <title>Add Product</title>
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
@@ -12,21 +12,18 @@
     <!--end::Fonts-->
     <!--begin::Page Vendor Stylesheets(used by this page)-->
     <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/dev-style.css" rel="stylesheet" type="text/css" />
     <!--end::Page Vendor Stylesheets-->
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
 
 <body id="kt_body"
     class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed"
-    style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+    style="--kt-toolbar-height:30px;--kt-toolbar-height-tablet-and-mobile:55px">
     <!--begin::Main-->
     <!--begin::Root-->
     <div class="d-flex flex-column flex-root">
@@ -558,153 +555,114 @@
                 <!--end::Header-->
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-column-fluid" id="kt_content">
+                    <div class="container" id="kt_docs_content_container">
+                        <div class="card card-docs mb-2">
+                            <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
 
-                    <div class="docs-content d-flex flex-column flex-column-fluid" id="kt_docs_content">
-                        <!--begin::Container-->
-                        <div class="container" id="kt_docs_content_container">
-                           
-
-                            <!--begin::Card-->
-                            <div class="card card-docs mb-2">
-                                <!--begin::Card Body-->
-                                <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
-                                    <!--begin::Section-->
-                                    <div>
-
-                                        <!--begin::Heading-->
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Stock In History</h1>
-
-                                            <!-- <a href="customer-add.html" class="btn btn-primary">
-                                                + Add Customer
-                                            </a> -->
-                                        </div>
-
-                                        <!--end::Heading-->
-                                        <!--begin::Block-->
-                                        <div class="my-5">
-                                            <table class="table table-rounded table-row-bordered border gy-7 gs-7">
-                                                <thead>
-                                                    <tr
-                                                        class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200 text-center">
-                                                        <th>No.</th>
-                                                        <th>Customer Name</th>
-                                                        <th>Color</th>
-                                                        <th>InDate</th>
-                                                        <th>Vehicle Number</th>
-                                                        <th>In Order Date</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="text-center">
-                                                        <td>1.</td>
-                                                        <td>Ramesh</td>
-                                                        <td>
-                                                            <div class="color-box"
-                                                                style="background-color: rgb(94, 157, 194);">
-                                                            </div>
-                                                            <small class="color-name">Blue</small>
-                                                        </td>
-                                                        <td>12-03-2025</td>
-                                                        <td>GJ01656</td>
-                                                        <td>13-02-2025</td>
-                                                        
-                                                    </tr>
-                                                    <tr class="table-active text-center">
-                                                        <td>1.</td>
-                                                        <td>Kamesh</td>
-                                                        <td>
-                                                            <div class="color-box"
-                                                                style="background-color: rgb(220, 177, 56);">
-                                                            </div>
-                                                            <small class="color-name">Yellow</small>
-                                                        </td>
-                                                        <td>12-03-2025</td>
-                                                        <td>GJ01656</td>
-                                                        <td>13-02-2025</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!--end::Block-->
-                                    
-                                    </div>
-                                    <!--end::Section-->
+                                <!-- Title + Button Row -->
+                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                    <h1 class="anchor fw-bolder m-0" id="active-rows">Add Product</h1>
                                 </div>
-                                <!--end::Card Body-->
-                            </div>
-                            <!--end::Card-->
-                             <div class="card card-docs mb-2 mt-4">
-                                <!--begin::Card Body-->
-                                <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
-                                    <!--begin::Section-->
-                                    <div>
-
-                                        <!--begin::Heading-->
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Stock Out History</h1>
-
-                                            <!-- <a href="customer-add.html" class="btn btn-primary">
-                                                + Add Customer
-                                            </a> -->
-                                        </div>
-
-                                        <!--end::Heading-->
-                                        <!--begin::Block-->
-                                        <div class="my-5">
-                                            <table class="table table-rounded table-row-bordered border gy-7 gs-7">
-                                                <thead>
-                                                    <tr
-                                                        class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200 text-center">
-                                                        <th>No.</th>
-                                                        <th >Customer Name</th>
-                                                        <th >Color</th>
-                                                        <th>Out Date</th>
-                                                        <th>Vehicle Number</th>
-                                                        <th>Out Order Date</th>
-                                                        
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="text-center">
-                                                        <td>1.</td>
-                                                        <td>Ramesh</td>
-                                                        <td>
-                                                            <div class="color-box"
-                                                                style="background-color: rgb(94, 157, 194);">
-                                                            </div>
-                                                            <small class="color-name">Blue</small>
-                                                        </td>
-                                                        <td>12-03-2025</td>
-                                                        <td>GJ01656</td>
-                                                        <td>13-02-2025</td>
-                                                        
-                                                    </tr>
-                                                    <tr class="table-active text-center">
-                                                        <td>1.</td>
-                                                        <td>Kamesh</td>
-                                                        <td>
-                                                            <div class="color-box"
-                                                                style="background-color: rgb(220, 177, 56);">
-                                                            </div>
-                                                            <small class="color-name">Yellow</small>
-                                                        </td>
-                                                        <td>12-03-2025</td>
-                                                        <td>GJ01656</td>
-                                                        <td>13-02-2025</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!--end::Block-->
-                                    
+                                <div class="row">
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Product Name</label>
+                                        <input type="text" class="form-control"
+                                            placeholder="Enter Product Name" />
                                     </div>
-                                    <!--end::Section-->
+                                    <div class="col-4 mb-5">
+                                        <label class="form-label">Width</label>
+                                        <select class="form-select"
+                                            data-placeholder="Select an option">
+                                            <option>Select Width</option>
+                                            <option value="1">4</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select"
+                                            data-placeholder="Select an option">
+                                            <option>Select Unit</option>
+                                            <option value="1">Feet</option>
+                                            <option value="2">Inch</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Thickness</label>
+                                        <select class="form-select" 
+                                            data-placeholder="Select an option">
+                                            <option>Select Thickness</option>
+                                            <option value="1">10 MM</option>
+                                            <option value="2">18 MM</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 mb-5">
+                                        <label class="form-label">Length</label>
+                                        <select class="form-select"
+                                            data-placeholder="Select an option">
+                                            <option>Select Length</option>
+                                            <option value="1">4</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select"
+                                            data-placeholder="Select an option">
+                                            <option>Select Unit</option>
+                                            <option value="1">MTR</option>
+                                            <option value="2">Feet</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Product Series Name</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option class="text-gray-700">Select Product Series</option>
+                                            <option value="1">Aeromat</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 mb-5">
+                                        <label class="form-label">Conversion Factor SQF</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option class="text-gray-700">Select Conversion Factor</option>
+                                            <option value="1">157.48</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option class="text-gray-700">Select Brand</option>
+                                            <option value="1">SQF</option>
+                                        </select>
+                                    </div>
+                                     <div class="col-6 mb-5">
+                                        <label class="form-label">Product Group</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option class="text-gray-700">Select Product Group</option>
+                                            <option value="1">Finished goods</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Sequence</label>
+                                        <input type="text" class="form-control" placeholder="Enter Sequence" />
+                                    </div>
+
+                                    <!-- Description -->
+                                    <div class="col-12 mb-5">
+                                        <label class="form-label">Description</label>
+                                        <input type="text" class="form-control" placeholder="Enter Description" />
+                                    </div>
+
+                                    <!-- Buttons (Centered) -->
+                                    <div class="col-12 d-flex justify-content-center align-items-center mt-10">
+                                        <a href="#" class="btn btn-bg-success text-inverse-success me-3">Save</a>
+                                        <a href="#" class="btn btn-bg-danger text-inverse-danger">Cancel</a>
+                                    </div>
+
                                 </div>
-                                <!--end::Card Body-->
                             </div>
                         </div>
-                        <!--end::Container-->
+
                     </div>
                 </div>
                 <!--end::Content-->
@@ -748,8 +706,6 @@
     <script src="assets/js/custom/apps/chat/chat.js"></script>
     <script src="assets/js/custom/modals/create-app.js"></script>
     <script src="assets/js/custom/modals/upgrade-plan.js"></script>
-    <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-    <script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 </body>
