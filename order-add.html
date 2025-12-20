@@ -354,13 +354,13 @@
                                 </span>
                                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                                     <div class="menu-item">
-													<a class="menu-link" href="product-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Product</span>
-													</a>
-												</div>
+                                        <a class="menu-link" href="product-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Product</span>
+                                        </a>
+                                    </div>
                                     <div class="menu-item">
                                         <a class="menu-link" href="thickness-list.html">
                                             <span class="menu-bullet">
@@ -564,7 +564,7 @@
                                     <h1 class="anchor fw-bolder m-0" id="active-rows">Add Order</h1>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 mb-5">
+                                    <div class="col-6 mb-5">
                                         <label class="form-label">Select Customer</label>
                                         <select class="form-select" data-control="select2"
                                             data-placeholder="Select an option">
@@ -574,317 +574,363 @@
                                         </select>
                                     </div>
                                     <div class="col-6 mb-5">
-                                        <label class="form-label">Company Name</label>
+                                        <label class="form-label">Order Priority</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Order Priority</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 mb-5">
+                                        <label class="form-label">Customer ID</label>
+                                        <input type="text" class="form-control" placeholder="KT0001" disabled />
+                                    </div>
+                                    <div class="col-3 mb-5">
+                                        <label class="form-label">Customer City</label>
+                                        <input type="text" class="form-control" placeholder="KT0001" disabled />
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Order Date</label>
+                                        <input type="date" class="form-control" />
+                                    </div>
+                                    <div class="col-4 mb-5">
+                                        <label class="form-label">Order Number</label>
+                                        <input type="text" class="form-control" placeholder="ORD-0002" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-docs mb-2">
+                            <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
+                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                    <h1 class="anchor fw-bolder m-0" id="active-rows">Add Product</h1>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Product Name</label>
+                                        <select class="form-select" data-control="select2"
+                                            data-placeholder="Select an option">
+                                            <option></option>
+                                            <option value="1">10 mm Aeromat 1.22 X 12 Mtr</option>
+                                            <option value="2">10 mm Aeromat 1.22 X 12 Mtr</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Thickness</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Order Priority</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Width</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Width</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Unit</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Length</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Length</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Unit</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Color Name</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Color Name</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Color</label>
+                                        <div>
+                                            <span class="badge text-white"
+                                                style="background-color: #FF0000; height: 45px; width: 32px;">
+                                            </span>
+                                            <span class="badge text-white"
+                                                style="background-color: #000000; height: 45px; width: 32px;">
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Color Tone Series</label>
+                                        <input type="text" class="form-control" placeholder="KT 3545" disabled />
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Weight Per Roll </label>
+                                        <input type="text" class="form-control" placeholder="39" disabled />
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Unit</label>
+                                        <input type="text" class="form-control" placeholder="KG" disabled />
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Backing Name</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Backing Name</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Backing Selection</label>
+                                        <input type="text" class="form-control" placeholder="Normal" disabled />
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Backing Brand</label>
+                                        <input type="text" class="form-control" placeholder="Kodel" disabled />
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Backing Color Name</label>
+
+                                        <div class="d-flex align-items-center gap-2">
+                                            <select class="form-select" style="width: 100%;">
+                                                <option>Unit</option>
+                                                <option value="1">Regular Order</option>
+                                                <option value="2">Urgent Order</option>
+                                                <option value="3">Hold Order</option>
+                                            </select>
+
+                                            <span class="badge text-white d-inline-block"
+                                                style="background-color: #FF0000; height: 45px; width: 32px;">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Looping Design</label>
                                         <input type="text" class="form-control" placeholder="Unique IT Solution"
                                             disabled />
                                     </div>
                                     <div class="col-6 mb-5">
-                                        <label class="form-label">Contact Number</label>
-                                        <input type="text" class="form-control" placeholder="9724983687" disabled />
-                                    </div>
-                                    <div class="col-6 mb-5">
-                                        <label class="form-label">Customer ID</label>
-                                        <input type="text" class="form-control" placeholder="KT0001" disabled />
-                                    </div>
-                                    <div class="col-6 mb-5">
-                                        <label class="form-label">GST Number</label>
-                                        <input type="text" class="form-control" placeholder="" disabled />
-                                    </div>
-                                    <div class="col-6 mb-5">
-                                        <label class="form-label">State</label>
-                                        <input type="text" class="form-control" placeholder="Gujarat" disabled />
-                                    </div>
-                                    <div class="col-6 mb-5">
-                                        <label class="form-label">City</label>
-                                        <input type="text" class="form-control" placeholder="Ahemdabad" disabled />
-                                    </div>
-                                    <div class="col-12 mb-5">
-                                        <label class="form-label">Shipping Address</label>
-                                        <input type="text" class="form-control" placeholder="B 615 KP Epitome Makarba"
+                                        <label class="form-label">Packing Specification</label>
+                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
                                             disabled />
                                     </div>
                                     <div class="col-6 mb-5">
-                                        <label class="form-label">Order Number</label>
-                                        <input type="text" class="form-control" placeholder="ORD-0002" disabled />
+                                        <label class="form-label">Order Product Name</label>
+                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                            disabled />
                                     </div>
-                                    <div class="col-6 mb-5">
-                                        <label class="form-label">Order Date</label>
-                                        <input type="date" class="form-control" />
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Double Color</label>
+                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                            disabled />
                                     </div>
-                                    <div class="card" style="border: 2px solid;">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-10">
-                                                <h1 class="anchor fw-bolder m-0" id="active-rows">Add Product</h1>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Coil Color</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Backing Color</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Looping Design</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Thickness</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Brand</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Weight</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Backing Design</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Backing Brand</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Length</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Width</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Bag Packing</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Select Bag Size</label>
-                                                    <select class="form-select" data-control="select2"
-                                                        data-placeholder="Select an option">
-                                                        <option></option>
-                                                        <option value="1">Ramesh bhai</option>
-                                                        <option value="2">Mahesh bhai</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-6 mb-5">
-                                                    <label class="form-label">Product Name</label>
-                                                    <input type="text" class="form-control" placeholder="" disabled />
-                                                </div>
-                                                <div class="col-md-3 mb-5">
-                                                    <label class="form-label">Qty</label>
-                                                    <input type="number" class="form-control" placeholder="" />
-                                                </div>
-                                                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                                    <a href="#"
-                                                        class="btn btn-sm btn-bg-success text-inverse-success me-3">Add</a>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <table class="table table-rounded table-row-bordered border gy-7 gs-7">
-                                                    <thead>
-                                                        <tr
-                                                            class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                            <th>No.</th>
-                                                            <th>Action</th>
-                                                            <th>Product Name</th>
-                                                            <th>Thickness</th>
-                                                            <th>KG</th>
-                                                            <th>Backing Design</th>
-                                                            <th>Backing color</th>
-                                                            <th>Coil Color</th>
-                                                            <th>Looping Design</th>
-                                                            <th>Length</th>
-                                                            <th>Width</th>
-                                                            <th>Qty</th>
-                                                            <th>Total SQF</th>
-
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1.</td>
-                                                            <td>
-                                                                <button
-                                                                    style="background-color: transparent; border: 0px">
-                                                                    <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="24" height="24" viewBox="0 0 24 24"
-                                                                            fill="none">
-                                                                            <rect opacity="0.3" x="2" y="2" width="20"
-                                                                                height="20" rx="10" fill="black"></rect>
-                                                                            <rect x="7" y="15.3137" width="12"
-                                                                                height="2" rx="1"
-                                                                                transform="rotate(-45 7 15.3137)"
-                                                                                fill="black"></rect>
-                                                                            <rect x="8.41422" y="7" width="12"
-                                                                                height="2" rx="1"
-                                                                                transform="rotate(45 8.41422 7)"
-                                                                                fill="black"></rect>
-                                                                        </svg></span>
-                                                                </button>
-                                                            </td>
-                                                            <td>12 MM SHIELDPRO</td>
-                                                            <td>12 MM</td>
-                                                            <td>44</td>
-                                                            <td>SPIKE-N<br><span class="badge badge-danger">Brand</span>
-                                                            </td>
-                                                            <td>1.0</td>
-                                                            <td>
-                                                                <div class="color-box "
-                                                                    style="background-color: rgb(94, 157, 194);">
-                                                                </div>
-                                                                <small class="color-name">Blue</small>
-                                                            </td>
-                                                            <td>FLET LOOPING</td>
-                                                            <td>15 MTR</td>
-                                                            <td>3</td>
-                                                            <td>2</td>
-                                                            <td>314.6</td>
-
-                                                        </tr>
-                                                        <tr class="table-active">
-                                                            <td>1.</td>
-                                                            <td>
-                                                                <button
-                                                                    style="background-color: transparent; border: 0px">
-                                                                    <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="24" height="24" viewBox="0 0 24 24"
-                                                                            fill="none">
-                                                                            <rect opacity="0.3" x="2" y="2" width="20"
-                                                                                height="20" rx="10" fill="black"></rect>
-                                                                            <rect x="7" y="15.3137" width="12"
-                                                                                height="2" rx="1"
-                                                                                transform="rotate(-45 7 15.3137)"
-                                                                                fill="black"></rect>
-                                                                            <rect x="8.41422" y="7" width="12"
-                                                                                height="2" rx="1"
-                                                                                transform="rotate(45 8.41422 7)"
-                                                                                fill="black"></rect>
-                                                                        </svg></span>
-                                                                </button>
-                                                            </td>
-                                                            <td>12 MM SHIELDPRO</td>
-                                                            <td>12 MM</td>
-                                                            <td>44</td>
-                                                            <td>SPIKE-N<br><span class="badge badge-danger">Brand</span>
-                                                            </td>
-
-                                                            <td>1.0</td>
-                                                            <td>
-                                                                <div class="color-box" style="background-color: red;">
-                                                                </div>
-                                                                <small class="color-name">Red</small>
-                                                            </td>
-
-                                                            <td>FLET LOOPING
-                                                                & LINING</td>
-                                                            <td>12 MTR</td>
-                                                            <td>4 </td>
-                                                            <td>5</td>
-                                                            <td>157.40</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Roll QTY</label>
+                                        <input type="text" class="form-control" placeholder="14" />
                                     </div>
-
-                                    <!-- Buttons (Centered) -->
-                                    <div class="col-12 d-flex justify-content-center align-items-center mt-10">
-                                        <a href="#" class="btn btn-bg-success text-inverse-success me-3">Save</a>
-                                        <a href="#" class="btn btn-bg-danger text-inverse-danger">Cancel</a>
+                                    <div class="col-2 d-flex justify-content-center align-items-center">
+                                        <a href="#" class="btn btn-sm btn-bg-success text-inverse-success me-3">Add</a>
                                     </div>
 
                                 </div>
+                                <div class="row">
+                                    <table class="table table-rounded table-row-bordered border gy-7 gs-7">
+                                        <thead>
+                                            <tr class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
+                                                <th>No.</th>
+                                                <th>Action</th>
+                                                <th>Order Product Name</th>
+                                                <th>Coil Color</th>
+                                                <th>Width</th>
+                                                <th>Length</th>
+                                                <th>Backing</th>
+                                                <th>Backing Brand & Color</th>
+                                                <th>Weight Req per roll</th>
+                                                <th>Looping Design </th>
+                                                <th>Roll QTY</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>
+                                                    <button style="background-color: transparent; border: 0px">
+                                                        <span class="svg-icon svg-icon-danger svg-icon-2hx">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                                <rect opacity="0.3" x="2" y="2" width="20" height="20"
+                                                                    rx="10" fill="black"></rect>
+                                                                <rect x="7" y="15.3137" width="12" height="2" rx="1"
+                                                                    transform="rotate(-45 7 15.3137)" fill="black">
+                                                                </rect>
+                                                                <rect x="8.41422" y="7" width="12" height="2" rx="1"
+                                                                    transform="rotate(45 8.41422 7)" fill="black">
+                                                                </rect>
+                                                            </svg></span>
+                                                    </button>
+                                                </td>
+                                                <td>10 mm Aeromat - Red & Black </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="badge text-white"
+                                                            style="background-color: #FF0000; height: 45px; width: 10px;">
+                                                        </span>
+                                                        <span class="badge text-white"
+                                                            style="background-color: #000000; height: 45px; width: 10px;">
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>4 feet</td>
+                                                <td>12 Mtr</td>
+                                                <td>Spike-Normal</td>
+                                                <td><span class="badge" style="background-color:#000000; color:#fff;">
+                                                        Kerol Brand
+                                                    </span>
+                                                </td>
+                                                <td> 39 Kg </td>
+                                                <td>Flet Looping & Mixe</td>
+                                                <td>14</td>
+
+
+                                            </tr>
+                                            <tr class="table-active">
+                                                <td>2.</td>
+                                                <td>
+                                                    <button style="background-color: transparent; border: 0px">
+                                                        <span class="svg-icon svg-icon-danger svg-icon-2hx">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                                <rect opacity="0.3" x="2" y="2" width="20" height="20"
+                                                                    rx="10" fill="black"></rect>
+                                                                <rect x="7" y="15.3137" width="12" height="2" rx="1"
+                                                                    transform="rotate(-45 7 15.3137)" fill="black">
+                                                                </rect>
+                                                                <rect x="8.41422" y="7" width="12" height="2" rx="1"
+                                                                    transform="rotate(45 8.41422 7)" fill="black">
+                                                                </rect>
+                                                            </svg></span>
+                                                    </button>
+                                                </td>
+                                                <td> 10 mm Aeromat - Red & Black </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="badge text-white"
+                                                            style="background-color: #FF0000; height: 45px; width: 10px;">
+                                                        </span>
+                                                        <span class="badge text-white"
+                                                            style="background-color: #000000; height: 45px; width: 10px;">
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>2 feet</td>
+                                                <td>12 Mtr
+                                                </td>
+
+                                                <td>Spike-Normal</td>
+                                                <td>
+                                                    <span class="badge" style="background-color:#000000; color:#fff;">
+                                                        Kerol Brand
+                                                    </span>
+                                                </td>
+
+                                                <td>19.5 Kg </td>
+                                                <td>Flet Looping & Mixe</td>
+                                                <td>40 </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10" class="text-end fw-bold">Roll Quantity In Accordance
+                                                    with Customer Order</td>
+                                                <td>271</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">4 feet Rolls</td>
+                                                <td colspan="1">159</td>
+                                                <td colspan="2"> 2 feet Rolls</td>
+                                                <td colspan="1"> 72</td>
+                                                <td colspan="4" class="text-center">Production Roll Quantity as per “48
+                                                    INCH” Width</td>
+                                                <td colspan="1">195</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">36 Inch Rolls</td>
+                                                <td colspan="1">20</td>
+                                                <td colspan="2">14 Inch Rolls</td>
+                                                <td colspan="1"> 20</td>
+                                                <td colspan="4" class="text-center fw-bold">Production Roll Quantity as
+                                                    per “50 INCH” Width</td>
+                                                <td colspan="1">20</td>
+                                            </tr>
+                                            <tr class="lineRow">
+                                                <td colspan="11"></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10" class="text-end fw-bold">Total Roll Quantity as per
+                                                    Production </td>
+                                                <td>215</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center align-items-center mt-10">
+                                    <a href="#" class="btn btn-bg-success text-inverse-success me-3">Save</a>
+                                    <a href="#" class="btn btn-bg-danger text-inverse-danger">Cancel</a>
+                                </div>
                             </div>
+
                         </div>
+
 
                     </div>
                 </div>
-                <!--end::Content-->
-                <!--begin::Footer-->
-                <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
-                    <!--begin::Container-->
-                    <div
-                        class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
-                        <!--begin::Copyright-->
-                        <div class="text-dark order-2 order-md-1">
-                            <span class="text-muted fw-bold me-1">2021©</span>
-                            <a href="https://keenthemes.com" target="_blank"
-                                class="text-gray-800 text-hover-primary">Keenthemes</a>
-                        </div>
-                        <!--end::Copyright-->
-                        <!--begin::Menu-->
 
-                        <!--end::Menu-->
-                    </div>
-                    <!--end::Container-->
-                </div>
-                <!--end::Footer-->
             </div>
-            <!--end::Wrapper-->
         </div>
-        <!--end::Page-->
+        <!--end::Content-->
+        <!--begin::Footer-->
+        <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+            <!--begin::Container-->
+            <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+                <!--begin::Copyright-->
+                <div class="text-dark order-2 order-md-1">
+                    <span class="text-muted fw-bold me-1">2021©</span>
+                    <a href="https://keenthemes.com" target="_blank"
+                        class="text-gray-800 text-hover-primary">Keenthemes</a>
+                </div>
+                <!--end::Copyright-->
+                <!--begin::Menu-->
+
+                <!--end::Menu-->
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::Footer-->
+    </div>
+    <!--end::Wrapper-->
+    </div>
+    <!--end::Page-->
     </div>
     <!--end::Root-->
     <!--end::Main-->
