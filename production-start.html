@@ -701,171 +701,188 @@
                         <!--begin::Container-->
                         <div class="container" id="kt_docs_content_container">
                             <!--begin::Card-->
-                            <div class="card card-docs mb-2">
-                                <!--begin::Card Body-->
-                                <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
-                                    <!--begin::Section-->
-                                    <div>
-                                        <div
-                                            style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                          <div class="card bg-secondary mb-2">
+                                    <div class="card-body">
+                                        <div class="row align-items-center text-center text-md-start">
 
-                                            <!-- Filter Dropdown -->
-                                            <select style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                ">
-                                                <option value="">Filter</option>
-                                                <option value="red">Red</option>
-                                                <option value="blue">Blue</option>
-                                                <option value="green">Green</option>
-                                            </select>
+                                            <!-- Left Section -->
+                                            <div class="col-md-3 mb-3 mb-md-0">
+                                                <input class="form-control mb-2 " type="text" value="3" disabled>
+                                                <span class="fw-bold fs-3 text-dark d-block mb-1">Single Color</span>
+                                                <label class="form-label mb-1"><small>Color Tone Series</small></label>
+                                                <input class="form-control" type="text" value="KT 3545" disabled>
+                                            </div>
 
+                                            <!-- Color Badge -->
+                                            <div
+                                                class="col-md-2 d-flex flex-column align-items-center justify-content-center mb-3 mb-md-0">
+                                                <span class="fw-semibold mb-2">G-Green</span>
+                                                <span class="badge rounded"
+                                                    style="background-color:#07b42f; width:45px; height:60px;">
+                                                </span>
+                                            </div>
 
-                                            <!-- Search Bar -->
-                                            <input type="text" placeholder="Search..." style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                    width: 200px;
-                                                ">
+                                            <!-- Middle Text -->
+                                            <div
+                                                class="col-md-5 d-flex flex-column align-items-center justify-content-center mb-3 mb-md-0">
+                                                <span class="fs-2hx fw-bold text-dark">10 MM</span>
+                                                <span class="fs-1 fw-bold text-dark">Flat Looping & Mixe</span>
+                                            </div>
+
+                                            <!-- Quantity -->
+                                            <div
+                                                class="col-md-2 d-flex flex-column align-items-center align-items-md-center justify-content-center">
+                                                <span class="fw-bold fs-6 text-dark">Total Rolls Qty</span>
+                                                <span class="fw-bold fs-2hx text-dark text-center">30</span>
+                                            </div>
+
                                         </div>
-
-                                        <!--begin::Heading-->
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Start-Production</h1>
-                                            <a href="color-add.html" class="btn btn-primary">
-                                                Start Production
-                                            </a>
-                                        </div>
-
-                                        <!--end::Heading-->
-                                        <!--begin::Block-->
-                                        <div class="my-5">
-                                            <table class="table table-rounded table-row-bordered border gy-7 gs-7">
-                                                <thead>
-                                                    <tr class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                        <th><input type="checkbox"></th>
-                                                        <th>Coil Colour</th>
-                                                        <th>Customer ID</th>
-                                                        <th>Order No</th>
-                                                        <th>Product Name</th>
-                                                        <th>Backing/Brand</th>
-                                                        <th>Length </th>
-                                                        <th>Looping Design</th>
-                                                        <th>Width</th>
-                                                        <th>Qty</th>
-                                                        <th>Total Rolls Per 4ft</th>
-                                                        <th>Total SQF</th>
-                                                        <th class="text-center">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                            <td><input type="checkbox"></td>
-                                                             <td>
-                                                                <div class="color-box" style="background-color: rgb(94, 157, 194);">
-                                                                </div>
-                                                                <small class="color-name">Blue</small>
-                                                            </td>
-                                                            <td>KT0005</td>
-                                                            <td>ORD-005</td>
-                                                            <td>12 MM SHIELDPRO</td>
-                                                            <td>Kodel- Daimond</td>
-                                                            <td>15 MTR</td>
-                                                            <td>Flat Looping</td>
-                                                            <td>36 inch</td>
-                                                            <td>5</td>
-                                                            <td>2</td>
-                                                            <td>738.185</td>
-                                                            <td><button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
-                                                                    </svg>
-                                                                </span>
-                                                            </button></td>
-                                                        </tr>
-                                                     <tr>
-                                                            <td><input type="checkbox"></td>
-                                                             <td>
-                                                                <div class="color-box" style="background-color: rgb(94, 157, 194);">
-                                                                </div>
-                                                                <div class="color-box" style="background-color: rgb(212, 128, 17);">
-                                                                </div>
-                                                                <small class="color-name">Blue</small>
-                                                            </td>
-                                                            <td>KT0005</td>
-                                                            <td>ORD-005</td>
-                                                            <td>12 MM SHIELDPRO</td>
-                                                            <td>Kodel- Daimond</td>
-                                                            <td>15 MTR</td>
-                                                            <td>Flat Looping</td>
-                                                            <td>36 inch</td>
-                                                            <td>5</td>
-                                                            <td>2</td>
-                                                            <td>738.185</td>
-                                                            <td><button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
-                                                                    </svg>
-                                                                </span>
-                                                            </button></td>
-                                                        </tr>
-                                                   
-                                                    <tr class="table-active">
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td><b>Total Rolls In Quantity Colour </b></td>
-                                                        <td>2 Feet</td>
-                                                        <td><b>5</b></td>
-                                                        <td>4 Feet</td>
-                                                        <td><b>5</b></td>
-                                                        <td class="text-center"></td>
-                                                    </tr>
-                                                     <tr class="table-active">
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td>14 inch</td>
-                                                        <td><b>5</b></td>
-                                                        <td>36 inch</td>
-                                                        <td><b>5</b></td>
-                                                        <td class="text-center"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                         
-                                        <!--end::Block-->
                                     </div>
-                                    <!--end::Section-->
+
                                 </div>
-                                <!--end::Card Body-->
-                            </div>
+                                <div class="card bg-secondary">
+                                    <div class="card-body p-4">
+                                        <div class="row">
+                                            <div class="col-4 fs-5 fw-bold text-center">
+                                                Company Id- KT 1071
+                                            </div>
+                                            <div class="col-5 fs-5 fw-bold text-center">
+                                                Oder Number- OD 25121701
+                                            </div>
+                                            <div class="col-3 fs-5 fw-bold text-center">
+                                                as per “4 Ft” Width
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-5">
+                                    <div class="col-4">
+                                        <div>
+                                            <label class="form-label">Product Name</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="10 mm Aeromat 1.22 X 12 Mtr" disabled />
+                                        </div>
+                                        <div>
+                                            <label class="form-label">Product Name</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="10 mm Aeromat 1.22 X 12 Mtr" disabled />
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label class="form-label text-danger">Backing Name</label>
+                                                <input type="text" class="form-control" placeholder="Diamond"
+                                                    disabled />
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label text-danger">Backing Selection</label>
+                                                <input type="text" class="form-control" placeholder="Normal" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label class="form-label text-danger">Backing Color Name</label>
+                                                <input type="text" class="form-control" placeholder="G-Green"
+                                                    disabled />
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label text-danger">Backing Color View</label>
+                                                <div class="text-white bg-danger w-100 rounded" style=" height: 42px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">Width</label>
+                                                <select class="form-select" data-placeholder="Select an option">
+                                                    <option>Width</option>
+                                                    <option value="1">Regular Order</option>
+                                                    <option value="2">Urgent Order</option>
+                                                    <option value="2">Hold Order</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Length</label>
+                                                <select class="form-select" data-placeholder="Select an option">
+                                                    <option>Length</option>
+                                                    <option value="1">Regular Order</option>
+                                                    <option value="2">Urgent Order</option>
+                                                    <option value="2">Hold Order</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Rolls QRY</label>
+                                                <select class="form-select" data-placeholder="Select an option">
+                                                    <option>Rolls QRY</option>
+                                                    <option value="1">10</option>
+                                                    <option value="2">20</option>
+                                                    <option value="2">30</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">Width</label>
+                                                <select class="form-select" data-placeholder="Select an option">
+                                                    <option>Width</option>
+                                                    <option value="1">Regular Order</option>
+                                                    <option value="2">Urgent Order</option>
+                                                    <option value="2">Hold Order</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Length</label>
+                                                <select class="form-select" data-placeholder="Select an option">
+                                                    <option>Length</option>
+                                                    <option value="1">Regular Order</option>
+                                                    <option value="2">Urgent Order</option>
+                                                    <option value="2">Hold Order</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Rolls QRY</label>
+                                                <select class="form-select" data-placeholder="Select an option">
+                                                    <option>Rolls QRY</option>
+                                                    <option value="1">10</option>
+                                                    <option value="2">20</option>
+                                                    <option value="2">30</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <label class="form-label text-danger">Weight Per Roll</label>
+                                            <input type="text" class="form-control" placeholder="52 KG" disabled />
+                                        </div>
+
+                                        <div class="">
+                                            <label class="form-label text-danger">Backing Brand</label>
+                                            <input type="text" class="form-control" placeholder="Kerol" disabled />
+                                        </div>
+                                    </div>
+                                    <div class="col-3 d-flex flex-column align-items-center justify-content-between">
+                                        <div class="fw-bolder fs-2tx text-gray text-center mb-2">30</div>
+                                        <div class="fs-2tx fw-bold text-center text-white rounded py-3 px-5"
+                                            style="background-color: #3f139d;">Finished</div>
+                                    </div>
+                                </div>
+                                <div class="row text-center mt-7">
+                                    <div class="col-12 col-md-4 d-flex flex-column align-items-center mt-4 mt-md-10">
+                                        <div class="px-9 py-3 badge badge-warning text-dark fs-5 mb-2">Order Req
+                                            QTY</div>
+                                        <div class="fw-bolder fs-2tx text-gray">30</div>
+                                    </div>
+                                    <div class="col-12 col-md-4 d-flex flex-column align-items-center mt-4 mt-md-10">
+                                        <div class="px-9 py-3 badge badge-danger fs-5 text-inverse-danger mb-2">Live
+                                            Production</div>
+                                        <div class="fw-bolder fs-2tx text-gray">30</div>
+                                    </div>
+                                    <div class="col-12 col-md-4 d-flex flex-column align-items-center mt-4 mt-md-10">
+                                        <div class="px-9 py-3 badge badge-primary fs-5 text-inverse-danger mb-2">Pending
+                                            Production</div>
+                                        <div class="fw-bolder fs-2tx text-gray">30</div>
+                                    </div>
+                                </div>
                             <!--end::Card-->
                         </div>
                         <!--end::Container-->

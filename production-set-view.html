@@ -561,7 +561,7 @@
                         <div class="card card-docs mb-2">
                             <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
                                 <div class="d-flex justify-content-between align-items-center mb-10">
-                                    <h1 class="anchor fw-bolder m-0" id="active-rows">Add Product</h1>
+                                    <h1 class="anchor fw-bolder m-0" id="active-rows">Order View</h1>
                                 </div>
                                 <div class="card bg-secondary mb-2">
                                     <div class="card-body">
@@ -602,6 +602,112 @@
                                     </div>
 
                                 </div>
+                                <div class="card bg-secondary">
+                                    <div class="card-body p-4">
+                                        <div class="row">
+                                            <div class="col-4 fs-5 fw-bold text-center">
+                                                Company Id- KT 1071
+                                            </div>
+                                            <div class="col-5 fs-5 fw-bold text-center">
+                                                Oder Number- OD 25121701
+                                            </div>
+                                            <div class="col-3 fs-5 fw-bold text-center">
+                                                as per “4 Ft” Width
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-5">
+                                    <div class="col-4">
+                                        <div>
+                                            <label class="form-label">Product Name</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="10 mm Aeromat 1.22 X 12 Mtr" disabled />
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label class="form-label text-danger">Backing Name</label>
+                                                <input type="text" class="form-control" placeholder="Diamond"
+                                                    disabled />
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label text-danger">Backing Selection</label>
+                                                <input type="text" class="form-control" placeholder="Normal" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label class="form-label text-danger">Backing Color Name</label>
+                                                <input type="text" class="form-control" placeholder="G-Green"
+                                                    disabled />
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label text-danger">Backing Color View</label>
+                                                <div class="text-white bg-danger w-100 rounded" style=" height: 42px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">Width</label>
+                                                <select class="form-select" data-placeholder="Select an option">
+                                                    <option>Width</option>
+                                                    <option value="1">Regular Order</option>
+                                                    <option value="2">Urgent Order</option>
+                                                    <option value="2">Hold Order</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Length</label>
+                                                <select class="form-select" data-placeholder="Select an option">
+                                                    <option>Length</option>
+                                                    <option value="1">Regular Order</option>
+                                                    <option value="2">Urgent Order</option>
+                                                    <option value="2">Hold Order</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Rolls QRY</label>
+                                                <select class="form-select" data-placeholder="Select an option">
+                                                    <option>Rolls QRY</option>
+                                                    <option value="1">10</option>
+                                                    <option value="2">20</option>
+                                                    <option value="2">30</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                       
+
+                                        <div class="">
+                                            <label class="form-label text-danger">Weight Per Roll</label>
+                                            <input type="text" class="form-control" placeholder="52 KG" disabled />
+                                        </div>
+
+                                        <div class="">
+                                            <label class="form-label text-danger">Backing Brand</label>
+                                            <input type="text" class="form-control" placeholder="Kerol" disabled />
+                                        </div>
+                                    </div>
+                                    <div class="col-3 d-flex flex-column align-items-center justify-content-between">
+                                        <div class="fw-bolder fs-2tx text-gray text-center mb-2">30</div>
+                                        <div class="fw-bolder fs-1tx text-gray text-center mb-2">Production Started
+                                        </div>
+                                        <div class="fs-2tx fw-bold text-center text-white rounded py-3 px-5"
+                                            style="background-color: #3f139d;">Icon</div>
+                                    </div>
+                                </div>
+                                <div class="row m-2">
+                                    <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="productionStarted">
+                                            <label class="form-check-label" for="productionStarted">
+                                                We have started the production after completing all the above setups.
+                                            </label>
+                                        </div>
+                                </div>
+                                 
                                 <div class="card bg-secondary">
                                     <div class="card-body p-4">
                                         <div class="row">
@@ -725,25 +831,16 @@
                                     <div class="col-3 d-flex flex-column align-items-center justify-content-between">
                                         <div class="fw-bolder fs-2tx text-gray text-center mb-2">30</div>
                                         <div class="fs-2tx fw-bold text-center text-white rounded py-3 px-5"
-                                            style="background-color: #3f139d;">Finished</div>
+                                            style="background-color: #3f139d;">Icon</div>
                                     </div>
                                 </div>
-                                <div class="row text-center mt-7">
-                                    <div class="col-12 col-md-4 d-flex flex-column align-items-center mt-4 mt-md-10">
-                                        <div class="px-9 py-3 badge badge-warning text-dark fs-5 mb-2">Order Req
-                                            QTY</div>
-                                        <div class="fw-bolder fs-2tx text-gray">30</div>
-                                    </div>
-                                    <div class="col-12 col-md-4 d-flex flex-column align-items-center mt-4 mt-md-10">
-                                        <div class="px-9 py-3 badge badge-danger fs-5 text-inverse-danger mb-2">Live
-                                            Production</div>
-                                        <div class="fw-bolder fs-2tx text-gray">30</div>
-                                    </div>
-                                    <div class="col-12 col-md-4 d-flex flex-column align-items-center mt-4 mt-md-10">
-                                        <div class="px-9 py-3 badge badge-primary fs-5 text-inverse-danger mb-2">Pending
-                                            Production</div>
-                                        <div class="fw-bolder fs-2tx text-gray">30</div>
-                                    </div>
+                                 <div class="row m-2">
+                                    <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="productionStarted" checked>
+                                            <label class="form-check-label" for="productionStarted">
+                                                We have started the production after completing all the above setups.
+                                            </label>
+                                        </div>
                                 </div>
                             </div>
                         </div>
