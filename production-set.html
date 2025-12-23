@@ -354,13 +354,13 @@
                                 </span>
                                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                                     <div class="menu-item">
-													<a class="menu-link" href="product-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Product</span>
-													</a>
-												</div>
+                                        <a class="menu-link" href="product-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Product</span>
+                                        </a>
+                                    </div>
                                     <div class="menu-item">
                                         <a class="menu-link" href="thickness-list.html">
                                             <span class="menu-bullet">
@@ -558,7 +558,7 @@
                 </div>
                 <!--end::Header-->
                 <!--three section-->
-               <style>
+                <style>
                     .status-card {
                         display: flex;
                         align-items: center;
@@ -579,7 +579,8 @@
                     .status-card.pending {
                         background-color: #F6A1A1;
                     }
-                      .status-card.set {
+
+                    .status-card.set {
                         background-color: #b6afaf;
                     }
 
@@ -596,6 +597,7 @@
                         /* Color when pending card is clicked */
                         color: white;
                     }
+
                     .status-card.set-active {
                         background-color: #6f6565;
                         /* Color when pending card is clicked */
@@ -617,11 +619,12 @@
                     .status-card.pending-active h4 {
                         color: #fff !important;
                     }
+
                     .status-card.set-active h4 {
                         color: #fff !important;
                     }
 
-                      .status-card.set-active h2 {
+                    .status-card.set-active h2 {
                         color: #fff !important;
                     }
 
@@ -640,6 +643,7 @@
                         transform: rotate(179deg);
                         transition: 1s;
                     }
+
                     .set-active.a-set::after {
                         position: absolute;
                         content: '';
@@ -664,7 +668,7 @@
                     .working-active.a-working::after {
                         position: absolute;
                         content: '';
-                        left: 69%;
+                        left: 58%;
                         bottom: 484px;
                         border-style: solid;
                         border-width: 0 20px 20px 20px;
@@ -695,9 +699,9 @@
                 </style>
                 <div class="container-fluid m-5">
                     <div class="row g-3">
-                         <div class="col">
+                        <div class="col">
                             <a href="production-set.html">
-                                <div class="status-card set a-set"
+                                <div class="status-card set a-set set-active"
                                     onclick="changeColor(this, 'set-active', 'set-table')">
                                     <h4>
                                         Production Set
@@ -721,7 +725,7 @@
                         <!-- Working on Tickets -->
                         <div class="col">
                             <a href="production-in.html">
-                                <div class="status-card working a-working working-active"
+                                <div class="status-card working a-working"
                                     onclick="changeColor(this, 'working-active', 'working-table')">
                                     <h4>In Production</h4>
                                     <h2 class="count">43</h2>
@@ -782,10 +786,10 @@
 
                                         <!--begin::Heading-->
                                         <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">IN Production</h1>
-                                            <!-- <a href="color-add.html" class="btn btn-primary">
-                                                Start Production
-                                            </a> -->
+                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Production Set</h1>
+                                            <a href="" class="btn btn-success">
+                                                Sequence Set
+                                            </a>
                                         </div>
 
                                         <!--end::Heading-->
@@ -794,112 +798,30 @@
                                             <table class="table table-rounded table-row-bordered border gy-7 gs-7">
                                                 <thead>
                                                     <tr
-                                                        class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                        <th>Coil Color</th>
-                                                        <th>No.</th>
-                                                        <th>Customer ID</th>
-                                                        <th>Order No</th>
-                                                        <th>Product Name</th>
-                                                        <th>Backing/Brand</th>
-                                                        <th>Length </th>
-                                                        <th>Looping Design</th>
-                                                        <th>Width</th>
-                                                        <th>Qty</th>
-                                                        <th>Total Rolls Per 4ft</th>
-                                                        <th>Total SQF</th>
+                                                        class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200 text-center">
+                                                        <th>Sequence</th>
+                                                        <th>Color</th>
+                                                        <th>Thickness & Looping</th>
+                                                        <th>Rolls as per Production</th>
                                                         <th class="text-center">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td rowspan="2"
-                                                            style="text-align:center; vertical-align:middle; background-color: red;">
-                                                            <div style="
-                                                                    width:60px;
-                                                                    height:90px;
-                                                                    color:white;
-                                                                    display:flex;
-                                                                    align-items:center;
-                                                                    justify-content:center;
-                                                                    border-radius:5px;
-                                                                    margin:auto;
-                                                                    font-weight:bold;
-                                                                ">
-                                                                red
-                                                            </div>
+                                                    <tr class="text-center">
+                                                        <td>1 <br><span class="fw-bold">Double Color</span> </td>
+                                                        <td><span>Red & Black</span><br><span class="badge text-white"
+                                                                style="background-color: #FF0000; height: 45px; width: 45px;">
+                                                            </span>
+                                                            <span class="badge text-white"
+                                                                style="background-color: #000000; height: 45px; width: 45px;">
+                                                            </span>
                                                         </td>
-                                                        <td style="text-align:center; vertical-align:middle;">1</td>
-                                                        <td>KT0005</td>
-                                                        <td>ORD-005</td>
-                                                        <td>12 MM SHIELDPRO</td>
-                                                        <td>Kodel- Daimond</td>
-                                                        <td>15 MTR</td>
-                                                        <td>Flat Looping</td>
-                                                        <td>36 inch</td>
-                                                        <td>5</td>
-                                                        <td>2</td>
-                                                        <td>738.185</td>
-                                                        <td class="text-center">
-                                                            <button class="btn btn-icon btn-light-primary me-2"
-                                                                title="Print Label">
-                                                                <span class="svg-icon svg-icon-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <path opacity="0.3" d="M6 8V2H18V8H6Z"
-                                                                            fill="currentColor" />
-                                                                        <path d="M6 14H18V22H6V14Z"
-                                                                            fill="currentColor" />
-                                                                        <path opacity="0.3"
-                                                                            d="M6 10H18C20.2 10 22 11.8 22 14V18C22 19.1 21.1 20 20 20H18V14H6V20H4C2.9 20 2 19.1 2 18V14C2 11.8 3.8 10 6 10Z"
-                                                                            fill="currentColor" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button type="button"
-                                                                style="background-color: transparent; border: 0px"
-                                                                data-bs-toggle="modal" data-bs-target="#lengthModal"
-                                                                title="Print Lebel">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>KT0005</td>
-                                                        <td>ORD-005</td>
-                                                        <td>12 MM SHIELDPRO</td>
-                                                        <td>Kodel- Daimond</td>
-                                                        <td>15 MTR</td>
-                                                        <td>Flat Looping</td>
-                                                        <td>36 inch</td>
-                                                        <td>5</td>
-                                                        <td>2</td>
-                                                        <td>738.185</td>
-                                                        <td class="text-center">
-                                                            <!-- <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                        <td><span class="fw-bolder fs-2">10 MM</span><br><span
+                                                                class="fw-bolder fs-4">Flet Looping & Mixe</span></td>
+                                                        <td><span class="fs-7">as per “4 Ft” Width</span><br><span
+                                                                class="fw-bolder fs-1">40</span></td>
+                                                        <td>
+                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
                                                                 style="background-color: transparent; border:0px">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                                     height="24" viewBox="0 0 24 24" fill="none">
@@ -910,84 +832,188 @@
                                                                         d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
                                                                         fill="black" />
                                                                 </svg>
-                                                            </button> -->
-                                                            <button class="btn btn-icon btn-light-primary me-2"
-                                                                title="Print Label">
-                                                                <span class="svg-icon svg-icon-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <path opacity="0.3" d="M6 8V2H18V8H6Z"
-                                                                            fill="currentColor" />
-                                                                        <path d="M6 14H18V22H6V14Z"
-                                                                            fill="currentColor" />
-                                                                        <path opacity="0.3"
-                                                                            d="M6 10H18C20.2 10 22 11.8 22 14V18C22 19.1 21.1 20 20 20H18V14H6V20H4C2.9 20 2 19.1 2 18V14C2 11.8 3.8 10 6 10Z"
-                                                                            fill="currentColor" />
-                                                                    </svg>
-                                                                </span>
                                                             </button>
-
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button type="button"
-                                                                style="background-color: transparent; border: 0px"
-                                                                data-bs-toggle="modal" data-bs-target="#lengthModal">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-
                                                         </td>
                                                     </tr>
-                                                    <tr class="table-active">
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td><b>Total Rolls In Quantity Colour </b></td>
-                                                        <td>2 Feet</td>
-                                                        <td><b>5</b></td>
-                                                        <td>4 Feet</td>
-                                                        <td><b>5</b></td>
-                                                        <td class="text-center"></td>
+                                                    <tr class="text-center">
+                                                        <td>2 <br><span class="fw-bold">Singal Color</span> </td>
+                                                        <td><span>Red</span><br><span class="badge text-white"
+                                                                style="background-color: #FF0000; height: 45px; width: 45px;">
+                                                            </span>
+
+                                                        </td>
+                                                        <td><span class="fw-bolder fs-2">12 MM</span><br><span
+                                                                class="fw-bolder fs-4">Flet Looping & Mixe</span></td>
+                                                        <td><span class="fs-7">as per “4 Ft” Width</span><br><span
+                                                                class="fw-bolder fs-1">43</span></td>
+                                                        <td>
+                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                                style="background-color: transparent; border:0px">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path opacity="0.3"
+                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
+                                                                        fill="black" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
                                                     </tr>
-                                                    <tr class="table-active">
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td>14 inch</td>
-                                                        <td><b>5</b></td>
-                                                        <td>36 inch</td>
-                                                        <td><b>5</b></td>
-                                                        <td class="text-center"></td>
+                                                    <tr class="text-center">
+                                                        <td rowspan="4">3<br><span class="fw-bold">Singal Color</span>
+                                                        </td>
+                                                        <td><span>G-Green</span><br><span class="badge text-white"
+                                                                style="background-color: #23a527; height: 45px; width: 45px;">
+                                                            </span>
+
+                                                        </td>
+                                                        <td><span class="fw-bolder fs-2">10 MM</span><br><span
+                                                                class="fw-bolder fs-4">Flet Looping & Mixe</span></td>
+                                                        <td><span class="fs-7">as per “4 Ft” Width</span><br><span
+                                                                class="fw-bolder fs-1">30</span></td>
+                                                        <td>
+                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                                style="background-color: transparent; border:0px">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path opacity="0.3"
+                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
+                                                                        fill="black" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td><span>G-Green</span><br><span class="badge text-white"
+                                                                style="background-color: #23a527; height: 45px; width: 45px;">
+                                                            </span>
+
+                                                        </td>
+                                                        <td><span class="fw-bolder fs-2">10 MM</span><br><span
+                                                                class="fw-bolder fs-4">Flet Looping & Mixe</span></td>
+                                                        <td><span class="fs-7 text-danger">as per “50 INCH” Width</span><br><span
+                                                                class="fw-bolder fs-1">20</span></td>
+                                                        <td>
+                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                                style="background-color: transparent; border:0px">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path opacity="0.3"
+                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
+                                                                        fill="black" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td><span>G-Green</span><br><span class="badge text-white"
+                                                                style="background-color: #23a527; height: 45px; width: 45px;">
+                                                            </span>
+
+                                                        </td>
+                                                        <td><span class="fw-bolder fs-2">12 MM</span><br><span
+                                                                class="fw-bolder fs-4">Flet Looping & Mixe</span></td>
+                                                        <td><span class="fs-7">per “4 Ft” Width</span><br><span
+                                                                class="fw-bolder fs-1">20</span></td>
+                                                        <td>
+                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                                style="background-color: transparent; border:0px">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path opacity="0.3"
+                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
+                                                                        fill="black" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td><span>G-Green</span><br><span class="badge text-white"
+                                                                style="background-color: #23a527; height: 45px; width: 45px;">
+                                                            </span>
+
+                                                        </td>
+                                                        <td><span class="fw-bolder fs-2">14 MM</span><br><span
+                                                                class="fw-bolder fs-4">Flet Looping & Mixe</span></td>
+                                                        <td><span class="fs-7">as per “4 Ft” Width</span><br><span
+                                                                class="fw-bolder fs-1">36</span></td>
+                                                        <td>
+                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                                style="background-color: transparent; border:0px">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path opacity="0.3"
+                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
+                                                                        fill="black" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>4 <br><span class="fw-bold">Singal Color</span> </td>
+                                                        <td><span>Blue</span><br><span class="badge text-white"
+                                                                style="background-color: #32008e; height: 45px; width: 45px;">
+                                                            </span>
+
+                                                        </td>
+                                                        <td><span class="fw-bolder fs-2">12 MM</span><br><span
+                                                                class="fw-bolder fs-4">Flet Looping & Mixe</span></td>
+                                                        <td><span class="fs-7">as per “4 Ft” Width</span><br><span
+                                                                class="fw-bolder fs-1">22</span></td>
+                                                        <td>
+                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                                style="background-color: transparent; border:0px">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path opacity="0.3"
+                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
+                                                                        fill="black" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                      <tr class="text-center">
+                                                        <td>5 <br><span class="fw-bold">Singal Color</span> </td>
+                                                        <td><span>grey</span><br><span class="badge text-white"
+                                                                style="background-color: #504d54; height: 45px; width: 45px;">
+                                                            </span>
+
+                                                        </td>
+                                                        <td><span class="fw-bolder fs-2">12 MM</span><br><span
+                                                                class="fw-bolder fs-4">Flet Looping & Mixe</span></td>
+                                                        <td><span class="fs-7">as per “4 Ft” Width</span><br><span
+                                                                class="fw-bolder fs-1">30</span></td>
+                                                        <td>
+                                                            <button class="svg-icon svg-icon-info svg-icon-2hx"
+                                                                style="background-color: transparent; border:0px">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path opacity="0.3"
+                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
+                                                                        fill="black" />
+                                                                </svg>
+                                                            </button>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1084,7 +1110,7 @@
         function changeColor(card, activeClass, tableId) {
 
             document.querySelectorAll('.status-card').forEach(function (el) {
-                el.classList.remove('pending-active', 'working-active', 'completed-active');
+                el.classList.remove('pending-active', 'working-active', 'completed-active', 'set-active');
             });
 
 

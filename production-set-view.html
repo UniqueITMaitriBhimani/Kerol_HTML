@@ -4,7 +4,7 @@
 
 <head>
     <base href="">
-    <title>Start-Production</title>
+    <title>Production-set View</title>
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
@@ -15,17 +15,17 @@
     <!--end::Page Vendor Stylesheets-->
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/dev-style.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
 
 <body id="kt_body"
     class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed"
-    style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+    style="--kt-toolbar-height:30px;--kt-toolbar-height-tablet-and-mobile:55px">
     <!--begin::Main-->
     <!--begin::Root-->
     <div class="d-flex flex-column flex-root">
@@ -354,13 +354,13 @@
                                 </span>
                                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                                     <div class="menu-item">
-													<a class="menu-link" href="product-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Product</span>
-													</a>
-												</div>
+                                        <a class="menu-link" href="product-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Product</span>
+                                        </a>
+                                    </div>
                                     <div class="menu-item">
                                         <a class="menu-link" href="thickness-list.html">
                                             <span class="menu-bullet">
@@ -539,7 +539,6 @@
                                             <!--end::Menu item-->
 
                                         </div>
-
                                         <!--end::Menu-->
                                         <!--end::Menu wrapper-->
                                     </div>
@@ -553,514 +552,397 @@
                         <!--end : Header-->
 
                     </div>
-
                     <!--end::Container-->
                 </div>
                 <!--end::Header-->
-                <!--three section-->
-               <style>
-                    .status-card {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        padding: 20px;
-                        border-radius: 8px;
-                        color: #000;
-                        font-weight: bold;
-                        cursor: pointer;
-
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    }
-
-                    .status-card .count {
-                        font-size: 2em;
-                    }
-
-                    .status-card.pending {
-                        background-color: #F6A1A1;
-                    }
-                      .status-card.set {
-                        background-color: #b6afaf;
-                    }
-
-                    .status-card.working {
-                        background-color: #b3d1ff;
-                    }
-
-                    .status-card.completed {
-                        background-color: #d3f1e4;
-                    }
-
-                    .status-card.pending-active {
-                        background-color: #E44141;
-                        /* Color when pending card is clicked */
-                        color: white;
-                    }
-                    .status-card.set-active {
-                        background-color: #6f6565;
-                        /* Color when pending card is clicked */
-                        color: white;
-                    }
-
-                    .status-card.working-active {
-                        background-color: #007bff;
-                        /* Color when working card is clicked */
-                        color: white;
-                    }
-
-                    .status-card.completed-active {
-                        background-color: #0DA759;
-                        /* Color when completed card is clicked */
-                        color: #ffff;
-                    }
-
-                    .status-card.pending-active h4 {
-                        color: #fff !important;
-                    }
-                    .status-card.set-active h4 {
-                        color: #fff !important;
-                    }
-
-                      .status-card.set-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .status-card.pending-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .pending-active.a-pending::after {
-                        position: absolute;
-                        content: '';
-                        left: 33%;
-                        bottom: 484px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #E44141 transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-                    .set-active.a-set::after {
-                        position: absolute;
-                        content: '';
-                        left: 30%;
-                        bottom: 484px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #6f6565 transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-
-
-                    .status-card.working-active h4 {
-                        color: #fff !important;
-                    }
-
-                    .status-card.working-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .working-active.a-working::after {
-                        position: absolute;
-                        content: '';
-                        left: 69%;
-                        bottom: 484px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #007bff transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-
-                    .status-card.completed-active h4 {
-                        color: #fff !important;
-                    }
-
-                    .status-card.completed-active h2 {
-                        color: #fff !important;
-                    }
-
-                    .completed-active.a-completed::after {
-                        position: absolute;
-                        content: '';
-                        left: 85%;
-                        bottom: 484px;
-                        border-style: solid;
-                        border-width: 0 20px 20px 20px;
-                        border-color: transparent transparent #0DA759 transparent;
-                        transform: rotate(179deg);
-                        transition: 1s;
-                    }
-                </style>
-                <div class="container-fluid m-5">
-                    <div class="row g-3">
-                         <div class="col">
-                            <a href="production-set.html">
-                                <div class="status-card set a-set"
-                                    onclick="changeColor(this, 'set-active', 'set-table')">
-                                    <h4>
-                                        Production Set
-                                    </h4>
-                                    <h2 class="count">53</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Pending Ticket -->
-                        <div class="col">
-                            <a href="production-start.html">
-                                <div class="status-card pending a-pending"
-                                    onclick="changeColor(this, 'pending-active', 'pending-table')">
-                                    <h4>
-                                        Start Production
-                                    </h4>
-                                    <h2 class="count">53</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Working on Tickets -->
-                        <div class="col">
-                            <a href="production-in.html">
-                                <div class="status-card working a-working working-active"
-                                    onclick="changeColor(this, 'working-active', 'working-table')">
-                                    <h4>In Production</h4>
-                                    <h2 class="count">43</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Completed Tickets -->
-                        <div class="col">
-                            <a href="production-finish.html">
-                                <div class="status-card completed a-completed"
-                                    onclick="changeColor(this, 'completed-active', 'completed-table')">
-                                    <h4>
-                                        Finish Production
-                                    </h4>
-                                    <h2 class="count">46</h2>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-column-fluid" id="kt_content">
+                    <div class="container" id="kt_docs_content_container">
+                        <div class="card card-docs mb-2">
+                            <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
+                                <div class="d-flex justify-content-between align-items-center mb-10">
+                                    <h1 class="anchor fw-bolder m-0" id="active-rows">Add Product</h1>
+                                </div>
+                                <div class="card bg-secondary mb-2">
+                                    <div class="card-body">
+                                        <div class="row align-items-center text-center text-md-start">
 
-                    <div class="docs-content d-flex flex-column flex-column-fluid" id="kt_docs_content">
-                        <!--begin::Container-->
-                        <div class="container" id="kt_docs_content_container">
-                            <!--begin::Card-->
-                            <div class="card card-docs mb-2">
-                                <!--begin::Card Body-->
-                                <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
-                                    <!--begin::Section-->
-                                    <div>
-                                        <div
-                                            style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                                            <!-- Left Section -->
+                                            <div class="col-md-3 mb-3 mb-md-0">
+                                                <input class="form-control mb-2" type="text" value="3" disabled>
+                                                <span class="fw-semibold text-dark d-block mb-1">Single Color</span>
+                                                <label class="form-label mb-1">Color Tone Series</label>
+                                                <input class="form-control" type="text" value="KT 3545" disabled>
+                                            </div>
 
-                                            <!-- Filter Dropdown -->
-                                            <select style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                ">
-                                                <option value="">Filter</option>
-                                                <option value="red">Red</option>
-                                                <option value="blue">Blue</option>
-                                                <option value="green">Green</option>
-                                            </select>
-                                            <!-- Search Bar -->
-                                            <input type="text" placeholder="Search..." style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                    width: 200px;
-                                                ">
+                                            <!-- Color Badge -->
+                                            <div
+                                                class="col-md-2 d-flex flex-column align-items-center justify-content-center mb-3 mb-md-0">
+                                                <span class="fw-semibold mb-2">G-Green</span>
+                                                <span class="badge rounded"
+                                                    style="background-color:#07b42f; width:45px; height:60px;">
+                                                </span>
+                                            </div>
+
+                                            <!-- Middle Text -->
+                                            <div
+                                                class="col-md-5 d-flex flex-column align-items-center justify-content-center mb-3 mb-md-0">
+                                                <span class="fs-1 fw-bold text-dark">10 MM</span>
+                                                <span class="fs-4 fw-semibold text-dark">Flat Looping & Mixe</span>
+                                            </div>
+
+                                            <!-- Quantity -->
+                                            <div
+                                                class="col-md-2 d-flex flex-column align-items-center align-items-md-start justify-content-center">
+                                                <span class="fw-bold fs-6 text-dark">Total Rolls Qty</span>
+                                                <span class="fw-bold fs-1 text-dark">30</span>
+                                            </div>
+
                                         </div>
-
-                                        <!--begin::Heading-->
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">IN Production</h1>
-                                            <!-- <a href="color-add.html" class="btn btn-primary">
-                                                Start Production
-                                            </a> -->
-                                        </div>
-
-                                        <!--end::Heading-->
-                                        <!--begin::Block-->
-                                        <div class="my-5">
-                                            <table class="table table-rounded table-row-bordered border gy-7 gs-7">
-                                                <thead>
-                                                    <tr
-                                                        class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                        <th>Coil Color</th>
-                                                        <th>No.</th>
-                                                        <th>Customer ID</th>
-                                                        <th>Order No</th>
-                                                        <th>Product Name</th>
-                                                        <th>Backing/Brand</th>
-                                                        <th>Length </th>
-                                                        <th>Looping Design</th>
-                                                        <th>Width</th>
-                                                        <th>Qty</th>
-                                                        <th>Total Rolls Per 4ft</th>
-                                                        <th>Total SQF</th>
-                                                        <th class="text-center">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td rowspan="2"
-                                                            style="text-align:center; vertical-align:middle; background-color: red;">
-                                                            <div style="
-                                                                    width:60px;
-                                                                    height:90px;
-                                                                    color:white;
-                                                                    display:flex;
-                                                                    align-items:center;
-                                                                    justify-content:center;
-                                                                    border-radius:5px;
-                                                                    margin:auto;
-                                                                    font-weight:bold;
-                                                                ">
-                                                                red
-                                                            </div>
-                                                        </td>
-                                                        <td style="text-align:center; vertical-align:middle;">1</td>
-                                                        <td>KT0005</td>
-                                                        <td>ORD-005</td>
-                                                        <td>12 MM SHIELDPRO</td>
-                                                        <td>Kodel- Daimond</td>
-                                                        <td>15 MTR</td>
-                                                        <td>Flat Looping</td>
-                                                        <td>36 inch</td>
-                                                        <td>5</td>
-                                                        <td>2</td>
-                                                        <td>738.185</td>
-                                                        <td class="text-center">
-                                                            <button class="btn btn-icon btn-light-primary me-2"
-                                                                title="Print Label">
-                                                                <span class="svg-icon svg-icon-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <path opacity="0.3" d="M6 8V2H18V8H6Z"
-                                                                            fill="currentColor" />
-                                                                        <path d="M6 14H18V22H6V14Z"
-                                                                            fill="currentColor" />
-                                                                        <path opacity="0.3"
-                                                                            d="M6 10H18C20.2 10 22 11.8 22 14V18C22 19.1 21.1 20 20 20H18V14H6V20H4C2.9 20 2 19.1 2 18V14C2 11.8 3.8 10 6 10Z"
-                                                                            fill="currentColor" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button type="button"
-                                                                style="background-color: transparent; border: 0px"
-                                                                data-bs-toggle="modal" data-bs-target="#lengthModal"
-                                                                title="Print Lebel">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>KT0005</td>
-                                                        <td>ORD-005</td>
-                                                        <td>12 MM SHIELDPRO</td>
-                                                        <td>Kodel- Daimond</td>
-                                                        <td>15 MTR</td>
-                                                        <td>Flat Looping</td>
-                                                        <td>36 inch</td>
-                                                        <td>5</td>
-                                                        <td>2</td>
-                                                        <td>738.185</td>
-                                                        <td class="text-center">
-                                                            <!-- <button class="svg-icon svg-icon-info svg-icon-2hx"
-                                                                style="background-color: transparent; border:0px">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                    height="24" viewBox="0 0 24 24" fill="none">
-                                                                    <path opacity="0.3"
-                                                                        d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
-                                                                        fill="black" />
-                                                                    <path
-                                                                        d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
-                                                                        fill="black" />
-                                                                </svg>
-                                                            </button> -->
-                                                            <button class="btn btn-icon btn-light-primary me-2"
-                                                                title="Print Label">
-                                                                <span class="svg-icon svg-icon-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <path opacity="0.3" d="M6 8V2H18V8H6Z"
-                                                                            fill="currentColor" />
-                                                                        <path d="M6 14H18V22H6V14Z"
-                                                                            fill="currentColor" />
-                                                                        <path opacity="0.3"
-                                                                            d="M6 10H18C20.2 10 22 11.8 22 14V18C22 19.1 21.1 20 20 20H18V14H6V20H4C2.9 20 2 19.1 2 18V14C2 11.8 3.8 10 6 10Z"
-                                                                            fill="currentColor" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-
-                                                            <button style="background-color: transparent; border: 0px">
-                                                                <span class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <rect x="7" y="15.3137" width="12" height="2"
-                                                                            rx="1" transform="rotate(-45 7 15.3137)"
-                                                                            fill="black"></rect>
-                                                                        <rect x="8.41422" y="7" width="12" height="2"
-                                                                            rx="1" transform="rotate(45 8.41422 7)"
-                                                                            fill="black"></rect>
-                                                                    </svg></span>
-                                                            </button>
-                                                            <button type="button"
-                                                                style="background-color: transparent; border: 0px"
-                                                                data-bs-toggle="modal" data-bs-target="#lengthModal">
-                                                                <span class="svg-icon svg-icon-primary svg-icon-2hx">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <rect opacity="0.3" x="2" y="2" width="20"
-                                                                            height="20" rx="10" fill="black"></rect>
-                                                                        <path d="M10 8L16 12L10 16V8Z" fill="black">
-                                                                        </path>
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="table-active">
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td><b>Total Rolls In Quantity Colour </b></td>
-                                                        <td>2 Feet</td>
-                                                        <td><b>5</b></td>
-                                                        <td>4 Feet</td>
-                                                        <td><b>5</b></td>
-                                                        <td class="text-center"></td>
-                                                    </tr>
-                                                    <tr class="table-active">
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td>14 inch</td>
-                                                        <td><b>5</b></td>
-                                                        <td>36 inch</td>
-                                                        <td><b>5</b></td>
-                                                        <td class="text-center"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                        <!--end::Block-->
                                     </div>
-                                    <!--end::Section-->
+
                                 </div>
-                                <!--end::Card Body-->
-                            </div>
-                            <!--end::Card-->
-                        </div>
-                        <!--end::Container-->
-                    </div>
-                </div>
-                <div class="modal fade" id="lengthModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
+                                <div class="card bg-secondary">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <div class="col-4">
+                                        Company Id- KT 1071
+                                    </div>
+                                    <div class="col-4">
+                                        Oder Number- OD 25121701
+                                    </div>
+                                    <div class="col-4">
+                                        as per “4 Ft” Width 
+                                    </div>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Product Name</label>
+                                        <select class="form-select" data-control="select2"
+                                            data-placeholder="Select an option">
+                                            <option></option>
+                                            <option value="1">10 mm Aeromat 1.22 X 12 Mtr</option>
+                                            <option value="2">10 mm Aeromat 1.22 X 12 Mtr</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Thickness</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Order Priority</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Width</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Width</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Unit</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Length</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Length</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Unit</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Unit</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Color Name</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Color Name</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Color</label>
+                                        <div>
+                                            <span class="badge text-white"
+                                                style="background-color: #FF0000; height: 45px; width: 32px;">
+                                            </span>
+                                            <span class="badge text-white"
+                                                style="background-color: #000000; height: 45px; width: 32px;">
+                                            </span>
+                                        </div>
 
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h5 class="modal-title">Add Length</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Color Tone Series</label>
+                                        <input type="text" class="form-control" placeholder="KT 3545" disabled />
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Weight Per Roll </label>
+                                        <input type="text" class="form-control" placeholder="39" disabled />
+                                    </div>
+                                    <div class="col-1 mb-5">
+                                        <label class="form-label">Unit</label>
+                                        <input type="text" class="form-control" placeholder="KG" disabled />
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Backing Name</label>
+                                        <select class="form-select" data-placeholder="Select an option">
+                                            <option>Backing Name</option>
+                                            <option value="1">Regular Order</option>
+                                            <option value="2">Urgent Order</option>
+                                            <option value="2">Hold Order</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Backing Selection</label>
+                                        <input type="text" class="form-control" placeholder="Normal" disabled />
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Backing Brand</label>
+                                        <input type="text" class="form-control" placeholder="Kodel" disabled />
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Backing Color Name</label>
 
-                            <!-- Modal Body -->
-                            <div class="modal-body">
-                                <div class="mb-3">
-                                    <label class="form-label">Length</label>
-                                    <input type="number" class="form-control" placeholder="Enter length"
-                                        id="lengthInput">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <select class="form-select" style="width: 100%;">
+                                                <option>Unit</option>
+                                                <option value="1">Regular Order</option>
+                                                <option value="2">Urgent Order</option>
+                                                <option value="3">Hold Order</option>
+                                            </select>
+
+                                            <span class="badge text-white d-inline-block"
+                                                style="background-color: #FF0000; height: 45px; width: 32px;">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Looping Design</label>
+                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                            disabled />
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Packing Specification</label>
+                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                            disabled />
+                                    </div>
+                                    <div class="col-6 mb-5">
+                                        <label class="form-label">Order Product Name</label>
+                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                            disabled />
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Double Color</label>
+                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                            disabled />
+                                    </div>
+                                    <div class="col-2 mb-5">
+                                        <label class="form-label">Roll QTY</label>
+                                        <input type="text" class="form-control" placeholder="14" />
+                                    </div>
+                                    <div class="col-2 d-flex justify-content-center align-items-center">
+                                        <a href="#" class="btn btn-sm btn-bg-success text-inverse-success me-3">Add</a>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <table class="table table-rounded table-row-bordered border gy-7 gs-7">
+                                        <thead>
+                                            <tr class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
+                                                <th>No.</th>
+                                                <th>Action</th>
+                                                <th>Order Product Name</th>
+                                                <th>Coil Color</th>
+                                                <th>Width</th>
+                                                <th>Length</th>
+                                                <th>Backing</th>
+                                                <th>Backing Brand & Color</th>
+                                                <th>Weight Req per roll</th>
+                                                <th>Looping Design </th>
+                                                <th>Roll QTY</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>
+                                                    <button style="background-color: transparent; border: 0px">
+                                                        <span class="svg-icon svg-icon-danger svg-icon-2hx">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                                <rect opacity="0.3" x="2" y="2" width="20" height="20"
+                                                                    rx="10" fill="black"></rect>
+                                                                <rect x="7" y="15.3137" width="12" height="2" rx="1"
+                                                                    transform="rotate(-45 7 15.3137)" fill="black">
+                                                                </rect>
+                                                                <rect x="8.41422" y="7" width="12" height="2" rx="1"
+                                                                    transform="rotate(45 8.41422 7)" fill="black">
+                                                                </rect>
+                                                            </svg></span>
+                                                    </button>
+                                                </td>
+                                                <td>10 mm Aeromat - Red & Black </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="badge text-white"
+                                                            style="background-color: #FF0000; height: 45px; width: 10px;">
+                                                        </span>
+                                                        <span class="badge text-white"
+                                                            style="background-color: #000000; height: 45px; width: 10px;">
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>4 feet</td>
+                                                <td>12 Mtr</td>
+                                                <td>Spike-Normal</td>
+                                                <td><span class="badge" style="background-color:#000000; color:#fff;">
+                                                        Kerol Brand
+                                                    </span>
+                                                </td>
+                                                <td> 39 Kg </td>
+                                                <td>Flet Looping & Mixe</td>
+                                                <td>14</td>
+
+
+                                            </tr>
+                                            <tr class="table-active">
+                                                <td>2.</td>
+                                                <td>
+                                                    <button style="background-color: transparent; border: 0px">
+                                                        <span class="svg-icon svg-icon-danger svg-icon-2hx">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                                <rect opacity="0.3" x="2" y="2" width="20" height="20"
+                                                                    rx="10" fill="black"></rect>
+                                                                <rect x="7" y="15.3137" width="12" height="2" rx="1"
+                                                                    transform="rotate(-45 7 15.3137)" fill="black">
+                                                                </rect>
+                                                                <rect x="8.41422" y="7" width="12" height="2" rx="1"
+                                                                    transform="rotate(45 8.41422 7)" fill="black">
+                                                                </rect>
+                                                            </svg></span>
+                                                    </button>
+                                                </td>
+                                                <td> 10 mm Aeromat - Red & Black </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="badge text-white"
+                                                            style="background-color: #FF0000; height: 45px; width: 10px;">
+                                                        </span>
+                                                        <span class="badge text-white"
+                                                            style="background-color: #000000; height: 45px; width: 10px;">
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>2 feet</td>
+                                                <td>12 Mtr
+                                                </td>
+
+                                                <td>Spike-Normal</td>
+                                                <td>
+                                                    <span class="badge" style="background-color:#000000; color:#fff;">
+                                                        Kerol Brand
+                                                    </span>
+                                                </td>
+
+                                                <td>19.5 Kg </td>
+                                                <td>Flet Looping & Mixe</td>
+                                                <td>40 </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10" class="text-end fw-bold">Roll Quantity In Accordance
+                                                    with Customer Order</td>
+                                                <td>271</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">4 feet Rolls</td>
+                                                <td colspan="1">159</td>
+                                                <td colspan="2"> 2 feet Rolls</td>
+                                                <td colspan="1"> 72</td>
+                                                <td colspan="4" class="text-center">Production Roll Quantity as per “48
+                                                    INCH” Width</td>
+                                                <td colspan="1">195</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">36 Inch Rolls</td>
+                                                <td colspan="1">20</td>
+                                                <td colspan="2">14 Inch Rolls</td>
+                                                <td colspan="1"> 20</td>
+                                                <td colspan="4" class="text-center fw-bold">Production Roll Quantity as
+                                                    per “50 INCH” Width</td>
+                                                <td colspan="1">20</td>
+                                            </tr>
+                                            <tr class="lineRow">
+                                                <td colspan="11"></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10" class="text-end fw-bold">Total Roll Quantity as per
+                                                    Production </td>
+                                                <td>215</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center align-items-center mt-10">
+                                    <a href="#" class="btn btn-bg-success text-inverse-success me-3">Save</a>
+                                    <a href="#" class="btn btn-bg-danger text-inverse-danger">Cancel</a>
                                 </div>
                             </div>
 
-                            <!-- Modal Footer -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                    Cancel
-                                </button>
-                                <button type="button" class="btn btn-primary" onclick="saveLength()">
-                                    Save
-                                </button>
-                            </div>
-
                         </div>
+
+
                     </div>
                 </div>
 
-                <!--end::Content-->
-                <!--begin::Footer-->
-                <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
-                    <!--begin::Container-->
-                    <div
-                        class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
-                        <!--begin::Copyright-->
-                        <div class="text-dark order-2 order-md-1">
-                            <span class="text-muted fw-bold me-1">2021©</span>
-                            <a href="https://keenthemes.com" target="_blank"
-                                class="text-gray-800 text-hover-primary">Keenthemes</a>
-                        </div>
-                        <!--end::Copyright-->
-                        <!--begin::Menu-->
-
-                        <!--end::Menu-->
-                    </div>
-                    <!--end::Container-->
-                </div>
-                <!--end::Footer-->
             </div>
-            <!--end::Wrapper-->
         </div>
-        <!--end::Page-->
+        <!--end::Content-->
+        <!--begin::Footer-->
+        <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+            <!--begin::Container-->
+            <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+                <!--begin::Copyright-->
+                <div class="text-dark order-2 order-md-1">
+                    <span class="text-muted fw-bold me-1">2021©</span>
+                    <a href="https://keenthemes.com" target="_blank"
+                        class="text-gray-800 text-hover-primary">Keenthemes</a>
+                </div>
+                <!--end::Copyright-->
+                <!--begin::Menu-->
+
+                <!--end::Menu-->
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::Footer-->
+    </div>
+    <!--end::Wrapper-->
+    </div>
+    <!--end::Page-->
     </div>
     <!--end::Root-->
     <!--end::Main-->
@@ -1068,6 +950,7 @@
     <!--begin::Javascript-->
     <!--begin::Global Javascript Bundle(used by all pages)-->
     <script src="assets/plugins/global/plugins.bundle.js"></script>
+
     <script src="assets/js/scripts.bundle.js"></script>
     <!--end::Global Javascript Bundle-->
     <!--begin::Page Vendors Javascript(used by this page)-->
@@ -1078,26 +961,7 @@
     <script src="assets/js/custom/apps/chat/chat.js"></script>
     <script src="assets/js/custom/modals/create-app.js"></script>
     <script src="assets/js/custom/modals/upgrade-plan.js"></script>
-    <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-    <script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
-    <script>
-        function changeColor(card, activeClass, tableId) {
-
-            document.querySelectorAll('.status-card').forEach(function (el) {
-                el.classList.remove('pending-active', 'working-active', 'completed-active');
-            });
-
-
-            document.querySelectorAll('.status-table').forEach(function (table) {
-                table.parentElement.classList.add('d-none');
-            });
-
-            card.classList.add(activeClass);
-
-
-            document.getElementById(tableId).classList.remove('d-none');
-        }
-    </script>
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 </body>

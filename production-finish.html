@@ -508,7 +508,7 @@
                 </div>
                 <!--end::Header-->
                 <!--three section-->
-                <style>
+                 <style>
                     .status-card {
                         display: flex;
                         align-items: center;
@@ -529,6 +529,9 @@
                     .status-card.pending {
                         background-color: #F6A1A1;
                     }
+                      .status-card.set {
+                        background-color: #b6afaf;
+                    }
 
                     .status-card.working {
                         background-color: #b3d1ff;
@@ -540,6 +543,11 @@
 
                     .status-card.pending-active {
                         background-color: #E44141;
+                        /* Color when pending card is clicked */
+                        color: white;
+                    }
+                    .status-card.set-active {
+                        background-color: #6f6565;
                         /* Color when pending card is clicked */
                         color: white;
                     }
@@ -559,6 +567,13 @@
                     .status-card.pending-active h4 {
                         color: #fff !important;
                     }
+                    .status-card.set-active h4 {
+                        color: #fff !important;
+                    }
+
+                      .status-card.set-active h2 {
+                        color: #fff !important;
+                    }
 
                     .status-card.pending-active h2 {
                         color: #fff !important;
@@ -572,6 +587,17 @@
                         border-style: solid;
                         border-width: 0 20px 20px 20px;
                         border-color: transparent transparent #E44141 transparent;
+                        transform: rotate(179deg);
+                        transition: 1s;
+                    }
+                    .set-active.a-set::after {
+                        position: absolute;
+                        content: '';
+                        left: 30%;
+                        bottom: 484px;
+                        border-style: solid;
+                        border-width: 0 20px 20px 20px;
+                        border-color: transparent transparent #6f6565 transparent;
                         transform: rotate(179deg);
                         transition: 1s;
                     }
@@ -619,6 +645,17 @@
                 </style>
                 <div class="container-fluid m-5">
                     <div class="row g-3">
+                         <div class="col">
+                            <a href="production-set.html">
+                                <div class="status-card set a-set"
+                                    onclick="changeColor(this, 'set-active', 'set-table')">
+                                    <h4>
+                                        Production Set
+                                    </h4>
+                                    <h2 class="count">53</h2>
+                                </div>
+                            </a>
+                        </div>
                         <!-- Pending Ticket -->
                         <div class="col">
                             <a href="production-start.html">
