@@ -4,7 +4,7 @@
 
 <head>
 	<base href="">
-	<title>Dispatch List</title>
+	<title>Looping Design List</title>
 	<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
 	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
 	<!--begin::Fonts-->
@@ -19,6 +19,7 @@
 	<!--end::Global Stylesheets Bundle-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/dev-style.css" rel="stylesheet" type="text/css" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -354,13 +355,13 @@
 								</span>
 								<div class="menu-sub menu-sub-accordion menu-active-bg">
 									<div class="menu-item">
-													<a class="menu-link" href="product-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Product</span>
-													</a>
-												</div>
+										<a class="menu-link" href="product-list.html">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Product</span>
+										</a>
+									</div>
 									<div class="menu-item">
 										<a class="menu-link" href="thickness-list.html">
 											<span class="menu-bullet">
@@ -561,141 +562,77 @@
 					<div class="docs-content d-flex flex-column flex-column-fluid" id="kt_docs_content">
 						<!--begin::Container-->
 						<div class="container" id="kt_docs_content_container">
-							<!--begin::Card-->
 							<div class="card card-docs mb-2">
-								<!--begin::Card Body-->
-								<div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
-									<!--begin::Section-->
-									<div>
-										<!--begin::Heading-->
-										<div class="d-flex justify-content-between align-items-center mb-3">
-											<h1 class="anchor fw-bolder m-0" id="active-rows">Dispatch List</h1>
+								<div class="card-body fs-6 py-15 px-10 py-lg-10 px-lg-15 text-gray-700">
+									<div class="d-flex justify-content-between align-items-center mb-3">
+										<!-- Title on the left -->
+										<h1 class="anchor fw-bolder m-0" id="active-rows">Create Dispatch List</h1>
 
-											<!-- <a href="dispatch-schedule-add.html" class="btn btn-primary">
-                                                + Create Dispatch Schedule
-                                            </a> -->
+										<!-- Two dropdowns on the right -->
+										<div class="d-flex align-items-center gap-2">
+											<label class="form-label mb-1">Date :- </label>
+											<div class="col-auto">
+
+												<select class="form-select" data-control="select2"
+													data-placeholder="Select an option">
+													<option></option>
+													<option value="1">22/12/2025</option>
+													<option value="2">23/12/2025</option>
+												</select>
+											</div>
+											<div class="col-auto">
+												<select class="form-select" data-control="select2"
+													data-placeholder="Select an option">
+													<option></option>
+													<option value="1">22/12/2025</option>
+													<option value="2">23/12/2025</option>
+												</select>
+											</div>
 										</div>
-
-										<!--end::Heading-->
-										<!--begin::Block-->
-										<div class="my-5">
-											<table class="table table-rounded table-row-bordered border gy-7 gs-7">
-												<thead>
-													<tr
-														class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-														<th>No.</th>
-														<th>Order Number</th>
-														<th>Order Date</th>
-														<th>Customer Id</th>
-														<th>Total Rolls Qty</th>
-														<th>Total SQFT Qty</th>
-														<th>Loading Date</th>
-														<th>Loading Time</th>
-														<th class="text-center">Action</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1.</td>
-														<td>ORD-005</td>
-														<td>12-12-2025</td>
-														<td>KT0001</td>
-														<td>25</td>
-														<td>25</td>
-														<td>25-12-2025</td>
-														<td>5 : 25 PM</td>
-														<td class="text-end">
-    <div class="dropdown">
-        <!-- Three dot button -->
-        <button class="btn btn-icon btn-light btn-sm"
-                data-kt-menu-trigger="click"
-                data-kt-menu-placement="bottom-end">
-            <span class="svg-icon svg-icon-2">
-                <!-- 3 Dots Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                     viewBox="0 0 24 24" fill="none">
-                    <path d="M12 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-                          fill="currentColor"/>
-                    <path d="M12 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-                          fill="currentColor"/>
-                    <path d="M12 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-                          fill="currentColor"/>
-                </svg>
-            </span>
-        </button>
-
-        <!-- Dropdown menu -->
-        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
-             data-kt-menu="true">
-
-            <!-- Download -->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3">
-                    <span class="menu-icon">
-                        <i class="ki-duotone ki-download fs-5"></i>
-                    </span>
-                    Download
-                </a>
-            </div>
-
-            <!-- Print -->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3">
-                    <span class="menu-icon">
-                        <i class="ki-duotone ki-printer fs-5"></i>
-                    </span>
-                    Print
-                </a>
-            </div>
-
-            <!-- Edit -->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3">
-                    <span class="menu-icon">
-                        <i class="ki-duotone ki-pencil fs-5"></i>
-                    </span>
-                    Edit
-                </a>
-            </div>
-
-            <!-- Load Stock -->
-            <div class="menu-item px-3">
-                <a href="loading-order.html" class="menu-link px-3">
-                    <span class="menu-icon">
-                        <i class="ki-duotone ki-plus-square fs-5"></i>
-                    </span>
-                    Load Stock
-                </a>
-            </div>
-
-            <div class="separator my-2"></div>
-
-            <!-- Delete -->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3 text-danger">
-                    <span class="menu-icon">
-                        <i class="ki-duotone ki-trash fs-5 text-danger"></i>
-                    </span>
-                    Delete
-                </a>
-            </div>
-
-        </div>
-    </div>
-</td>
-
-													</tr>
-
-												</tbody>
-											</table>
-										</div>
-										<!--end::Block-->
 									</div>
-									<!--end::Section-->
 								</div>
-								<!--end::Card Body-->
+
 							</div>
-							<!--end::Card-->
+							<div class="card border-0 shadow-sm">
+								<div class="card-body p-0">
+									<div class="table-responsive">
+										<table class="table table-hover align-middle mb-0">
+											<thead class="table-light">
+												<tr>
+													<th class="px-2 py-4 fw-bolder">No</th>
+													<th class="px-2 py-4 fw-bolder">Loading Date</th>
+													<th class="px-2 py-4 fw-bolder">Loading Time</th>
+													<th class="px-2 py-4 fw-bolder">Company Name</th>
+													<th class="px-2 py-4 fw-bolder">City</th>
+													<th class="px-2 py-4 fw-bolder">Loading Roll Qty</th>
+													<th class="px-2 py-4 fw-bolder">Action</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td class="px-2 py-4">01</td>
+													<td class="px-2 py-4">22/12/2025</td>
+													<td class="px-2 py-4">2:38 PM</td>
+													<td class="px-2 py-4">Abc Trading Company</td>
+													<td class="px-2 py-4">Morbi</td>
+													<td class="px-2 py-4">270</td>
+													<td class="px-2 py-4">
+														<button class="btn btn-primary"
+															data-bs-toggle="modal" data-bs-target="#LoadingDetails">
+															<i class="bi bi-folder2-open fs-5"></i>
+														</button>
+														<button class="btn btn-success">
+															<i class="bi bi-printer fs-5"></i>
+														</button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+								</div>
+							</div>
 						</div>
 						<!--end::Container-->
 					</div>
@@ -727,6 +664,139 @@
 	</div>
 	<!--end::Root-->
 	<!--end::Main-->
+
+
+	<!-- Print Modal -->
+<div class="modal fade" id="LoadingDetails" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xxl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- HEADER -->
+      <div class="modal-header p-0">
+        <div class="w-100 bg-secondary text-white p-3 d-flex justify-content-between align-items-center">
+          <div>
+            <h5 class="mb-1 fw-bold">Loading List</h5>
+            <small>Company ID: <b>KT 1105</b></small>
+          </div>
+
+          <div class="text-end small">
+            <div>Loading Date : <b>22/12/2025</b></div>
+            <div>Vehicle No. : <b>GJ03XX000</b></div>
+            <div>Driver No. : <b>99999 99999</b></div>
+          </div>
+
+          <div class="fw-bold fs-4">KEROL</div>
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="modal-body bg-light">
+
+        <!-- LOADING TABLE -->
+        <div class="table-responsive">
+          <table class="table table-bordered text-center align-middle small">
+            <thead class="table-light">
+              <tr>
+                <th>No</th>
+                <th>Thickness</th>
+                <th>Width</th>
+                <th>Length</th>
+                <th>Color</th>
+                <th>Backing</th>
+                <th>Roll Qty</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>01</td><td>10 mm</td><td>4 feet</td><td>12 Mtr</td>
+                <td>Red</td><td>Spike-Black</td><td>15</td>
+              </tr>
+              <tr>
+                <td>02</td><td>10 mm</td><td>4 feet</td><td>12 Mtr</td>
+                <td>Green</td><td>Diamond-Green</td><td>10</td>
+              </tr>
+              <tr>
+                <td>03</td><td>10 mm</td><td>4 feet</td><td>12 Mtr</td>
+                <td>Blue</td><td>Diamond-Blue</td><td>12</td>
+              </tr>
+              <tr>
+                <td>04</td><td>10 mm</td><td>4 feet</td><td>12 Mtr</td>
+                <td>Black</td><td>Diamond-Black</td><td>20</td>
+              </tr>
+
+              <tr class="fw-bold text-success">
+                <td colspan="6" class="text-end">Rolls Qty :</td>
+                <td>57</td>
+              </tr>
+
+              <!-- repeat blocks like image -->
+              <tr>
+                <td>01</td><td>10 mm</td><td>2 feet</td><td>12 Mtr</td>
+                <td>Blue</td><td>Diamond-Blue</td><td>20</td>
+              </tr>
+              <tr>
+                <td>02</td><td>10 mm</td><td>2 feet</td><td>12 Mtr</td>
+                <td>Black</td><td>Diamond-Black</td><td>40</td>
+              </tr>
+
+              <tr class="fw-bold text-success">
+                <td colspan="6" class="text-end">Rolls Qty :</td>
+                <td>60</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SUMMARY TABLE -->
+        <div class="table-responsive mt-4">
+          <table class="table table-bordered text-center small">
+            <thead class="table-light">
+              <tr>
+                <th>No.</th>
+                <th>Thickness</th>
+                <th>4 feet</th>
+                <th>2 feet</th>
+                <th>36 inch</th>
+                <th>14 inch</th>
+                <th>Total SQF</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td><td>10 mm</td><td>57</td><td>60</td><td>40</td><td>39</td><td><b>14780.76</b></td>
+              </tr>
+              <tr>
+                <td>02</td><td>12 mm</td><td>25</td><td>71</td><td>0</td><td>0</td><td><b>9527.54</b></td>
+              </tr>
+
+              <tr class="fw-bold">
+                <td colspan="2">Total</td>
+                <td>82</td><td>131</td><td>40</td><td>39</td>
+                <td>24308.3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- TOTAL ROLL -->
+        <div class="fw-bold text-danger mt-2">
+          Total Roll Quantity : <span class="fs-5">292</span>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="modal-footer">
+        <button class="btn btn-success">PDF</button>
+        <button class="btn btn-danger">Print</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 	<script>var hostUrl = "assets/";</script>
 	<!--begin::Javascript-->
 	<!--begin::Global Javascript Bundle(used by all pages)-->

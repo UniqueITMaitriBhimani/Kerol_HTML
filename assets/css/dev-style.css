@@ -11,3 +11,6 @@
     display: block;
     font-size: 12px;
 }
+.bg-danger{
+    color: #FF0000 !important;
+}

@@ -355,13 +355,13 @@
                                 </span>
                                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                                     <div class="menu-item">
-													<a class="menu-link" href="product-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Product</span>
-													</a>
-												</div>
+                                        <a class="menu-link" href="product-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Product</span>
+                                        </a>
+                                    </div>
                                     <div class="menu-item">
                                         <a class="menu-link" href="thickness-list.html">
                                             <span class="menu-bullet">
@@ -565,217 +565,609 @@
                             <div class="card card-docs mb-2">
                                 <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h1 class="anchor fw-bolder m-0" id="active-rows"> Vehical Details</h1>
-                                        <a href="" class="btn btn-primary">
-                                            Save
-                                        </a>
+                                        <h1 class="anchor fw-bolder m-0" id="active-rows"> Create Dispatch</h1>
                                     </div>
                                     <div class="row">
                                         <div class="col-4 mb-5">
-                                            <label class="form-label">Vehical Number</label>
-                                            <input type="text" class="form-control" placeholder="">
-                                        </div>
-                                        <div class="col-4 mb-5">
-                                            <label class="form-label">Loading Time</label>
-                                            <input type="text" class="form-control" placeholder="">
-                                        </div>
-                                        <div class="col-4 mb-5">
-                                            <label class="form-label">Loading Date</label>
-                                            <input type="text" class="form-control" placeholder="">
-                                        </div>
-                                        <div class="col-4 mb-5">
-                                            <label class="form-label">Select Customer</label>
+                                            <label class="form-label">Company Name</label>
                                             <select class="form-select" data-control="select2"
                                                 data-placeholder="Select an option">
                                                 <option></option>
-                                                <option value="1">Ramesh bhai</option>
-                                                <option value="2">Mahesh bhai</option>
+                                                <option value="1">Abc Trading Company-Morbi</option>
+                                                <option value="2">Abc Trading Company-Morbi</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2 mb-5">
+                                            <label class="form-label">Customer Id</label>
+                                            <input type="text" class="form-control" placeholder="" value="KT 1071"
+                                                disabled>
+                                        </div>
+                                        <div class="col-2 mb-5">
+                                            <label class="form-label">Customer City</label>
+                                            <input type="text" class="form-control" placeholder="" value="Morbi"
+                                                disabled>
+                                        </div>
+                                        <div class="col-2 mb-5">
+                                            <label class="form-label">Loading Date</label>
+                                            <select class="form-select" data-control="select2"
+                                                data-placeholder="Select an option">
+                                                <option></option>
+                                                <option value="1">22/12/2025</option>
+                                                <option value="2">22/12/2025</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2 mb-5">
+                                            <label class="form-label">Loading Time</label>
+                                            <select class="form-select" data-control="select2"
+                                                data-placeholder="Select an option">
+                                                <option></option>
+                                                <option value="1">12:30 PM</option>
+                                                <option value="2">12:30 PM</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4 mb-5">
+                                            <label class="form-label">Product Name</label>
+                                            <select class="form-select" data-control="select2"
+                                                data-placeholder="Select an option">
+                                                <option></option>
+                                                <option value="1">All</option>
+                                                <option value="2">All</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2 mb-5">
+                                            <label class="form-label">Thickness</label>
+                                            <input type="text" class="form-control" placeholder="" value="All">
+                                        </div>
+                                        <div class="col-2 mb-5">
+                                            <label class="form-label">Length</label>
+                                            <input type="text" class="form-control" placeholder="" value="All">
+                                        </div>
+                                        <div class="col-2 mb-5">
+                                            <label class="form-label">Width</label>
+                                            <select class="form-select" data-control="select2"
+                                                data-placeholder="Select an option">
+                                                <option></option>
+                                                <option value="1">All</option>
+                                                <option value="2">All</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2 mb-5">
+                                            <label class="form-label">Order Number</label>
+                                            <select class="form-select" data-control="select2"
+                                                data-placeholder="Select an option">
+                                                <option></option>
+                                                <option value="1">All</option>
+                                                <option value="2">All</option>
                                             </select>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="px-2 py-4 fw-bolder text-start align-start">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <label class="form-check-label small mb-1" for="selectAll">
+                                                                Select All
+                                                            </label>
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+
+                                                    </th>
+                                                    <th class="px-2 py-4 fw-bolder">Company ID</th>
+                                                    <th class="px-2 py-4 fw-bolder">Order Product Name</th>
+                                                    <th class="px-2 py-4 fw-bolder">Coil Color</th>
+                                                    <th class="px-2 py-4 fw-bolder">Width</th>
+                                                    <th class="px-2 py-4 fw-bolder">Length</th>
+                                                    <th class="px-2 py-4 fw-bolder">Backing</th>
+                                                    <th class="px-2 py-4 fw-bolder">Backing Brand & Color</th>
+                                                    <th class="px-2 py-4 fw-bolder">Roll QTY</th>
+                                                    <th class="px-2 py-4 fw-bolder">Dispatch Rolls Qty</th>
+                                                    <th class="px-2 py-4 fw-bolder">Approval</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">10 mm Aeromat - Red & Black</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 me-1 bg-danger">&nbsp;</span>
+                                                        <span class="badge rounded-2 bg-dark">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">4 feet</td>
+                                                    <td class="px-2 py-4">12 Mtr</td>
+                                                    <td class="px-2 py-4">Spike-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-dark">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">14</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4"><button class="btn btn-primary"
+                                                            data-bs-toggle="modal" data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="table-secondary">
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">10 mm Aeromat - Red & Black</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 me-1 bg-danger">&nbsp;</span>
+                                                        <span class="badge rounded-2 bg-dark">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">2 feet</td>
+                                                    <td class="px-2 py-4">12 Mtr</td>
+                                                    <td class="px-2 py-4">Spike-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-dark">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">40</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">10 mm ShieldPro - G-Green</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">4 feet</td>
+                                                    <td class="px-2 py-4">15 Mtr</td>
+                                                    <td class="px-2 py-4">Diamond-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-dark">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">10</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">12 mm ShieldPro - G-Green</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">4 feet</td>
+                                                    <td class="px-2 py-4">15 Mtr</td>
+                                                    <td class="px-2 py-4">Diamond-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-success">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">20</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">14 mm EvoDeck - G-Green</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">4 feet</td>
+                                                    <td class="px-2 py-4">12 Mtr</td>
+                                                    <td class="px-2 py-4">Diamond-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-success">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">20</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">14 mm EvoDeck - G-Green</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">2 feet</td>
+                                                    <td class="px-2 py-4">12 Mtr</td>
+                                                    <td class="px-2 py-4">Diamond-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-success">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">32</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">10 mm Aeromat - G-Green</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">36 feet</td>
+                                                    <td class="px-2 py-4">12 Mtr</td>
+                                                    <td class="px-2 py-4">Diamond-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-success">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">20</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">10 mm Aeromat - G-Green</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">14 feet</td>
+                                                    <td class="px-2 py-4">12 Mtr</td>
+                                                    <td class="px-2 py-4">Diamond-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-success">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">20</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">12 mm ShieldPro - Grey</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 bg-secondary">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">4 feet</td>
+                                                    <td class="px-2 py-4">12 Mtr</td>
+                                                    <td class="px-2 py-4">Diamond-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-secondary text-dark">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">30</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">12 mm ShieldPro - Red</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 bg-danger">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">4 feet</td>
+                                                    <td class="px-2 py-4">12 Mtr</td>
+                                                    <td class="px-2 py-4">Diamond-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-danger "
+                                                            style="color: white !important;">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">43</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-2 py-4 fw-bolder text-center align-middle">
+                                                        <div
+                                                            class="form-check d-flex flex-column align-items-start justify-content-center">
+                                                            <input class="form-check-input m-0" type="checkbox"
+                                                                id="selectAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-2 py-4">KT 1071</td>
+                                                    <td class="px-2 py-4">12 mm ShieldPro - Red</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge rounded-2 bg-primary">&nbsp;</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">4 feet</td>
+                                                    <td class="px-2 py-4">12 Mtr</td>
+                                                    <td class="px-2 py-4">Diamond-Normal</td>
+                                                    <td class="px-2 py-4">
+                                                        <span class="badge bg-primary">Kerol Brand</span>
+                                                    </td>
+                                                    <td class="px-2 py-4">22</td>
+                                                    <td class="px-2 py-4">
+                                                        <input type="text" value="14"
+                                                            class="form-control form-control-sm text-center"
+                                                            style="max-width: 60px;">
+                                                    </td>
+                                                    <td class="px-2 py-4">
+                                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#productInformation">
+                                                            <i class="bi bi-folder2-open fs-5"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
 
                                 </div>
                             </div>
-                            <!--begin::Card-->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="card card-docs mb-2">
-                                        <!--begin::Card Body-->
-                                        <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
-                                            <!--begin::Section-->
-                                            <div>
-                                                <!--begin::Heading-->
-                                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                                    <h1 class="anchor fw-bolder m-0" id="active-rows"> Dispatch Colors
-                                                    </h1>
-
-                                                </div>
-                                                <!--end::Heading-->
-                                                <!--begin::Block-->
-                                                <div class="my-5">
-                                                    <table
-                                                        class="table table-rounded table-row-bordered border gy-7 gs-7">
-                                                        <thead>
-                                                            <tr
-                                                                class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                                <th>No.</th>
-                                                                <th>Coil Colour</th>
-                                                        <th>Customer ID</th>
-                                                        <th>Order No</th>
-                                                        <th>Product Name</th>
-                                                        <th>Backing/Brand</th>
-                                                        <th>Length </th>
-                                                        <th>Looping Design</th>
-                                                        <th>Width</th>
-                                                        <th>Qty</th>
-                                                        <th>Total Rolls Per 4ft</th>
-                                                        <th>Total SQF</th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>1.</td>
-                                                               <td>
-                                                                <div class="color-box" style="background-color: rgb(94, 157, 194);">
-                                                                </div>
-                                                                <small class="color-name">Blue</small>
-                                                            </td>
-                                                            <td>KT0005</td>
-                                                            <td>ORD-005</td>
-                                                            <td>12 MM SHIELDPRO</td>
-                                                            <td>Kodel- Daimond</td>
-                                                            <td>15 MTR</td>
-                                                            <td>Flat Looping</td>
-                                                            <td>36 inch</td>
-                                                            <td>5</td>
-                                                            <td>2</td>
-                                                            <td>738.185</td>
-                                                                <td><button
-                                                                        style="background-color: transparent; border: 0px">
-                                                                        <span
-                                                                            class="svg-icon svg-icon-danger svg-icon-2hx">
-                                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                width="24" height="24"
-                                                                                viewBox="0 0 24 24" fill="none">
-                                                                                <rect opacity="0.3" x="2" y="2"
-                                                                                    width="20" height="20" rx="10"
-                                                                                    fill="black"></rect>
-                                                                                <rect x="7" y="15.3137" width="12"
-                                                                                    height="2" rx="1"
-                                                                                    transform="rotate(-45 7 15.3137)"
-                                                                                    fill="black"></rect>
-                                                                                <rect x="8.41422" y="7" width="12"
-                                                                                    height="2" rx="1"
-                                                                                    transform="rotate(45 8.41422 7)"
-                                                                                    fill="black"></rect>
-                                                                            </svg></span>
-                                                                    </button></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <!--end::Block-->
-                                            </div>
-                                            <!--end::Section-->
-                                        </div>
-                                        <!--end::Card Body-->
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="card card-docs mb-2">
-                                        <!--begin::Card Body-->
-                                        <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
-                                            <!--begin::Section-->
-                                            <div>
-                                                <!--begin::Heading-->
-                                                <div class="d-flex align-items-end justify-content-between mb-3">
-
-                                                    <!-- Left -->
-                                                    <h1 class="anchor fw-bolder m-0" id="active-rows">Select Colors</h1>
-
-                                                    <!-- Right -->
-                                                    <div class="d-flex align-items-end gap-4">
-
-                                                        <div>
-                                                            <label class="form-label">Select Customer</label>
-                                                            <select class="form-select" data-control="select2"
-                                                                data-placeholder="Select an option">
-                                                                <option></option>
-                                                                <option value="1">Ramesh bhai</option>
-                                                                <option value="2">Mahesh bhai</option>
-                                                            </select>
-                                                        </div>
-
-                                                        <div>
-                                                            <label class="form-label">Select Order</label>
-                                                            <select class="form-select" data-control="select2"
-                                                                data-placeholder="Select an option">
-                                                                <option></option>
-                                                                <option value="1">ORD-001</option>
-                                                                <option value="2">ORD-002</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <!--end::Heading-->
-                                                <!--begin::Block-->
-                                                <div class="my-5">
-                                                    <table
-                                                        class="table table-rounded table-row-bordered border gy-7 gs-7">
-                                                        <thead>
-                                                            <tr
-                                                                class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                                <th>No.</th>
-                                                                <th>Coil Colour</th>
-                                                        <th>Customer ID</th>
-                                                        <th>Order No</th>
-                                                        <th>Product Name</th>
-                                                        <th>Backing/Brand</th>
-                                                        <th>Length </th>
-                                                        <th>Looping Design</th>
-                                                        <th>Width</th>
-                                                        <th>Qty</th>
-                                                        <th>Total Rolls Per 4ft</th>
-                                                        <th>Total SQF</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td><input type="checkbox"></td>
-                                                             <td>
-                                                                <div class="color-box" style="background-color: rgb(94, 157, 194);">
-                                                                </div>
-                                                                <small class="color-name">Blue</small>
-                                                            </td>
-                                                            <td>KT0005</td>
-                                                            <td>ORD-005</td>
-                                                            <td>12 MM SHIELDPRO</td>
-                                                            <td>Kodel- Daimond</td>
-                                                            <td>15 MTR</td>
-                                                            <td>Flat Looping</td>
-                                                            <td>36 inch</td>
-                                                            <td>5</td>
-                                                            <td>2</td>
-                                                            <td>738.185</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <!--end::Block-->
-                                            </div>
-                                            <!--end::Section-->
-                                        </div>
-                                        <!--end::Card Body-->
-                                    </div>
-                                </div>
-
-
+                            <div class="table-responsive py-5 my-5">
+                                <table class="table table-bordered align-middle text-center small">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="8" class="text-end fw-bolder fs-4">Totall Roll Quantity In
+                                                Stock</td>
+                                            <td class="fw-bolder fs-4 text-start">271</td>
+                                            <td class="fw-bolder fs-4 text-start">54</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
+                            <div class="row d-flex">
+                                <!-- Stock Calculation -->
+                                <div class="col-lg-6 mb-4 d-flex">
+                                    <div class="table-container shadow-sm w-100 d-flex flex-column">
+                                        <div class="text-danger p-3">Stock Calculation</div>
+                                        <div class="table-responsive flex-fill"
+                                            style="max-height: 300px; overflow-y: auto;">
+                                            <table class="table table-hover align-middle mb-0">
+                                                <thead class="bg-secondary fw-bolder">
+                                                    <tr>
+                                                        <th class="p-3">Rolls Width</th>
+                                                        <th class="p-3">Rolls Qty</th>
+                                                        <th class="p-3">Total Sqf</th>
+                                                        <th class="p-3">Total Kg</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="px-3 py-2 fw-bolder text-gray-700">4 Feet</td>
+                                                        <td class="px-3 py-2"><input type="text" value="159"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="25039.32"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="6837"
+                                                                class="form-control form-control-sm"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-3 py-2 fw-bolder text-gray-700">2 Feet</td>
+                                                        <td class="px-3 py-2"><input type="text" value="72"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="5669.28"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="1548"
+                                                                class="form-control form-control-sm"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-3 py-2 fw-bolder text-gray-700">36 Inch</td>
+                                                        <td class="px-3 py-2"><input type="text" value="20"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="2362.2"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="777.6"
+                                                                class="form-control form-control-sm"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-3 py-2 fw-bolder text-gray-700">14 Inch</td>
+                                                        <td class="px-3 py-2"><input type="text" value="20"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="930"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="302.4"
+                                                                class="form-control form-control-sm"></td>
+                                                    </tr>
+                                                    <!-- Add other rows -->
+                                                </tbody>
+                                                <tfoot class="fw-bold border-top border-dark bg-light">
+                                                    <tr>
+                                                        <td class="px-3 py-2 fw-bolder text-gray-700">Total</td>
+                                                        <td class="px-3 py-2">271</td>
+                                                        <td class="px-3 py-2">34000.8</td>
+                                                        <td class="px-3 py-2">9465</td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <!--end::Card-->
+                                <!-- Dispatch Calculation -->
+                                <div class="col-lg-6 mb-4 d-flex">
+                                    <div class="table-container shadow-sm w-100 d-flex flex-column">
+                                        <div class="text-danger p-3">Dispatch Calculation</div>
+                                        <div class="position-relative flex-fill"
+                                            style="max-height: 300px; overflow-y: auto;">
+                                            <table class="table table-hover align-middle mb-0">
+                                                <thead class="bg-secondary fw-bolder">
+                                                    <tr>
+                                                        <th class="p-3">Rolls Width</th>
+                                                        <th class="p-3">Rolls Qty</th>
+                                                        <th class="p-3">Total Sqf</th>
+                                                        <th class="p-3">Total Kg</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="px-3 py-2 fw-bolder text-gray-700">4 Feet</td>
+                                                        <td class="px-3 py-2"><input type="text" value="14"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="2204.72"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="602"
+                                                                class="form-control form-control-sm"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-3 py-2 fw-bolder text-gray-700">2 Feet</td>
+                                                        <td class="px-3 py-2"><input type="text" value="40"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="3149.6"
+                                                                class="form-control form-control-sm"></td>
+                                                        <td class="px-3 py-2"><input type="text" value="860"
+                                                                class="form-control form-control-sm"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- Fixed Footer -->
+                                        <div class="fw-bold border-top border-dark bg-light p-2">
+                                            <div class="d-flex justify-content-between">
+                                                <div>Total</div>
+                                                <div>54</div>
+                                                <div> 34000.8</div>
+                                                <div>1462</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end mt-3 mb-3">
+                                <button class="btn btn-success create-btn">Create Dispatch</button>
+                            </div>
                         </div>
                         <!--end::Container-->
                     </div>
@@ -807,6 +1199,161 @@
     </div>
     <!--end::Root-->
     <!--end::Main-->
+
+    
+    <!-- Print Modal -->
+<div class="modal fade" id="productInformation" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title text-white">Product Information</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body bg-light">
+
+        <!-- Company Details -->
+        <h6 class="fw-bold mb-3">Company Details</h6>
+        <div class="bg-secondary-subtle p-3 rounded mb-4">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Company Name</label>
+              <input type="text" class="form-control" value="Abc Trading Company - Morbi">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Order Number</label>
+              <input type="text" class="form-control" value="OD 25121701">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Order Date</label>
+              <input type="date" class="form-control" value="2025-12-17">
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Customer ID</label>
+              <input type="text" class="form-control" value="KT 1071">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Customer City</label>
+              <input type="text" class="form-control" value="Morbi">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Order Priority</label>
+              <input type="text" class="form-control" value="Regular Order">
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Details -->
+        <h6 class="fw-bold mb-3">Product Details</h6>
+        <div class="bg-secondary-subtle p-3 rounded">
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Product Name</label>
+              <input type="text" class="form-control" value="10 mm Aeromat 1.22 X 12 Mtr">
+            </div>
+
+            <div class="col-md-2">
+              <label class="form-label">Thickness</label>
+              <input type="text" class="form-control" value="10 mm">
+            </div>
+
+            <div class="col-md-2">
+              <label class="form-label">Width</label>
+              <input type="text" class="form-control" value="4 Feet">
+            </div>
+
+            <div class="col-md-2">
+              <label class="form-label">Length</label>
+              <input type="text" class="form-control" value="12 Mtr">
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">Color Name</label>
+              <input type="text" class="form-control" value="Red & Black">
+            </div>
+
+            <!-- Color Preview -->
+            <div class="col-md-2">
+              <label class="form-label">Double Color</label>
+              <div class="d-flex gap-2">
+                <div class="rounded" style="width:30px;height:30px;background:red;"></div>
+                <div class="rounded" style="width:30px;height:30px;background:black;"></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Color Tone Series</label>
+              <input type="text" class="form-control" value="KT 3545">
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Weight Per Roll</label>
+              <input type="text" class="form-control" value="39 Kg">
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Backing Name</label>
+              <input type="text" class="form-control" value="Spike">
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Backing Brand</label>
+              <input type="text" class="form-control" value="Kerol">
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Backing Color</label>
+              <input type="text" class="form-control" value="Black">
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Packing Specification</label>
+              <input type="text" class="form-control"
+                value="Kerol - 36 X 73 - 4 Feet - Single Roll Packing">
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Mfg. Date</label>
+              <input type="date" class="form-control" value="2025-12-18">
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Roll Qty</label>
+              <input type="number" class="form-control" value="14">
+            </div>
+
+            <!-- Image Upload -->
+            <div class="col-md-6">
+              <label class="form-label">Product Image</label>
+              <input type="file" class="form-control">
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Preview</label><br>
+              <img src="https://via.placeholder.com/200x120"
+                class="img-thumbnail" alt="Preview">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-primary">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
     <script>var hostUrl = "assets/";</script>
     <!--begin::Javascript-->
     <!--begin::Global Javascript Bundle(used by all pages)-->

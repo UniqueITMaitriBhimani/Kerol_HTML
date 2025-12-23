@@ -4,7 +4,7 @@
 
 <head>
     <base href="">
-    <title>Finish-Production</title>
+    <title>Production-set View</title>
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
@@ -15,11 +15,10 @@
     <!--end::Page Vendor Stylesheets-->
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    <!--end::Global Stylesheets Bundle-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/dev-style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Stylesheets Bundle-->
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -66,339 +65,390 @@
                 </div>
                 <!--end::Brand-->
                 <!--start ::Aside menu-->
-               <div class="aside-menu flex-column-fluid">
-						<!--begin::Aside Menu-->
-						<div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
-							<!--begin::Menu-->
-							<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
-								<div class="menu-item">
-									<a class="menu-link active" href="index.html">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
-													<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
-													<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
-													<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-title">Dashboard</span>
-									</a>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<path d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z" fill="black" />
-													<path d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z" fill="black" />
-													<path opacity="0.3" d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z" fill="black" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-title">Order Management</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-										<div class="menu-item">
-													<a class="menu-link" href="order-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Order List</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="order-add.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Create Order</span>
-													</a>
-												</div>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<path d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z" fill="black" />
-													<path d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z" fill="black" />
-													<path opacity="0.3" d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z" fill="black" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-title">Production Management</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-										<div class="menu-item">
-													<a class="menu-link" href="production-order-listing.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Production Orders</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="production-start.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Production process</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="label-listing.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Label Management</span>
-													</a>
-												</div>
-									</div>
-								</div>
-								<div class="menu-item">
-									<a class="menu-link" href="admin-approval.html">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
-													<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
-													<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
-													<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-title">Admin Approval</span>
-									</a>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<path d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z" fill="black" />
-													<path d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z" fill="black" />
-													<path opacity="0.3" d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z" fill="black" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-title">Stock Management</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-										<div class="menu-item">
-													<a class="menu-link" href="stock-listing.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Overall Stock</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="customer-wise-stock-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Customer-wise Stock</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="stock-history.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Stock History</span>
-													</a>
-												</div>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<path d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z" fill="black" />
-													<path d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z" fill="black" />
-													<path opacity="0.3" d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z" fill="black" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-title">Dispatch Management</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-										<div class="menu-item">
-													<a class="menu-link" href="dispatch-schedule-add.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Create Dispatch</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="dispatch-schedule-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Dispatch Schedule</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="dispatched-done-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Dispatched Orders</span>
-													</a>
-												</div>
-									</div>
-								</div>
-								<div class="menu-item">
-									<a class="menu-link" href="customer-list.html">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
-													<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
-													<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
-													<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-title">Customer Management</span>
-									</a>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<path d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z" fill="black" />
-													<path d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z" fill="black" />
-													<path opacity="0.3" d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z" fill="black" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-title">Masters</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-                                        <div class="menu-item">
-													<a class="menu-link" href="product-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Product</span>
-													</a>
-												</div>
-										<div class="menu-item">
-													<a class="menu-link" href="thickness-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Thickness</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="width-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Width</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="length-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Length</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="color-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Color</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="looping-design-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Looping Design</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="weight-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Weight</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="backing-design-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Backing Design</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="brand-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Brand</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="bag-packing-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Packing Master</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="bagsize-list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Bag Size</span>
-													</a>
-												</div>
-										
-									</div>
-								</div>
-							</div>
-							<!--end::Menu-->
-						</div>
-						<!--end::Aside Menu-->
-					</div>
+                <div class="aside-menu flex-column-fluid">
+                    <!--begin::Aside Menu-->
+                    <div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true"
+                        data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto"
+                        data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer"
+                        data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
+                        <!--begin::Menu-->
+                        <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
+                            id="#kt_aside_menu" data-kt-menu="true">
+                            <div class="menu-item">
+                                <a class="menu-link active" href="index.html">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                                    fill="black" />
+                                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                                    fill="black" />
+                                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                                    fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Dashboard</span>
+                                </a>
+                            </div>
+                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                <span class="menu-link">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z"
+                                                    fill="black" />
+                                                <path
+                                                    d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z"
+                                                    fill="black" />
+                                                <path opacity="0.3"
+                                                    d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Order Management</span>
+                                    <span class="menu-arrow"></span>
+                                </span>
+                                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="order-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Order List</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="order-add.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Create Order</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                <span class="menu-link">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z"
+                                                    fill="black" />
+                                                <path
+                                                    d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z"
+                                                    fill="black" />
+                                                <path opacity="0.3"
+                                                    d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Production Management</span>
+                                    <span class="menu-arrow"></span>
+                                </span>
+                                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="production-order-listing.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Production Orders</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="production-start.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Production process</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="label-listing.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Label Management</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link" href="admin-approval.html">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                                    fill="black" />
+                                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                                    fill="black" />
+                                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                                    fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Admin Approval</span>
+                                </a>
+                            </div>
+                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                <span class="menu-link">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z"
+                                                    fill="black" />
+                                                <path
+                                                    d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z"
+                                                    fill="black" />
+                                                <path opacity="0.3"
+                                                    d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Stock Management</span>
+                                    <span class="menu-arrow"></span>
+                                </span>
+                                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="stock-listing.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Overall Stock</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="customer-wise-stock-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Customer-wise Stock</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="stock-history.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Stock History</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                <span class="menu-link">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z"
+                                                    fill="black" />
+                                                <path
+                                                    d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z"
+                                                    fill="black" />
+                                                <path opacity="0.3"
+                                                    d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Dispatch Management</span>
+                                    <span class="menu-arrow"></span>
+                                </span>
+                                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="dispatch-schedule-add.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Create Dispatch</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="dispatch-schedule-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Dispatch Schedule</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="dispatched-done-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Dispatched Orders</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link" href="customer-list.html">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+                                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+                                                    fill="black" />
+                                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+                                                    fill="black" />
+                                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+                                                    fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Customer Management</span>
+                                </a>
+                            </div>
+                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                <span class="menu-link">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z"
+                                                    fill="black" />
+                                                <path
+                                                    d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z"
+                                                    fill="black" />
+                                                <path opacity="0.3"
+                                                    d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Masters</span>
+                                    <span class="menu-arrow"></span>
+                                </span>
+                                <div class="menu-sub menu-sub-accordion menu-active-bg">
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="product-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Product</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="thickness-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Thickness</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="width-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Width</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="length-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Length</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="color-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Color</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="looping-design-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Looping Design</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="weight-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Weight</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="backing-design-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Backing Design</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="brand-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Brand</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="bag-packing-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Packing Master</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="bagsize-list.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Bag Size</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Menu-->
+                    </div>
+                    <!--end::Aside Menu-->
+                </div>
                 <!--end ::Aside menu-->
             </div>
             <!--end::Aside-->
@@ -508,7 +558,7 @@
                 </div>
                 <!--end::Header-->
                 <!--three section-->
-                 <style>
+                <style>
                     .status-card {
                         display: flex;
                         align-items: center;
@@ -529,7 +579,8 @@
                     .status-card.pending {
                         background-color: #F6A1A1;
                     }
-                      .status-card.set {
+
+                    .status-card.set {
                         background-color: #b6afaf;
                     }
 
@@ -546,6 +597,7 @@
                         /* Color when pending card is clicked */
                         color: white;
                     }
+
                     .status-card.set-active {
                         background-color: #6f6565;
                         /* Color when pending card is clicked */
@@ -567,11 +619,12 @@
                     .status-card.pending-active h4 {
                         color: #fff !important;
                     }
+
                     .status-card.set-active h4 {
                         color: #fff !important;
                     }
 
-                      .status-card.set-active h2 {
+                    .status-card.set-active h2 {
                         color: #fff !important;
                     }
 
@@ -590,6 +643,7 @@
                         transform: rotate(179deg);
                         transition: 1s;
                     }
+
                     .set-active.a-set::after {
                         position: absolute;
                         content: '';
@@ -645,206 +699,456 @@
                 </style>
                 <div class="container-fluid m-5">
                     <div class="row g-3">
-                         <div class="col">
-                            <a href="production-set.html">
-                                <div class="status-card set a-set"
-                                    onclick="changeColor(this, 'set-active', 'set-table')">
-                                    <h4>
-                                        Production Set
-                                    </h4>
-                                    <h2 class="count">53</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Pending Ticket -->
                         <div class="col">
-                            <a href="production-start.html">
-                            <div class="status-card pending a-pending"
-                                onclick="changeColor(this, 'pending-active', 'pending-table')">
-                                <h4>
-                                    Start Production
-                                </h4>
-                                <h2 class="count">53</h2>
-                            </div>
-                            </a>
+                            <h3 class="anchor fw-bolder m-0 text-gray mb-4" id="active-rows">Production Running</h3>
                         </div>
-                        <!-- Working on Tickets -->
                         <div class="col">
-                            <a href="production-in.html">
-                            <div class="status-card working a-working"
-                                onclick="changeColor(this, 'working-active', 'working-table')">
-                                <h4>In Production</h4>
-                                <h2 class="count">43</h2>
-                            </div>
-                            </a>
+                            <h3 class="anchor fw-bolder m-0 text-gray mb-4" id="active-rows">Date :-</h3>
                         </div>
-                        <!-- Completed Tickets -->
+                    </div>
+                    <div class="row g-3">
                         <div class="col">
                             <a href="production-finish.html">
-                            <div class="status-card completed a-completed completed-active"
-                                onclick="changeColor(this, 'completed-active', 'completed-table')">
-                                <h4>
-                                    Finish Production
-                                </h4>
-                                <h2 class="count">46</h2>
-                            </div>
+                                <div class="status-card completed a-completed completed-active"
+                                    onclick="changeColor(this, 'completed-active', 'completed-table')">
+                                    <h4>
+                                        Production Running
+                                    </h4>
+                                    <h2 class="count">46</h2>
+                                </div>
                             </a>
                         </div>
-
-                    </div>
-                </div>
-                <!--begin::Content-->
-                <div class="d-flex flex-column flex-column-fluid" id="kt_content">
-
-                    <div class="docs-content d-flex flex-column flex-column-fluid" id="kt_docs_content">
-                        <!--begin::Container-->
-                        <div class="container" id="kt_docs_content_container">
-                            <!--begin::Card-->
-                            <div class="card card-docs mb-2">
-                                <!--begin::Card Body-->
-                                <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
-                                    <!--begin::Section-->
-                                    <div>
-                                        <div
-                                            style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-
-                                            <!-- Filter Dropdown -->
-                                            <select style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                ">
-                                                <option value="">Filter</option>
-                                                <option value="red">Red</option>
-                                                <option value="blue">Blue</option>
-                                                <option value="green">Green</option>
-                                            </select>
-
-                                           
-
-                                            <!-- Search Bar -->
-                                            <input type="text" placeholder="Search..." style="
-                                                    padding: 8px 12px;
-                                                    border: 1px solid #ccc;
-                                                    border-radius: 6px;
-                                                    font-size: 14px;
-                                                    width: 200px;
-                                                ">
-                                        </div>
-
-                                        <!--begin::Heading-->
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h1 class="anchor fw-bolder m-0" id="active-rows">Finish Production</h1>
-                                            <!-- <a href="color-add.html" class="btn btn-primary">
-                                                Start Production
-                                            </a> -->
-                                        </div>
-
-                                        <!--end::Heading-->
-                                        <!--begin::Block-->
-                                        <div class="my-5">
-                                           <table class="table table-rounded table-row-bordered border gy-7 gs-7">
-                                                <thead>
-                                                    <tr class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                                                        <th>No.</th>
-                                                        <th>Coil Color</th>
-                                                        <th>No.</th>
-                                                        <th>Customer ID</th>
-                                                        <th>Order No</th>
-                                                        <th>Product Name</th>
-                                                        <th>Backing/Brand</th>
-                                                        <th>Length </th>
-                                                        <th>Looping Design</th>
-                                                        <th>Width</th>
-                                                        <th>Qty</th>
-                                                        <th>Total Rolls Per 4ft</th>
-                                                        <th>Total SQF</th>
-                                                        <th class="text-center">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>
-                                                                <div class="color-box" style="background-color: rgb(94, 157, 194);">
-                                                                </div>
-                                                                <small class="color-name">Blue</small>
-                                                            </td>
-                                                        <td>1</td>
-                                                       <td>KT0005</td>
-                                                        <td>ORD-005</td>
-                                                        <td>12 MM SHIELDPRO</td>
-                                                        <td>Kodel- Daimond</td>
-                                                        <td>15 MTR</td>
-                                                        <td>Flat Looping</td>
-                                                        <td>36 inch</td>
-                                                        <td>5</td>
-                                                        <td>2</td>
-                                                        <td>738.185</td>
-                                                        <td class="text-center">
-                                                                <button class="svg-icon svg-icon-info svg-icon-2hx" 
-                                                                        style="background-color: transparent; border:0px">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" 
-                                                                        width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                                        <path opacity="0.3" 
-                                                                            d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z" 
-                                                                            fill="black"/>
-                                                                        <path 
-                                                                            d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" 
-                                                                            fill="black"/>
-                                                                    </svg>
-                                                                </button>
-                                                        </td>
-                                                    </tr>
-                                                     <tr class="table-active">
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td><b>Total Rolls In Quantity Colour </b></td>
-                                                        <td>2 Feet</td>
-                                                        <td><b>5</b></td>
-                                                        <td>4 Feet</td>
-                                                        <td><b>5</b></td>
-                                                        <td class="text-center"></td>
-                                                    </tr>
-                                                     <tr class="table-active">
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td>14 inch</td>
-                                                        <td><b>5</b></td>
-                                                        <td>36 inch</td>
-                                                        <td><b>5</b></td>
-                                                        <td class="text-center"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                         
-                                        <!--end::Block-->
-                                    </div>
-                                    <!--end::Section-->
+                        <div class="col">
+                            <a href="production-in.html">
+                                <div class="status-card working a-working"
+                                    onclick="changeColor(this, 'working-active', 'working-table')">
+                                    <h4>Production Finished</h4>
+                                    <h2 class="count">43</h2>
                                 </div>
-                                <!--end::Card Body-->
-                            </div>
-                            <!--end::Card-->
+                            </a>
                         </div>
-                        <!--end::Container-->
+                    </div>
+                    <div class="card bg-secondary mt-4">
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-6 fs-2qx fw-boldest text-end">
+                                    Oder Number- OD 25121801
+                                </div>
+                                <div class="col-6 fs-2qx text-danger fw-boldest text-start">
+                                    KT 1071
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th class="px-2 py-4 fw-bolder">Order Product Name</th>
+                                            <th class="px-2 py-4 fw-bolder">Coil Color</th>
+                                            <th class="px-2 py-4 fw-bolder">Width</th>
+                                            <th class="px-2 py-4 fw-bolder">Length</th>
+                                            <th class="px-2 py-4 fw-bolder">Backing</th>
+                                            <th class="px-2 py-4 fw-bolder">Backing Brand & Color</th>
+                                            <th class="px-2 py-4 fw-bolder">Weight Req Per Roll</th>
+                                            <th class="px-2 py-4 fw-bolder">Looping Design</th>
+                                            <th class="px-2 py-4 fw-bolder">Roll QTY</th>
+                                            <th class="px-2 py-4 fw-bolder">Prod QTY</th>
+                                            <th class="px-2 py-4 fw-bolder">Approval</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-2 py-4">10 mm Aeromat - Red & Black</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 me-1 bg-danger">&nbsp;</span>
+                                                <span class="badge rounded-2 bg-dark">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">4 feet</td>
+                                            <td class="px-2 py-4">12 Mtr</td>
+                                            <td class="px-2 py-4">Spike-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-dark">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">39 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">20</td>
+                                            <td class="px-2 py-4"><strong>20</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger text-white px-3 py-2">Pending</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-secondary">
+                                            <td class="px-2 py-4">10 mm Aeromat - Red & Black</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 me-1 bg-danger">&nbsp;</span>
+                                                <span class="badge rounded-2 bg-dark">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">2 feet</td>
+                                            <td class="px-2 py-4">12 Mtr</td>
+                                            <td class="px-2 py-4">Spike-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-dark">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">19.5 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">40</td>
+                                            <td class="px-2 py-4"><strong>40</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-2 py-4">10 mm ShieldPro - G-Green</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">4 feet</td>
+                                            <td class="px-2 py-4">15 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-dark">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">39 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">10</td>
+                                            <td class="px-2 py-4"><strong>10</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-2 py-4">12 mm ShieldPro - G-Green</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">4 feet</td>
+                                            <td class="px-2 py-4">15 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-success">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">52 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">20</td>
+                                            <td class="px-2 py-4"><strong>20</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-2 py-4">14 mm EvoDeck - G-Green</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">4 feet</td>
+                                            <td class="px-2 py-4">12 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-success">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">50 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">32</td>
+                                            <td class="px-2 py-4"><strong>32</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-2 py-4">14 mm EvoDeck - G-Green</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">2 feet</td>
+                                            <td class="px-2 py-4">12 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-success">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">25 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">32</td>
+                                            <td class="px-2 py-4"><strong>32</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-2 py-4">10 mm Aeromat - G-Green</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">36 feet</td>
+                                            <td class="px-2 py-4">12 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-success">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">29.50 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">20</td>
+                                            <td class="px-2 py-4"><strong>20</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-2 py-4">10 mm Aeromat - G-Green</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 bg-success">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">14 feet</td>
+                                            <td class="px-2 py-4">12 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-success">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">11.50 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">20</td>
+                                            <td class="px-2 py-4"><strong>20</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-2 py-4">12 mm ShieldPro - Grey</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 bg-secondary">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">4 feet</td>
+                                            <td class="px-2 py-4">12 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-secondary text-dark">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">43 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">30</td>
+                                            <td class="px-2 py-4"><strong>30</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-2 py-4">12 mm ShieldPro - Red</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 bg-danger">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">4 feet</td>
+                                            <td class="px-2 py-4">12 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger text-white">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">43 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">43</td>
+                                            <td class="px-2 py-4"><strong>43</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-2 py-4">12 mm ShieldPro - Red</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 bg-primary">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">4 feet</td>
+                                            <td class="px-2 py-4">12 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-primary">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">43 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">22</td>
+                                            <td class="px-2 py-4"><strong>22</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="table-responsive py-8 my-8">
+                        <table class="table table-bordered align-middle text-center small">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td colspan="2" class="text-center fw-bolder fs-4">Roll Quantity In Accordance with Customer Order</td>
+                                    <td class="fw-bolder fs-4">277</td>
+                                </tr>
+                                <tr class="pt-4 pb-5" style="border-bottom: 1px solid #000 !important;">
+                                    <td class="fw-bolder fs-4 text-gray-700">4 feet Rolls</td>
+                                    <td class="fw-bolder fs-4">165</td>
+                                    <td class="fw-bolder fs-4 text-gray-700"> 2 feet Rolls</td>
+                                    <td class="fw-bolder fs-4">72</td>
+                                    <td class="fw-bolder fs-4">Production Roll Quantity as per “48 INCH” Width </td>
+                                    <td class="fw-bolder fs-4">201</td>
+                                </tr>
+                                <tr class="pt-4 pb-5" style="border-bottom: 1px solid #000 !important;">
+                                    <td class="fw-bolder fs-4 text-gray-700">36 Inch Rolls</td>
+                                    <td class="fw-bolder fs-4">20</td>
+                                    <td class="fw-bolder fs-4 text-gray-700"> 14 Inch Rolls</td>
+                                    <td class="fw-bolder fs-4">20</td>
+                                    <td class="fw-bolder fs-4">Production Roll Quantity as per “50 INCH” Width </td>
+                                    <td class="fw-bolder fs-4">20</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td colspan="2" class="text-center fw-bolder fs-4">Total Roll Quantity as per Production</td>
+                                    <td class="fw-bolder fs-4">221</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card bg-secondary mt-4">
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-6 fs-2qx fw-boldest text-end">
+                                    Oder Number- OD 25121801
+                                </div>
+                                <div class="col-6 fs-2qx text-danger fw-boldest text-start">
+                                    KT 1071
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th class="px-2 py-4 fw-bolder">Order Product Name</th>
+                                            <th class="px-2 py-4 fw-bolder">Coil Color</th>
+                                            <th class="px-2 py-4 fw-bolder">Width</th>
+                                            <th class="px-2 py-4 fw-bolder">Length</th>
+                                            <th class="px-2 py-4 fw-bolder">Backing</th>
+                                            <th class="px-2 py-4 fw-bolder">Backing Brand & Color</th>
+                                            <th class="px-2 py-4 fw-bolder">Weight Req Per Roll</th>
+                                            <th class="px-2 py-4 fw-bolder">Looping Design</th>
+                                            <th class="px-2 py-4 fw-bolder">Roll QTY</th>
+                                            <th class="px-2 py-4 fw-bolder">Prod QTY</th>
+                                            <th class="px-2 py-4 fw-bolder">Approval</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-2 py-4">10 mm Aeromat - Red & Black</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 me-1 bg-danger">&nbsp;</span>
+                                                <span class="badge rounded-2 bg-dark">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">4 feet</td>
+                                            <td class="px-2 py-4">15 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-success">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">52 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">10</td>
+                                            <td class="px-2 py-4"><strong>11</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger text-white px-3 py-2">Pending</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-secondary">
+                                            <td class="px-2 py-4">10 mm Aeromat - Red & Black</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge rounded-2 me-1 bg-danger">&nbsp;</span>
+                                                <span class="badge rounded-2 bg-dark">&nbsp;</span>
+                                            </td>
+                                            <td class="px-2 py-4">2 feet</td>
+                                            <td class="px-2 py-4">15 Mtr</td>
+                                            <td class="px-2 py-4">Diamond-Normal</td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-success">Kerol Brand</span>
+                                            </td>
+                                            <td class="px-2 py-4">26 Kg</td>
+                                            <td class="px-2 py-4">Flet Looping & Mixe</td>
+                                            <td class="px-2 py-4">20</td>
+                                            <td class="px-2 py-4"><strong>20</strong></td>
+                                            <td class="px-2 py-4">
+                                                <span class="badge bg-danger px-3 py-2 text-white">Pending</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle text-center small">
+                            <tbody>
+                                <tr class="table-secondary">
+                                    <td colspan="11" class="text-start text-danger fs-4 fw-boldest">
+                                        ** Short-Length Roll Production
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10 mm Aeromat - G-Green</td>
+                                    <td>
+                                        <span class="d-inline-block rounded bg-success"
+                                            style="width:20px;height:20px;"></span>
+                                    </td>
+                                    <td>4 Feet</td>
+                                    <td>15 Mtr</td>
+                                    <td>Diamond-Normal</td>
+                                    <td><span class="badge bg-success">Kerol Brand</span></td>
+                                    <td>52 Kg</td>
+                                    <td>Flet Looping & Mixe</td>
+                                    <td>01</td>
+                                    <td>01</td>
+                                    <td><span class="badge bg-danger text-white">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="table-responsive py-8 my-820Dispatch">
+                        <table class="table table-bordered align-middle text-center small">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td colspan="2" class="text-center fw-bolder fs-4">Roll Quantity In Accordance with Customer Order</td>
+                                    <td class="fw-bolder fs-4">30</td>
+                                </tr>
+                                <tr class="pt-4 pb-5" style="border-bottom: 1px solid #000 !important;">
+                                    <td class="fw-bolder fs-4 text-gray-700">4 feet Rolls</td>
+                                    <td class="fw-bolder fs-4">10</td>
+                                    <td class="fw-bolder fs-4 text-gray-700"> 2 feet Rolls</td>
+                                    <td class="fw-bolder fs-4">20</td>
+                                    <td class="fw-bolder fs-4">Production Roll Quantity as per “48 INCH” Width</td>
+                                    <td class="fw-bolder fs-4">20</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td colspan="2" class="text-center fw-bolder fs-4">Total Roll Quantity as per Production</td>
+                                    <td class="fw-bolder fs-4">20</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <!--end::Content-->
                 <!--begin::Footer-->
                 <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
                     <!--begin::Container-->
@@ -870,6 +1174,111 @@
         <!--end::Page-->
     </div>
     <!--end::Root-->
+
+    <!-- Print Modal -->
+    <div class="modal fade" id="printModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Multiple Label Print</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="printCheck">
+                        <label class="form-check-label" for="printCheck">
+                            We want to print multiple rolls of this product and I confirm it.
+                        </label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Rolls Qty</label>
+                        <input type="number" class="form-control" value="5">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Check Modal -->
+    <div class="modal fade" id="checkModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Production Finished</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row text-center mb-3">
+                        <div class="col">
+                            <span class="badge px-8 py-2 bg-primary">Order</span>
+                            <div class="fw-bold fs-4">20</div>
+                        </div>
+                        <div class="col">
+                            <span class="badge px-8 py-2 bg-warning text-dark">Production</span>
+                            <div class="fw-bold fs-4">22</div>
+                        </div>
+                        <div class="col">
+                            <span class="badge px-8 py-2 bg-success">Finished</span>
+                            <div class="fw-bold fs-4">22</div>
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="productionCheck">
+                        <label class="form-check-label" for="productionCheck">
+                            The roll production as per the order has been completed and verified.
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-success">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="feetModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Rolls Length</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="productionCheck">
+                        <label class="form-check-label" for="productionCheck">
+                            We have Started the Production after Completing all the above Setups.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Confirm</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <!--end::Main-->
     <script>var hostUrl = "assets/";</script>
     <!--begin::Javascript-->
@@ -887,6 +1296,8 @@
     <script src="assets/js/custom/modals/upgrade-plan.js"></script>
     <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
     <script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
+    <!-- JS -->
+
     <script>
         function changeColor(card, activeClass, tableId) {
 
