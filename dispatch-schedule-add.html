@@ -589,25 +589,16 @@
                                         </div>
                                         <div class="col-2 mb-5">
                                             <label class="form-label">Loading Date</label>
-                                            <select class="form-select" data-control="select2"
-                                                data-placeholder="Select an option">
-                                                <option></option>
-                                                <option value="1">22/12/2025</option>
-                                                <option value="2">22/12/2025</option>
-                                            </select>
+                                           <input type="date" class="form-control">
                                         </div>
                                         <div class="col-2 mb-5">
                                             <label class="form-label">Loading Time</label>
-                                            <select class="form-select" data-control="select2"
-                                                data-placeholder="Select an option">
-                                                <option></option>
-                                                <option value="1">12:30 PM</option>
-                                                <option value="2">12:30 PM</option>
-                                            </select>
+                                            <input type="time" class="form-control">
+
                                         </div>
                                         <div class="col-4 mb-5">
                                             <label class="form-label">Product Name</label>
-                                            <select class="form-select" data-control="select2"
+                                            <select class="form-select"
                                                 data-placeholder="Select an option">
                                                 <option></option>
                                                 <option value="1">All</option>
@@ -616,30 +607,40 @@
                                         </div>
                                         <div class="col-2 mb-5">
                                             <label class="form-label">Thickness</label>
-                                            <input type="text" class="form-control" placeholder="" value="All">
+                                            <select class="form-select"
+                                                data-placeholder="Select an option">
+                                                <option></option>
+                                                <option value="1">10 MM</option>
+                                                <option value="2">18 MM</option>
+                                            </select>
                                         </div>
                                         <div class="col-2 mb-5">
                                             <label class="form-label">Length</label>
-                                            <input type="text" class="form-control" placeholder="" value="All">
+                                            <select class="form-select"
+                                                data-placeholder="Select an option">
+                                                <option></option>
+                                                <option value="1">15 Mtr</option>
+                                                <option value="2">12 Mtr</option>
+                                            </select>
                                         </div>
                                         <div class="col-2 mb-5">
                                             <label class="form-label">Width</label>
-                                            <select class="form-select" data-control="select2"
+                                            <select class="form-select" 
                                                 data-placeholder="Select an option">
                                                 <option></option>
-                                                <option value="1">All</option>
-                                                <option value="2">All</option>
+                                                <option value="1">4 Feet</option>
+                                                <option value="2">2 Feet</option>
                                             </select>
                                         </div>
                                         <div class="col-2 mb-5">
                                             <label class="form-label">Order Number</label>
-                                            <select class="form-select" data-control="select2"
-                                                data-placeholder="Select an option">
-                                                <option></option>
-                                                <option value="1">All</option>
-                                                <option value="2">All</option>
-                                            </select>
+                                            <input class="form-control" type="text" >
                                         </div>
+                                        <div class="col-12 mb-5 d-flex justify-content-end align-items-end">
+                                            <a class="btn btn-success me-2">Search</a>
+                                            <a class="btn btn-danger">Clear</a>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -669,7 +670,7 @@
                                                     <th class="px-2 py-4 fw-bolder">Backing Brand & Color</th>
                                                     <th class="px-2 py-4 fw-bolder">Roll QTY</th>
                                                     <th class="px-2 py-4 fw-bolder">Dispatch Rolls Qty</th>
-                                                    <th class="px-2 py-4 fw-bolder">Approval</th>
+                                                    <th class="px-2 py-4 fw-bolder"></th>
                                                 </tr>
                                             </thead>
 
@@ -1029,26 +1030,17 @@
                                                         </button>
                                                     </td>
                                                 </tr>
-
+                                                <tr>
+                                                    <td colspan="8" class="text-end fw-bolder fs-5">Totall Roll Quantity In Stock</td>
+                                                    <td class="fw-bolder fs-5">271</td>
+                                                    <td class="fw-bolder fs-5">54</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
-
                                 </div>
                             </div>
-                            <div class="table-responsive py-5 my-5">
-                                <table class="table table-bordered align-middle text-center small">
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="8" class="text-end fw-bolder fs-4">Totall Roll Quantity In
-                                                Stock</td>
-                                            <td class="fw-bolder fs-4 text-start">271</td>
-                                            <td class="fw-bolder fs-4 text-start">54</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="row d-flex">
+                            <div class="row d-flex mt-5">
                                 <!-- Stock Calculation -->
                                 <div class="col-lg-6 mb-4 d-flex">
                                     <div class="table-container shadow-sm w-100 d-flex flex-column">
@@ -1200,159 +1192,153 @@
     <!--end::Root-->
     <!--end::Main-->
 
-    
+
     <!-- Print Modal -->
-<div class="modal fade" id="productInformation" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
+    <div class="modal fade" id="productInformation" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header bg-dark text-white">
-        <h5 class="modal-title text-white">Product Information</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
+                <!-- Modal Header -->
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title text-white">Product Information</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
 
-      <!-- Modal Body -->
-      <div class="modal-body bg-light">
+                <!-- Modal Body -->
+                <div class="modal-body bg-light">
 
-        <!-- Company Details -->
-        <h6 class="fw-bold mb-3">Company Details</h6>
-        <div class="bg-secondary-subtle p-3 rounded mb-4">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label">Company Name</label>
-              <input type="text" class="form-control" value="Abc Trading Company - Morbi">
-            </div>
-            <div class="col-md-3">
-              <label class="form-label">Order Number</label>
-              <input type="text" class="form-control" value="OD 25121701">
-            </div>
-            <div class="col-md-3">
-              <label class="form-label">Order Date</label>
-              <input type="date" class="form-control" value="2025-12-17">
-            </div>
+                    <!-- Company Details -->
+                    <h6 class="fw-bold mb-3">Company Details</h6>
+                    <div class="bg-secondary-subtle p-3 rounded mb-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-control" value="Abc Trading Company - Morbi">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Order Number</label>
+                                <input type="text" class="form-control" value="OD 25121701">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Order Date</label>
+                                <input type="date" class="form-control" value="2025-12-17">
+                            </div>
 
-            <div class="col-md-3">
-              <label class="form-label">Customer ID</label>
-              <input type="text" class="form-control" value="KT 1071">
+                            <div class="col-md-3">
+                                <label class="form-label">Customer ID</label>
+                                <input type="text" class="form-control" value="KT 1071">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Customer City</label>
+                                <input type="text" class="form-control" value="Morbi">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Order Priority</label>
+                                <input type="text" class="form-control" value="Regular Order">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <h6 class="fw-bold mb-3">Product Details</h6>
+                    <div class="bg-secondary-subtle p-3 rounded">
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Product Name</label>
+                                <input type="text" class="form-control" value="10 mm Aeromat 1.22 X 12 Mtr">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="form-label">Thickness</label>
+                                <input type="text" class="form-control" value="10 mm">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="form-label">Width</label>
+                                <input type="text" class="form-control" value="4 Feet">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="form-label">Length</label>
+                                <input type="text" class="form-control" value="12 Mtr">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Color Name</label>
+                                <input type="text" class="form-control" value="Red & Black">
+                            </div>
+
+                            <!-- Color Preview -->
+                            <div class="col-md-2">
+                                <label class="form-label">Double Color</label>
+                                <div class="d-flex gap-2">
+                                    <div class="rounded" style="width:30px;height:30px;background:red;"></div>
+                                    <div class="rounded" style="width:30px;height:30px;background:black;"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Color Tone Series</label>
+                                <input type="text" class="form-control" value="KT 3545">
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Weight Per Roll</label>
+                                <input type="text" class="form-control" value="39 Kg">
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Backing Name</label>
+                                <input type="text" class="form-control" value="Spike">
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Backing Brand</label>
+                                <input type="text" class="form-control" value="Kerol">
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Backing Color</label>
+                                <input type="text" class="form-control" value="Black">
+                            </div>
+                            <div class="col-md-2"> 
+                                <label class="form-label">Double Color</label>
+                                <div class="d-flex gap-2">
+                                    <div class="rounded" style="width:30px;height:30px;background:black;"></div>
+                                </div></div>
+                                <div class="col-md-6">
+                                <label class="form-label">Looping Design</label>
+                                <input type="text" class="form-control"
+                                    value="Flet Looping & Mixe">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Packing Specification</label>
+                                <input type="text" class="form-control"
+                                    value="Kerol - 36 X 73 - 4 Feet - Single Roll Packing">
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Mfg. Date</label>
+                                <input type="date" class="form-control" value="2025-12-18">
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Roll Qty</label>
+                                <input type="number" class="form-control" value="14">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Modal Footer -->
+                <!-- <div class="modal-footer">
+      </div> -->
+
             </div>
-            <div class="col-md-3">
-              <label class="form-label">Customer City</label>
-              <input type="text" class="form-control" value="Morbi">
-            </div>
-            <div class="col-md-3">
-              <label class="form-label">Order Priority</label>
-              <input type="text" class="form-control" value="Regular Order">
-            </div>
-          </div>
         </div>
-
-        <!-- Product Details -->
-        <h6 class="fw-bold mb-3">Product Details</h6>
-        <div class="bg-secondary-subtle p-3 rounded">
-
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label">Product Name</label>
-              <input type="text" class="form-control" value="10 mm Aeromat 1.22 X 12 Mtr">
-            </div>
-
-            <div class="col-md-2">
-              <label class="form-label">Thickness</label>
-              <input type="text" class="form-control" value="10 mm">
-            </div>
-
-            <div class="col-md-2">
-              <label class="form-label">Width</label>
-              <input type="text" class="form-control" value="4 Feet">
-            </div>
-
-            <div class="col-md-2">
-              <label class="form-label">Length</label>
-              <input type="text" class="form-control" value="12 Mtr">
-            </div>
-
-            <div class="col-md-4">
-              <label class="form-label">Color Name</label>
-              <input type="text" class="form-control" value="Red & Black">
-            </div>
-
-            <!-- Color Preview -->
-            <div class="col-md-2">
-              <label class="form-label">Double Color</label>
-              <div class="d-flex gap-2">
-                <div class="rounded" style="width:30px;height:30px;background:red;"></div>
-                <div class="rounded" style="width:30px;height:30px;background:black;"></div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label class="form-label">Color Tone Series</label>
-              <input type="text" class="form-control" value="KT 3545">
-            </div>
-
-            <div class="col-md-3">
-              <label class="form-label">Weight Per Roll</label>
-              <input type="text" class="form-control" value="39 Kg">
-            </div>
-
-            <div class="col-md-3">
-              <label class="form-label">Backing Name</label>
-              <input type="text" class="form-control" value="Spike">
-            </div>
-
-            <div class="col-md-3">
-              <label class="form-label">Backing Brand</label>
-              <input type="text" class="form-control" value="Kerol">
-            </div>
-
-            <div class="col-md-3">
-              <label class="form-label">Backing Color</label>
-              <input type="text" class="form-control" value="Black">
-            </div>
-
-            <div class="col-md-6">
-              <label class="form-label">Packing Specification</label>
-              <input type="text" class="form-control"
-                value="Kerol - 36 X 73 - 4 Feet - Single Roll Packing">
-            </div>
-
-            <div class="col-md-3">
-              <label class="form-label">Mfg. Date</label>
-              <input type="date" class="form-control" value="2025-12-18">
-            </div>
-
-            <div class="col-md-3">
-              <label class="form-label">Roll Qty</label>
-              <input type="number" class="form-control" value="14">
-            </div>
-
-            <!-- Image Upload -->
-            <div class="col-md-6">
-              <label class="form-label">Product Image</label>
-              <input type="file" class="form-control">
-            </div>
-
-            <div class="col-md-6">
-              <label class="form-label">Preview</label><br>
-              <img src="https://via.placeholder.com/200x120"
-                class="img-thumbnail" alt="Preview">
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-primary">Save</button>
-      </div>
-
     </div>
-  </div>
-</div>
 
     <script>var hostUrl = "assets/";</script>
     <!--begin::Javascript-->

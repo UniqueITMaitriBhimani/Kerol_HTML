@@ -565,30 +565,7 @@
 							<div class="card card-docs mb-2">
 								<div class="card-body fs-6 py-15 px-10 py-lg-10 px-lg-15 text-gray-700">
 									<div class="d-flex justify-content-between align-items-center mb-3">
-										<!-- Title on the left -->
-										<h1 class="anchor fw-bolder m-0" id="active-rows">Create Dispatch List</h1>
-
-										<!-- Two dropdowns on the right -->
-										<div class="d-flex align-items-center gap-2">
-											<label class="form-label mb-1">Date :- </label>
-											<div class="col-auto">
-
-												<select class="form-select" data-control="select2"
-													data-placeholder="Select an option">
-													<option></option>
-													<option value="1">22/12/2025</option>
-													<option value="2">23/12/2025</option>
-												</select>
-											</div>
-											<div class="col-auto">
-												<select class="form-select" data-control="select2"
-													data-placeholder="Select an option">
-													<option></option>
-													<option value="1">22/12/2025</option>
-													<option value="2">23/12/2025</option>
-												</select>
-											</div>
-										</div>
+										<h1 class="anchor fw-bolder m-0" id="active-rows">Dispatch Schedule</h1>
 									</div>
 								</div>
 
@@ -603,6 +580,7 @@
 													<th class="px-2 py-4 fw-bolder">Loading Date</th>
 													<th class="px-2 py-4 fw-bolder">Loading Time</th>
 													<th class="px-2 py-4 fw-bolder">Company Name</th>
+													<th class="px-2 py-4 fw-bolder">Company ID</th>
 													<th class="px-2 py-4 fw-bolder">City</th>
 													<th class="px-2 py-4 fw-bolder">Loading Roll Qty</th>
 													<th class="px-2 py-4 fw-bolder">Action</th>
@@ -615,12 +593,39 @@
 													<td class="px-2 py-4">22/12/2025</td>
 													<td class="px-2 py-4">2:38 PM</td>
 													<td class="px-2 py-4">Abc Trading Company</td>
+													<td class="px-2 py-4">KT 1071</td>
 													<td class="px-2 py-4">Morbi</td>
-													<td class="px-2 py-4">270</td>
+													<td class="px-2 py-4">271</td>
 													<td class="px-2 py-4">
-														<button class="btn btn-primary"
-															data-bs-toggle="modal" data-bs-target="#LoadingDetails">
+														<button class="btn btn-primary" >
 															<i class="bi bi-folder2-open fs-5"></i>
+														</button>
+														<button class="btn btn-warning" data-bs-toggle="modal"
+															data-bs-target="#TransportDetails">
+															<i class="bi bi-truck fs-5"></i>
+														</button>
+														<button class="btn btn-success" data-bs-toggle="modal"
+															data-bs-target="#PrintModalDetails">
+															<i class="bi bi-printer fs-5"></i>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td class="px-2 py-4">02</td>
+													<td class="px-2 py-4">23/12/2025</td>
+													<td class="px-2 py-4">2:38 PM</td>
+													<td class="px-2 py-4">K Trading Mat </td>
+													<td class="px-2 py-4">KT 1091</td>
+													<td class="px-2 py-4">Surat</td>
+													<td class="px-2 py-4">22</td>
+													<td class="px-2 py-4">
+														<button class="btn btn-primary" data-bs-toggle="modal"
+															data-bs-target="#LoadingDetails">
+															<i class="bi bi-folder2-open fs-5"></i>
+														</button>
+														<button class="btn btn-warning" data-bs-toggle="modal"
+															data-bs-target="#LoadingDetails">
+															<i class="bi bi-truck fs-5"></i>
 														</button>
 														<button class="btn btn-success">
 															<i class="bi bi-printer fs-5"></i>
@@ -664,138 +669,257 @@
 	</div>
 	<!--end::Root-->
 	<!--end::Main-->
-
+	<style>
+		.header-bg {
+			background: #3f525c;
+		}
+	</style>
 
 	<!-- Print Modal -->
-<div class="modal fade" id="LoadingDetails" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-xxl modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
+	<div class="modal fade" id="PrintModalDetails" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
 
-      <!-- HEADER -->
-      <div class="modal-header p-0">
-        <div class="w-100 bg-secondary text-white p-3 d-flex justify-content-between align-items-center">
-          <div>
-            <h5 class="mb-1 fw-bold">Loading List</h5>
-            <small>Company ID: <b>KT 1105</b></small>
-          </div>
+				<!-- Modal Header -->
+				<div class="modal-header bg-dark text-white">
+					<h5 class="modal-title text-white">Product Information</h5>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+				</div>
 
-          <div class="text-end small">
-            <div>Loading Date : <b>22/12/2025</b></div>
-            <div>Vehicle No. : <b>GJ03XX000</b></div>
-            <div>Driver No. : <b>99999 99999</b></div>
-          </div>
+				<!-- Modal Body -->
+				<div class="modal-body bg-light">
+					<div class="header-bg text-white p-3 d-flex justify-content-between align-items-center">
+						<div>
+							<h4 class="mb-0">Dispatch List</h4>
+							<small>Company ID - KT 1105</small>
+						</div>
+						<div class="fw-bold">
+							KEROL
+						</div>
+					</div>
+					<div class="p-3">
+						<table class="table table-bordered text-center align-middle">
+							<thead class="table-light">
+								<tr>
+									<th>No.</th>
+									<th>Thickness</th>
+									<th>Width</th>
+									<th>Length</th>
+									<th>Color</th>
+									<th>Backing</th>
+									<th>Roll Qty</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>01</td>
+									<td>10 mm</td>
+									<td>4 feet</td>
+									<td>12 Mtr</td>
+									<td>Red</td>
+									<td>Spike-Black</td>
+									<td>15</td>
+								</tr>
+								<tr>
+									<td>02</td>
+									<td>10 mm</td>
+									<td>4 feet</td>
+									<td>12 Mtr</td>
+									<td>Green</td>
+									<td>Diamond-Green</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>03</td>
+									<td>10 mm</td>
+									<td>4 feet</td>
+									<td>12 Mtr</td>
+									<td>Blue</td>
+									<td>Diamond-Blue</td>
+									<td>12</td>
+								</tr>
+								<tr>
+									<td>04</td>
+									<td>10 mm</td>
+									<td>4 feet</td>
+									<td>12 Mtr</td>
+									<td>Black</td>
+									<td>Diamond-Black</td>
+									<td>20</td>
+								</tr>
 
-          <div class="fw-bold fs-4">KEROL</div>
-        </div>
-      </div>
+								<tr>
+									<td colspan="6" class="text-end fw-semibold">Rolls Qty :</td>
+									<td class="roll-qty">57</td>
+								</tr>
 
-      <!-- BODY -->
-      <div class="modal-body bg-light">
+								<tr>
+									<td>01</td>
+									<td>10 mm</td>
+									<td>2 feet</td>
+									<td>12 Mtr</td>
+									<td>Blue</td>
+									<td>Diamond-Blue</td>
+									<td>20</td>
+								</tr>
+								<tr>
+									<td>02</td>
+									<td>10 mm</td>
+									<td>2 feet</td>
+									<td>12 Mtr</td>
+									<td>Black</td>
+									<td>Diamond-Black</td>
+									<td>40</td>
+								</tr>
 
-        <!-- LOADING TABLE -->
-        <div class="table-responsive">
-          <table class="table table-bordered text-center align-middle small">
-            <thead class="table-light">
-              <tr>
-                <th>No</th>
-                <th>Thickness</th>
-                <th>Width</th>
-                <th>Length</th>
-                <th>Color</th>
-                <th>Backing</th>
-                <th>Roll Qty</th>
-              </tr>
-            </thead>
+								<tr>
+									<td colspan="6" class="text-end fw-semibold">Rolls Qty :</td>
+									<td class="roll-qty">60</td>
+								</tr>
 
-            <tbody>
-              <tr>
-                <td>01</td><td>10 mm</td><td>4 feet</td><td>12 Mtr</td>
-                <td>Red</td><td>Spike-Black</td><td>15</td>
-              </tr>
-              <tr>
-                <td>02</td><td>10 mm</td><td>4 feet</td><td>12 Mtr</td>
-                <td>Green</td><td>Diamond-Green</td><td>10</td>
-              </tr>
-              <tr>
-                <td>03</td><td>10 mm</td><td>4 feet</td><td>12 Mtr</td>
-                <td>Blue</td><td>Diamond-Blue</td><td>12</td>
-              </tr>
-              <tr>
-                <td>04</td><td>10 mm</td><td>4 feet</td><td>12 Mtr</td>
-                <td>Black</td><td>Diamond-Black</td><td>20</td>
-              </tr>
+								<tr>
+									<td>01</td>
+									<td>10 mm</td>
+									<td>36 Inch</td>
+									<td>12 Mtr</td>
+									<td>Green</td>
+									<td>Diamond-Green</td>
+									<td>15</td>
+								</tr>
+								<tr>
+									<td>02</td>
+									<td>10 mm</td>
+									<td>36 Inch</td>
+									<td>12 Mtr</td>
+									<td>Blue</td>
+									<td>Diamond-Blue</td>
+									<td>25</td>
+								</tr>
 
-              <tr class="fw-bold text-success">
-                <td colspan="6" class="text-end">Rolls Qty :</td>
-                <td>57</td>
-              </tr>
+								<tr>
+									<td colspan="6" class="text-end fw-semibold">Rolls Qty :</td>
+									<td class="roll-qty">40</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 
-              <!-- repeat blocks like image -->
-              <tr>
-                <td>01</td><td>10 mm</td><td>2 feet</td><td>12 Mtr</td>
-                <td>Blue</td><td>Diamond-Blue</td><td>20</td>
-              </tr>
-              <tr>
-                <td>02</td><td>10 mm</td><td>2 feet</td><td>12 Mtr</td>
-                <td>Black</td><td>Diamond-Black</td><td>40</td>
-              </tr>
+					<!-- Summary Section -->
+					<div class="summary-bg p-3">
+						<table class="table table-bordered text-center mb-3">
+							<thead>
+								<tr>
+									<th>No.</th>
+									<th>Thickness</th>
+									<th>4 feet</th>
+									<th>2 feet</th>
+									<th>36 Inch</th>
+									<th>14 Inch</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>01</td>
+									<td>10 mm</td>
+									<td>57</td>
+									<td>60</td>
+									<td>40</td>
+									<td>39</td>
+								</tr>
+								<tr>
+									<td>02</td>
+									<td>12 mm</td>
+									<td>25</td>
+									<td>71</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr class="fw-bold">
+									<td colspan="2">Total</td>
+									<td>82</td>
+									<td>131</td>
+									<td>40</td>
+									<td>39</td>
+								</tr>
+							</tbody>
+						</table>
 
-              <tr class="fw-bold text-success">
-                <td colspan="6" class="text-end">Rolls Qty :</td>
-                <td>60</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="fw-bold">
+								Total Roll Quantity : <span class="text-danger">292</span>
+							</div>
+							<div>
+								<button class="btn btn-success me-2">PDF</button>
+								<button class="btn btn-danger">Print</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        <!-- SUMMARY TABLE -->
-        <div class="table-responsive mt-4">
-          <table class="table table-bordered text-center small">
-            <thead class="table-light">
-              <tr>
-                <th>No.</th>
-                <th>Thickness</th>
-                <th>4 feet</th>
-                <th>2 feet</th>
-                <th>36 inch</th>
-                <th>14 inch</th>
-                <th>Total SQF</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>01</td><td>10 mm</td><td>57</td><td>60</td><td>40</td><td>39</td><td><b>14780.76</b></td>
-              </tr>
-              <tr>
-                <td>02</td><td>12 mm</td><td>25</td><td>71</td><td>0</td><td>0</td><td><b>9527.54</b></td>
-              </tr>
+				<!-- Modal Footer -->
+				<!-- <div class="modal-footer">
+					<button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button class="btn btn-primary">Save</button>
+				</div> -->
 
-              <tr class="fw-bold">
-                <td colspan="2">Total</td>
-                <td>82</td><td>131</td><td>40</td><td>39</td>
-                <td>24308.3</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+			</div>
+		</div>
+	</div>
 
-        <!-- TOTAL ROLL -->
-        <div class="fw-bold text-danger mt-2">
-          Total Roll Quantity : <span class="fs-5">292</span>
-        </div>
+	<div class="modal fade" id="TransportDetails" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
 
-      </div>
+				<!-- Modal Header -->
+				<div class="modal-header bg-dark text-white">
+					<h5 class="modal-title text-white">Transporter Details</h5>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+				</div>
 
-      <!-- FOOTER -->
-      <div class="modal-footer">
-        <button class="btn btn-success">PDF</button>
-        <button class="btn btn-danger">Print</button>
-      </div>
+				<!-- Modal Body -->
+				<div class="modal-body bg-light">
 
-    </div>
-  </div>
-</div>
+					<!-- Company Details -->
+					<div class="bg-secondary-subtle p-3 rounded mb-4">
+						<div class="row g-3">
+							<div class="col-md-6">
+								<label class="form-label">Transporter Company</label>
+								<input type="text" class="form-control" value="BHARDWAJ CAREWAYS (INDIA) PVT .LTD.">
+							</div>
+							<div class="col-md-3">
+								<label class="form-label">Transporter ID</label>
+								<input type="text" class="form-control" value="XX123XXX0000">
+							</div>
+							<div class="col-md-3">
+								<label class="form-label">Vehicle Number</label>
+								<input type="date" class="form-control" value="GJ03XX0000">
+							</div>
 
+							<div class="col-md-3">
+								<label class="form-label">Driver Name</label>
+								<input type="text" class="form-control" value="Rajubhai">
+							</div>
+							<div class="col-md-3">
+								<label class="form-label">Driver Contect Number</label>
+								<input type="text" class="form-control" value="99999 99999">
+							</div>
+							<div class="col-md-3">
+								<label class="form-label">Order Priority</label>
+								<input type="text" class="form-control" value="Regular Order">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Footer -->
+				<div class="modal-footer justify-content-center">
+					<button class="btn btn-danger me-2" data-bs-dismiss="modal">Cancel</button>
+					<button class="btn btn-success">Send For Loading</button>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
 
 	<script>var hostUrl = "assets/";</script>
 	<!--begin::Javascript-->
