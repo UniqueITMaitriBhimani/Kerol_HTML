@@ -575,17 +575,17 @@
                                             </h1>
                                             <!-- Right side: Search + Button -->
                                             <div class="d-flex align-items-center gap-3">
-                                             <h2> Abc Trading Company-Morbi(KT 1071 ) </h2>
+                                             <h2> Abc Trading Company-Morbi <span class="text-danger">( KT 1071 ) </span></h2>
                                             </div>
                                         </div>
 
                                         <!--end::Heading-->
                                         <!--begin::Block-->
                                         <div class="my-5">
-                                            <table class="table table-rounded table-row-bordered border gy-7 gs-7">
+                                            <table class="table table-rounded table-row-bordered border gy-7 gs-7 fs-6">
                                                 <thead>
                                                     <tr
-                                                        class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
+                                                        class="fw-bolder fs-6 text-gray-800 border-bottom-2 border-gray-200">
                                                         <th>No.</th>
                                                         <th>Order Product Name</th>
                                                         <th>Coil Color</th>
@@ -604,7 +604,7 @@
                                                     <tr>
                                                         <td>01</td>
                                                         <td>10 mm Aeromat - Red & Black</td>
-                                                        <td>
+                                                        <td style="width: 75px;">
                                                             <span class="badge text-white"
                                                                 style="background-color: #FF0000; height: 25px; width: 25px;">
                                                             </span>
@@ -942,38 +942,42 @@
                                                         <td colspan="10" class="text-end fw-bold">
                                                             Roll Quantity In Accordance With Customer Order
                                                         </td>
-                                                        <td colspan="2" class="text-center fw-bold">277</td>
+                                                        <td colspan="2" class="text-center fw-bolder fs-5">277</td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="2">4 feet Rolls</td>
-                                                        <td colspan="1">165</td>
+                                                        <td colspan="1" class="fw-bolder fs-5">165</td>
                                                         <td colspan="2"> 2 feet Rolls</td>
-                                                        <td colspan="1"> 72</td>
+                                                        <td colspan="1" class="fw-bolder fs-5"> 72</td>
                                                         <td colspan="4" class="text-center">Production Roll Quantity as
                                                             per “48
                                                             INCH” Width</td>
-                                                        <td colspan="2" class="text-center">201</td>
+                                                        <td colspan="2" class="text-center fw-bolder fs-5">201</td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="2">36 Inch Rolls</td>
-                                                        <td colspan="1">20</td>
+                                                        <td colspan="1" class="fw-bolder fs-5">20</td>
                                                         <td colspan="2">14 Inch Rolls</td>
-                                                        <td colspan="1"> 20</td>
+                                                        <td colspan="1" class="fw-bolder fs-5"> 20</td>
                                                         <td colspan="4" class="text-center fw-bold">Production Roll
                                                             Quantity as
                                                             per “50 INCH” Width</td>
-                                                        <td colspan="2" class="text-center">20</td>
+                                                        <td colspan="2" class="text-center fw-bolder fs-5">20</td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="10" class="text-end fw-bold">Total Roll Quantity as
                                                             per
                                                             Production </td>
-                                                        <td colspan="2" class="text-center">221</td>
+                                                        <td colspan="2" class="text-center fw-bolder fs-5">221</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                         <!--end::Block-->
+                                        <div class="col-12 d-flex justify-content-end align-items-center mt-10">
+                                        <a href="#" class="btn btn-bg-success text-inverse-success me-3">Update</a>
+                                        <a href="#" class="btn btn-bg-danger text-inverse-danger">Cancel</a>
+                                    </div>
                                     </div>
                                     <!--end::Section-->
                                 </div>
@@ -1004,66 +1008,34 @@
                                 <div class="row">
                                     <div class="col-6 mb-5">
                                         <label class="form-label">Product Name</label>
-                                        <select class="form-select" data-control="select2"
-                                            data-placeholder="Select an option">
-                                            <option></option>
-                                            <option value="1">10 mm Aeromat 1.22 X 12 Mtr</option>
-                                            <option value="2">10 mm Aeromat 1.22 X 12 Mtr</option>
-                                        </select>
+                                        <input type="text" class="form-control" placeholder="10 mm Aeromat 1.22 X 12 Mtr" disabled />
                                     </div>
                                     <div class="col-2 mb-5">
                                         <label class="form-label">Thickness</label>
-                                        <select class="form-select" data-placeholder="Select an option">
-                                            <option>Order Priority</option>
-                                            <option value="1">Regular Order</option>
-                                            <option value="2">Urgent Order</option>
-                                            <option value="2">Hold Order</option>
-                                        </select>
+                                        <input type="text" class="form-control" placeholder="10 MM" disabled />
+                                        
                                     </div>
                                     <div class="col-1 mb-5">
                                         <label class="form-label">Width</label>
-                                        <select class="form-select" data-placeholder="Select an option">
-                                            <option>Width</option>
-                                            <option value="1">Regular Order</option>
-                                            <option value="2">Urgent Order</option>
-                                            <option value="2">Hold Order</option>
-                                        </select>
+                                        <input type="text" class="form-control" placeholder="4" disabled />
+
                                     </div>
                                     <div class="col-1 mb-5">
                                         <label class="form-label">Unit</label>
-                                        <select class="form-select" data-placeholder="Select an option">
-                                            <option>Unit</option>
-                                            <option value="1">Regular Order</option>
-                                            <option value="2">Urgent Order</option>
-                                            <option value="2">Hold Order</option>
-                                        </select>
+                                        <input type="text" class="form-control" placeholder="Feet" disabled />
+
                                     </div>
                                     <div class="col-1 mb-5">
                                         <label class="form-label">Length</label>
-                                        <select class="form-select" data-placeholder="Select an option">
-                                            <option>Length</option>
-                                            <option value="1">Regular Order</option>
-                                            <option value="2">Urgent Order</option>
-                                            <option value="2">Hold Order</option>
-                                        </select>
+                                        <input type="text" class="form-control" placeholder="15" disabled />
                                     </div>
                                     <div class="col-1 mb-5">
                                         <label class="form-label">Unit</label>
-                                        <select class="form-select" data-placeholder="Select an option">
-                                            <option>Unit</option>
-                                            <option value="1">Regular Order</option>
-                                            <option value="2">Urgent Order</option>
-                                            <option value="2">Hold Order</option>
-                                        </select>
+                                        <input type="text" class="form-control" placeholder="Mtr" disabled />
                                     </div>
                                     <div class="col-6 mb-5">
                                         <label class="form-label">Color Name</label>
-                                        <select class="form-select" data-placeholder="Select an option">
-                                            <option>Color Name</option>
-                                            <option value="1">Regular Order</option>
-                                            <option value="2">Urgent Order</option>
-                                            <option value="2">Hold Order</option>
-                                        </select>
+                                        <input type="text" class="form-control" placeholder="Red & Black" disabled />
                                     </div>
                                     <div class="col-1 mb-5">
                                         <label class="form-label">Color</label>
@@ -1104,7 +1076,7 @@
                                     </div>
                                     <div class="col-2 mb-5">
                                         <label class="form-label">Backing Brand</label>
-                                        <input type="text" class="form-control" placeholder="Kodel" disabled />
+                                        <input type="text" class="form-control" placeholder="Kerol" disabled />
                                     </div>
                                     <div class="col-2 mb-5">
                                         <label class="form-label">Backing Color Name</label>
@@ -1118,36 +1090,36 @@
                                             </select>
 
                                             <span class="badge text-white d-inline-block"
-                                                style="background-color: #FF0000; height: 45px; width: 32px;">
+                                                style="background-color: #000000; height: 45px; width: 32px;">
                                             </span>
                                         </div>
                                     </div>
                                     <div class="col-6 mb-5">
                                         <label class="form-label">Looping Design</label>
-                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                        <input type="text" class="form-control" placeholder="Flet Looping & Mixe"
                                             disabled />
                                     </div>
                                     <div class="col-6 mb-5">
                                         <label class="form-label">Packing Specification</label>
-                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                        <input type="text" class="form-control" placeholder="Kerol - 36 X 73 - 4 Feet - Singal Roll Packing"
                                             disabled />
                                     </div>
                                     <div class="col-6 mb-5">
                                         <label class="form-label">Order Product Name</label>
-                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                        <input type="text" class="form-control" placeholder=" 10 mm - Spike - Kerol - 4Feet X 12 Mtr "
                                             disabled />
                                     </div>
                                     <div class="col-2 mb-5">
                                         <label class="form-label">Double Color</label>
-                                        <input type="text" class="form-control" placeholder="Unique IT Solution"
+                                        <input type="text" class="form-control" placeholder="Red & Black"
                                             disabled />
                                     </div>
                                     <div class="col-2 mb-5">
                                         <label class="form-label">Roll QTY</label>
-                                        <input type="text" class="form-control" placeholder="14" />
+                                        <input type="text" class="form-control" placeholder="20" />
                                     </div>
                                     <div class="col-2 d-flex justify-content-center align-items-center">
-                                        <a href="#" class="btn btn-sm btn-bg-success text-inverse-success me-3">Add</a>
+                                        <a href="#" class="btn btn-sm btn-bg-success text-inverse-success me-3">Update</a>
                                     </div>
                                     <div class="col-12">
                                         <span class="text-primary">Your Order is Currently in Production,Therefore you can make only the changes listed below if the order were still pending, all modification would have been possible thank you</span>
