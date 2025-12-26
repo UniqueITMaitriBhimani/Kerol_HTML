@@ -171,7 +171,7 @@
 											<span class="menu-title">Production process</span>
 										</a>
 									</div>
-									 
+
 								</div>
 							</div>
 							<div class="menu-item">
@@ -630,11 +630,12 @@
 													<td class="px-2 py-4">GJ03XX0000</td>
 													<td class="px-2 py-4">271</td>
 													<td class="px-2 py-4">
-														<button class="btn btn-primary" >
+														<button class="btn btn-primary" data-bs-toggle="modal"
+															data-bs-target="#dispatchModal">
 															<i class="bi bi-folder2-open fs-5"></i>
 														</button>
 														<button class="btn btn-warning" data-bs-toggle="modal"
-															data-bs-target="#TransportDetails">
+															data-bs-target="#dispatchLoadingModal">
 															<i class="bi bi-truck fs-5"></i>
 														</button>
 													</td>
@@ -928,24 +929,237 @@
 		</div>
 	</div>
 
-	<script>var hostUrl = "assets/";</script>
-	<!--begin::Javascript-->
-	<!--begin::Global Javascript Bundle(used by all pages)-->
-	<script src="assets/plugins/global/plugins.bundle.js"></script>
-	<script src="assets/js/scripts.bundle.js"></script>
-	<!--end::Global Javascript Bundle-->
-	<!--begin::Page Vendors Javascript(used by this page)-->
-	<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-	<!--end::Page Vendors Javascript-->
-	<!--begin::Page Custom Javascript(used by this page)-->
-	<script src="assets/js/custom/widgets.js"></script>
-	<script src="assets/js/custom/apps/chat/chat.js"></script>
-	<script src="assets/js/custom/modals/create-app.js"></script>
-	<script src="assets/js/custom/modals/upgrade-plan.js"></script>
-	<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-	<script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
-	<!--end::Page Custom Javascript-->
-	<!--end::Javascript-->
+	<div class="modal fade" id="dispatchLoadingModal" tabindex="-1">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
+
+				<!-- Header -->
+				<div class="modal-header bg-dark text-white py-2">
+					<h5 class="modal-title">Loading Start</h5>
+					<button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+				</div>
+
+				<!-- Info -->
+				<div class="px-4 pt-3">
+					<div class="d-flex justify-content-between fw-bold">
+						<div>Company ID - KT 1071 &nbsp;&nbsp; GJ03XX0000</div>
+						<div>
+							Loading Date : 22/12/2025 <br>
+							Loading Time : 00:00:00 PM
+						</div>
+					</div>
+				</div>
+
+				<!-- Tabs -->
+				<div class="d-flex mt-3">
+					<div class="w-50 text-center py-2 bg-primary text-white fw-bold">Dispatch</div>
+					<div class="w-50 text-center py-2 bg-success text-white fw-bold">Loading</div>
+				</div>
+
+				<!-- Table -->
+				<div class="modal-body p-0">
+					<div class="table-responsive">
+						<table class="table table-bordered align-middle text-center mb-0">
+							<thead class="table-light fw-bold">
+								<tr>
+									<th>No</th>
+									<th>Thickness</th>
+									<th>Width</th>
+									<th>Length</th>
+									<th>Color</th>
+									<th>Backing</th>
+									<th>Dispatch Roll Qty</th>
+									<th>Loading Roll Qty</th>
+									<th>Pending Roll Qty</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>01</td>
+									<td>10 mm</td>
+									<td>4 Feet</td>
+									<td>12 Mtr</td>
+									<td>Red & Black</td>
+									<td>Spike</td>
+									<td>14</td>
+									<td>14</td>
+									<td><span class="badge bg-success">Finished</span></td>
+								</tr>
+
+								<tr>
+									<td>01</td>
+									<td>10 mm</td>
+									<td>2 Feet</td>
+									<td>12 Mtr</td>
+									<td>Red & Black</td>
+									<td>Spike</td>
+									<td>40</td>
+									<td>40</td>
+									<td><span class="badge bg-success">Finished</span></td>
+								</tr>
+
+								<tr>
+									<td>01</td>
+									<td>12 mm</td>
+									<td>4 Feet</td>
+									<td>12 Mtr</td>
+									<td>Red</td>
+									<td>Diamond</td>
+									<td>43</td>
+									<td>43</td>
+									<td><span class="badge bg-success">Finished</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- Totals -->
+					<div class="d-flex justify-content-center fw-bold py-3">
+						<span>Total Rolls Qty : 271</span>
+						<span class="mx-4">270</span>
+						<span class="text-danger">01</span>
+					</div>
+
+					<!-- Action -->
+					<div class="text-center pb-4">
+						<button class="btn btn-success px-10"
+        data-bs-toggle="modal"
+        data-bs-target="#loadingFinishedModal"
+        onclick="bootstrap.Modal.getInstance(document.getElementById('dispatchLoadingModal')).hide();">
+    Loading Finished
+</button>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="modal fade" id="loadingFinishedModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-secondary text-white py-2">
+                <h5 class="modal-title">Loading Finished</h5>
+                <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="confirmLoading">
+                    <label class="form-check-label fw-semibold" for="confirmLoading">
+                        The loading process has been successfully completed
+                        and we have thoroughly verified and confirmed it.
+                    </label>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-success px-6 me-2">Save</button>
+                    <button class="btn btn-danger px-6" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+	<div class="modal fade" id="dispatchModal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header bg-primary">
+					<h5 class="modal-title text-white fw-bold">Dispatch</h5>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+				</div>
+
+				<!-- Modal Body -->
+				<div class="modal-body p-0">
+
+					<div class="table-responsive">
+						<table class="table table-bordered align-middle mb-0">
+							<thead class="bg-light fw-bold text-center">
+								<tr>
+									<th>Company ID</th>
+									<th>Order Product Name</th>
+									<th>Coil Color</th>
+									<th>Width</th>
+									<th>Length</th>
+									<th>Backing</th>
+									<th>Backing Brand & Color</th>
+									<th>Dispatch Rolls Qty</th>
+								</tr>
+							</thead>
+
+							<tbody class="text-center">
+
+								<tr>
+									<td>KT 1071</td>
+									<td>10 mm Aeromat - Red & Black</td>
+									<td>
+										<span class="badge bg-danger me-1">&nbsp;</span>
+										<span class="badge bg-dark">&nbsp;</span>
+									</td>
+									<td>4 feet</td>
+									<td>12 Mtr</td>
+									<td>Spike-Normal</td>
+									<td><span class="badge bg-dark">Kerol Brand</span></td>
+									<td><input type="text" class="form-control text-center" value="14"></td>
+								</tr>
+
+								<tr class="bg-light">
+									<td>KT 1071</td>
+									<td>10 mm Aeromat - G-Green</td>
+									<td><span class="badge bg-success">&nbsp;</span></td>
+									<td>4 feet</td>
+									<td>12 Mtr</td>
+									<td>Spike-Normal</td>
+									<td><span class="badge bg-success">Kerol Brand</span></td>
+									<td><input type="text" class="form-control text-center" value="10"></td>
+								</tr>
+
+								<tr>
+									<td>KT 1071</td>
+									<td>12 mm ShieldPro - Red</td>
+									<td><span class="badge bg-danger">&nbsp;</span></td>
+									<td>4 feet</td>
+									<td>12 Mtr</td>
+									<td>Diamond-Normal</td>
+									<td><span class="badge bg-danger">Kerol Brand</span></td>
+									<td><input type="text" class="form-control text-center" value="43"></td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+
+					<!-- Total -->
+					<div class="d-flex justify-content-end p-4">
+						<h5 class="fw-bold">
+							Total Roll Quantity In Stock :
+							<span class="text-dark ms-2">271</span>
+						</h5>
+
+						<script>var hostUrl = "assets/";</script>
+						<!--begin::Javascript-->
+						<!--begin::Global Javascript Bundle(used by all pages)-->
+						<script src="assets/plugins/global/plugins.bundle.js"></script>
+						<script src="assets/js/scripts.bundle.js"></script>
+						<!--end::Global Javascript Bundle-->
+						<!--begin::Page Vendors Javascript(used by this page)-->
+						<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+						<!--end::Page Vendors Javascript-->
+						<!--begin::Page Custom Javascript(used by this page)-->
+						<script src="assets/js/custom/widgets.js"></script>
+						<script src="assets/js/custom/apps/chat/chat.js"></script>
+						<script src="assets/js/custom/modals/create-app.js"></script>
+						<script src="assets/js/custom/modals/upgrade-plan.js"></script>
+						<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+						<script src="assets/js/custom/documentation/general/datatables/basic.js"></script>
+						<!--end::Page Custom Javascript-->
+						<!--end::Javascript-->
 </body>
 <!--end::Body-->
 
