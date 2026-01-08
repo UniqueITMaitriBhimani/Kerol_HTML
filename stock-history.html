@@ -228,7 +228,7 @@
 										</a>
 									</div>
 									<div class="menu-item">
-										<a class="menu-link" href="customer-wise-stock-view.html">
+										<a class="menu-link" href="customer-wise-stock-list.html">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -758,7 +758,19 @@
                             </div>
                             <div class="container-fluid mt-3">
                                 <div class="row bg-success align-items-center rounded px-3 py-2">
-
+                                    <div class="col-md-2">
+                                        <label>Select Customer</label>
+                                        <select class="form-select" 
+                                                data-placeholder="Select an option">
+                                                <option></option>
+                                                <option value="1">ABC Company - Morbi</option>
+                                                <option value="2">ABC Company - Morbi</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label>Order Number</label>
+                                        <input class="form-control form-control-sm w-auto" type="text" >
+                                    </div>
                                     <!-- Date Range -->
                                     <div class="col-md-4 d-flex align-items-center gap-2 text-white">
                                         <strong>Date Range</strong>
@@ -769,11 +781,11 @@
                                         <input type="date" class="form-control form-control-sm w-auto"
                                             value="2025-12-31">
                                     </div>
-
+                                      
                                     <!-- Title -->
-                                    <div class="col-md-4 text-center text-white fw-bold fs-5">
+                                    <!-- <div class="col-md-4 text-center text-white fw-bold fs-5">
                                         Stock In - Production
-                                    </div>
+                                    </div> -->
 
                                     <!-- Search Button -->
                                     <div class="col-md-4 text-end">
